@@ -1,10 +1,15 @@
 {
-  "cpus": {
+  "cpu": {
     "intel" : [
       {
-        "name": "",
-        "points": "",
-        "price": 0
+      "name": "i5 6600",
+      "points": "70",
+      "price": "9000"
+      },
+      {
+        "name": "i7 9900",
+        "points": "150",
+        "price": "19000"
       }
     ],
     "amd" : [
@@ -12,7 +17,7 @@
     ]
   },
 
-  "gpus" : {
+  "gpu" : {
     "nvidia" : [
 
     ],
@@ -21,7 +26,7 @@
     ]
   },
 
-  "motherboards" : {
+  "motherboard" : {
     "amd": [
 
     ],
