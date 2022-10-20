@@ -1,0 +1,56 @@
+{
+  "cpus": {
+    "intel" : [
+      {
+        "name": "",
+        "points": "",
+        "price": 0
+      }
+    ],
+    "amd" : [
+
+    ]
+  },
+
+  "gpus" : {
+    "nvidia" : [
+
+    ],
+    "amd" : [
+
+    ]
+  },
+
+  "motherboards" : {
+    "amd": [
+
+    ],
+    "intel": [
+
+    ]
+  },
+
+  "cooling": [
+
+  ],
+
+  "ram": {
+    "ddr5": [
+
+    ],
+    "ddr4": [
+
+    ],
+    "ddr3": [
+
+    ]
+  },
+
+  "power": [
+
+  ],
+
+  "corpus": [
+
+  ]
+}
