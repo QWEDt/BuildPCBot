@@ -7,8 +7,13 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 public class PCBuilderBot extends TelegramLongPollingBot {
+    boolean isBuilding = false;
+    List<String> arguments;
+    BuildProcess buildProcess = new BuildProcess();
     @Override
     public String getBotUsername() {
         return System.getenv("botName");
@@ -23,7 +28,30 @@ public class PCBuilderBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
-            sendText(message, message.getText());
+            if (!isBuilding) {
+                switch (message.getText()) {
+                    case "/BuildPC":
+                        sendText(message, "Введите бюджет.");
+                        isBuilding = true;
+                        break;
+                    case "/start":
+                        break;
+                }
+            } else if (!Objects.equals(message.getText(), "/cancel")){
+                if (arguments.size() < 3)
+                {
+                    arguments.add(message.getText());
+                }
+                else {
+                    HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
+                    sendText(message, PC.toString());
+                    isBuilding = false;
+                }
+            }
+            else {
+                isBuilding = false;
+                sendText(message, "Сборка отменена");
+            }
         }
     }
 

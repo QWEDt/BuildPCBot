@@ -1,7 +1,5 @@
 package org.example;
 
-import com.fasterxml.jackson.databind.JsonSerializer;
-
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +14,7 @@ public final class BuildProcess {
         }
     }
     public HashMap<String, HashMap<String, String>> build(int money, String BrandCpu, String BrandGpu) {
-        HashMap<String, Double> ratio = new HashMap<String, Double>();
+        HashMap<String, Double> ratio = new HashMap<>();
 
         ratio.put("cpu", 0.15);
         ratio.put("gpu", 0.3);
@@ -27,7 +25,7 @@ public final class BuildProcess {
         ratio.put("corpus", 0.05);
         ratio.put("disk", 0.08);
 
-        HashMap<String, HashMap<String, String>> assembled = new HashMap<String, HashMap<String, String>>();
+        HashMap<String, HashMap<String, String>> assembled = new HashMap<>();
         assembled.put("cpu", searchBestComponent("cpu", BrandCpu, "", money * ratio.get("cpu")));
         assembled.put("gpu", searchBestComponent("gpu", "", BrandGpu, money * ratio.get("gpu")));
         assembled.put("motherboard", searchBestComponent("motherboard", BrandCpu, "", money * ratio.get("motherboard")));
