@@ -10,14 +10,40 @@
         "name": "i7 9900",
         "points": "150",
         "price": "19000"
+      },
+      {
+        "name": "i5-11400F",
+        "prise": "13000"
+      },
+      {
+        "name": "i7-12700K",
+        "prise": "350000"
+      },
+      {
+        "name": " i3-10105F",
+        "prise": "6500"
       }
     ],
     "amd" : [
       {
-
-    },
+      "name": "Ryzen 9 5900X",
+      "prise": "30500"
+      },
       {
-
+        "name": "Ryzen 5 3600",
+        "prise": "9500"
+      },
+      {
+        "name": " Ryzen 7 5800X",
+        "prise": "21000 "
+      },
+      {
+        "name": "Ryzen 5 5600G ",
+        "prise": "12000"
+      },
+      {
+        "name": "Ryzen 3 3100",
+        "prise": "8000"
       }
     ]
   },
@@ -25,51 +51,130 @@
   "gpu" : {
     "nvidia" : [
       {
-
-    },
+      "name": "RTX 3050",
+      "prise": "23000 "
+      },
       {
-
+      "name": "GTX 1660",
+      "prise": "21000"
+      },
+      {
+      "name": "GTX 1050TI",
+      "prise": "12000"
+      },
+      {
+      "name": "RTX 2060 ",
+      "prise": "26000 "
       }
     ],
     "amd" : [
-
+      {
+      "name": " Radeon RX 560 ",
+      "prise": "8500 "
+      },
+      {
+      "name": "Radeon RX 5500 XT OC ",
+      "prise": "20000 "
+      },
+      {
+      "name": "Radeon RX 6600 EAGLE ",
+      "prise": "26000 "
+      },
+      {
+      "name": "RX 6600 XT ",
+      "prise": "35000 "
+      }
     ]
   },
 
   "motherboard" : {
     "amd": [
-
+      {
+      "name": "MSI MAG B550 TOMAHAWK ",
+      "prise": "15000 "
+      },
+      {
+      "name": " MSI B450 GAMING PLUS MAX ",
+      "prise": "7500"
+      }
     ],
     "intel": [
-
+      {
+      "name": "MSI H510M-A PRO ",
+      "prise": "5000 "
+      },
+      {
+      "name": "GIGABYTE B660 Gaming X DDR4 ",
+      "prise": "12000 "
+      }
     ]
   },
 
   "cooling": [
-
+    {
+    "name": "Deepcool ICE EDGE MINI FS V2.0 ",
+    "prise": "700 "
+    },
+    {
+    "name": "GIGABYTE Aorus Waterforce X 240 ",
+    "prise": "14000 "
+    }
   ],
 
   "ram": {
     "ddr5": [
-
+      {
+      "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц ",
+      "prise": "20000 "
+      }
     ],
     "ddr4": [
-
-    ],
-    "ddr3": [
-
+      {
+      "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4 ",
+      "prise": "9000"
+      },
+      {
+      "name": "Kingston FURY Beast RGB 16 ГБ DDR4 ",
+      "prise": "5000 "
+      }
     ]
   },
 
   "power": [
+    {
+    "name": "be quiet! System Power 9 700W ",
+    "prise": "6000"
+    },
+    {
+    "name": "be quiet! System Power 9 600W ",
+    "prise": "5000 "
+    },
+    {
+    "name": "AeroCool VX Plus 600W ",
+    "prise": "2500 "
+    }
 
   ],
 
   "corpus": [
-
+    {
+    "name": "Ginzzu CL150 ",
+    "prise": "2500 "
+    }
   ],
 
   "disk": [
-
+    {
+    "name": "Western Digital WD Blue 1 ТБ  ",
+    "prise": "3500 "
+    },
+    {
+    "name": "Patriot Memory P210 1 ТБ    ",
+    "prise": "5000 "
+    },
+    {
+    "name": "Kingston NV1 1 ТБ M.2  ",
+    "prise": "6500 "
+    }
   ]
 }
