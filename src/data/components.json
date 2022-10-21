@@ -10,18 +10,74 @@
         "name": "i7 9900",
         "points": "150",
         "price": "19000"
+      },
+      {
+        "name": "i5-11400F",
+        "prise": "13000"
+      },
+      {
+        "name": "i7-12700K",
+        "prise": "350000"
+      },
+      {
+        "name": " i3-10105F",
+        "prise": "6500"
       }
     ],
     "amd" : [
+      {
+      "name": "Ryzen 9 5900X",
+      "prise": "30500"
+    },
+      {
+        "name": "Ryzen 5 3600",
+        "prise": "9500"
+      },
+      {
+        "name": " Ryzen 7 5800X",
+        "prise": "21000 "
+      },
+      {
+        "name": "Ryzen 5 5600G ",
+        "prise": "12000"
+      },
+      {
+        "name": "Ryzen 3 3100",
+        "prise": "8000"
+      }
 
     ]
   },
 
   "gpu" : {
-    "nvidia" : [
+    "nvidia" : [{
+      "name": "RTX 3050",
+      "prise": "23000 "
+    },{
+      "name": "GTX 1660",
+      "prise": "21000"
+    },{
+      "name": "GTX 1050TI",
+      "prise": "12000"
+    },{
+      "name": "RTX 2060 ",
+      "prise": "26000 "
+    }
 
     ],
-    "amd" : [
+    "amd" : [{
+      "name": " Radeon RX 560 ",
+      "prise": "8500 "
+    },{
+      "name": "Radeon RX 5500 XT OC ",
+      "prise": "20000 "
+    },{
+      "name": "Radeon RX 6600 EAGLE ",
+      "prise": "26000 "
+    },{
+      "name": "RX 6600 XT ",
+      "prise": "35000 "
+    }
 
     ]
   },
