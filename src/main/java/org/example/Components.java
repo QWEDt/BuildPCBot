@@ -13,7 +13,7 @@ import java.util.Scanner;
  * Хранит все компоненты из передаваемого json файла
  * и отдает списки с нужным типом компонентов
  */
-public class Components {
+public final class Components {
     private final HashMap<String, List<HashMap<String, String>>> CPUs;
     private final HashMap<String, List<HashMap<String, String>>> GPUs;
     private final HashMap<String, List<HashMap<String, String>>> motherboards;
@@ -71,5 +71,19 @@ public class Components {
 
     public List<HashMap<String, String>> getDisks() {
         return disks;
+    }
+
+    public List<HashMap<String, String>> getComponent(String type, String cpu, String gpu, String ram) {
+        return switch (type) {
+            case "cpu" -> getCPUs(cpu);
+            case "gpu" -> getGPUs(gpu);
+            case "motherboard" -> getMotherboards(cpu);
+            case "ram" -> getRAM("ddr4");
+            case "cooling" -> getCooling();
+            case "power" -> getPowers();
+            case "corpus" -> getCorpuses();
+            case "disk" -> getDisks();
+            default -> null;
+        };
     }
 }
