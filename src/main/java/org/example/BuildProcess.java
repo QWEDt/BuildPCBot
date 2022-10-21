@@ -41,6 +41,12 @@ public final class BuildProcess {
 
     private HashMap<String, String> searchBestComponent(String component, String BrandCpu, String BrandGpu, double money) {
         List<HashMap<String, String>> whereToSearch = components.getComponent(component, BrandCpu, BrandGpu, "");
-        return new HashMap<String, String>();
+        HashMap<String, String> bestComponent = whereToSearch.get(0);
+        for (HashMap<String, String> toSearch : whereToSearch) {
+            if (Integer.parseInt(toSearch.get("price")) <= money && Integer.parseInt(toSearch.get("points")) > Integer.parseInt(bestComponent.get("points"))) {
+                bestComponent = toSearch;
+            }
+        }
+        return bestComponent;
     }
 }
