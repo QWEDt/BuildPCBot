@@ -83,39 +83,84 @@
   },
 
   "motherboard" : {
-    "amd": [
+    "amd": [{
+      "name": "MSI MAG B550 TOMAHAWK ",
+      "prise": "15000 "
+    },{
+      "name": " MSI B450 GAMING PLUS MAX ",
+      "prise": "7500"
+    }
 
     ],
-    "intel": [
+    "intel": [{
+      "name": "MSI H510M-A PRO ",
+      "prise": "5000 "
+    },{
+      "name": "GIGABYTE B660 Gaming X DDR4 ",
+      "prise": "12000 "
+    }
 
     ]
   },
 
-  "cooling": [
+  "cooling": [{
+    "name": "Deepcool ICE EDGE MINI FS V2.0 ",
+    "prise": "700 "
+  },{
+    "name": "GIGABYTE Aorus Waterforce X 240 ",
+    "prise": "14000 "
+  }
 
   ],
 
   "ram": {
-    "ddr5": [
+    "ddr5": [{
+      "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц ",
+      "prise": "20000 "
+    }
 
     ],
-    "ddr4": [
-
-    ],
-    "ddr3": [
+    "ddr4": [{
+      "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4 ",
+      "prise": "9000"
+    },{
+      "name": "Kingston FURY Beast RGB 16 ГБ DDR4 ",
+      "prise": "5000 "
+    }
 
     ]
   },
 
-  "power": [
+  "power": [{
+    "name": "be quiet! System Power 9 700W ",
+    "prise": "6000"
+  },{
+    "name": "be quiet! System Power 9 600W ",
+    "prise": "5000 "
+  },{
+    "name": "AeroCool VX Plus 600W ",
+    "prise": "2500 "
+  }
 
   ],
 
-  "corpus": [
+  "corpus": [ {
+    "name": "Ginzzu CL150 ",
+    "prise": "2500 "
+  }
 
   ],
 
-  "disk": [
+  "disk": [{
+    "name": "Western Digital WD Blue 1 ТБ  ",
+    "prise": "3500 "
+  },{
+    "name": "Patriot Memory P210 1 ТБ    ",
+    "prise": "5000 "
+  },{
+    "name": "Kingston NV1 1 ТБ M.2  ",
+    "prise": "6500 "
+  }
 
   ]
 }
