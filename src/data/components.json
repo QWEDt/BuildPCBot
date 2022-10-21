@@ -112,7 +112,7 @@
     ],
     "intel": [{
       "name": "MSI H510M-A PRO ",
-      "prise": "5000 ",
+      "prise": "5000",
       "points": "5"
     },{
       "name": "GIGABYTE B660 Gaming X DDR4 ",
@@ -126,10 +126,12 @@
   "cooling": [{
     "name": "Deepcool ICE EDGE MINI FS V2.0 ",
     "prise": "700",
-    "points": "150"
+    "points": "10"
   },{
     "name": "GIGABYTE Aorus Waterforce X 240 ",
-    "prise": "14000 "
+    "prise": "14000",
+    "points": "14"
+
   }
 
   ],
@@ -137,16 +139,19 @@
   "ram": {
     "ddr5": [{
       "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц ",
-      "prise": "20000 "
+      "prise": "20000",
+      "points": "20"
     }
 
     ],
     "ddr4": [{
       "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4 ",
-      "prise": "9000"
+      "prise": "9000",
+      "points": "9"
     },{
       "name": "Kingston FURY Beast RGB 16 ГБ DDR4 ",
-      "prise": "5000 "
+      "prise": "5000 ",
+      "points": "5"
     }
 
     ]
@@ -154,33 +159,40 @@
 
   "power": [{
     "name": "be quiet! System Power 9 700W ",
-    "prise": "6000"
+    "prise": "6000",
+    "points": "6"
   },{
     "name": "be quiet! System Power 9 600W ",
-    "prise": "5000 "
+    "prise": "5000",
+    "points": "5"
   },{
     "name": "AeroCool VX Plus 600W ",
-    "prise": "2500 "
+    "prise": "2500",
+    "points": "2"
   }
 
   ],
 
   "corpus": [ {
     "name": "Ginzzu CL150 ",
-    "prise": "2500 "
+    "prise": "2500",
+    "points": "2"
   }
 
   ],
 
   "disk": [{
     "name": "Western Digital WD Blue 1 ТБ  ",
-    "prise": "3500 "
+    "prise": "3500",
+    "points": "3"
   },{
     "name": "Patriot Memory P210 1 ТБ    ",
-    "prise": "5000 "
+    "prise": "5000",
+    "points": "5"
   },{
     "name": "Kingston NV1 1 ТБ M.2  ",
-    "prise": "6500 "
+    "prise": "6500",
+    "points": "6"
   }
 
   ]
