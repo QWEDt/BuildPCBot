@@ -1,199 +1,204 @@
 {
-  "cpu": {
+  "cpu" : {
     "intel" : [
       {
-      "name": "i5 6600",
-      "price": "9000",
-        "points": "9"
+        "name" : "i5 6600",
+        "price" : "9000",
+        "points" : "9"
       },
       {
-        "name": "i7 9900",
-        "price": "19000",
-        "points": "19"
+        "name" : "i7 9900",
+        "price" : "19000",
+        "points" : "19"
       },
       {
-        "name": "i5-11400F",
-        "prise": "13000",
-        "points": "13"
+        "name" : "i5-11400F",
+        "price" : "13000",
+        "points" : "13"
       },
       {
-        "name": "i7-12700K",
-        "prise": "35000",
-        "points": "35"
+        "name" : "i7-12700K",
+        "price" : "35000",
+        "points" : "35"
       },
       {
-        "name": " i3-10105F",
-        "prise": "6500",
-        "points": "6"
+        "name" : " i3-10105F",
+        "price" : "6500",
+        "points" : "6"
       }
     ],
     "amd" : [
       {
-      "name": "Ryzen 9 5900X",
-      "prise": "30500",
-        "points": "30"
-    },
-      {
-        "name": "Ryzen 5 3600",
-        "prise": "9500",
-        "points": "9"
+        "name" : "Ryzen 9 5900X",
+        "price" : "30500",
+        "points" : "30"
       },
       {
-        "name": " Ryzen 7 5800X",
-        "prise": "21000 ",
-        "points": "21"
+        "name" : "Ryzen 5 3600",
+        "price" : "9500",
+        "points" : "9"
       },
       {
-        "name": "Ryzen 5 5600G ",
-        "prise": "12000",
-        "points": "12"
+        "name" : " Ryzen 7 5800X",
+        "price" : "21000",
+        "points" : "21"
       },
       {
-        "name": "Ryzen 3 3100",
-        "prise": "8000",
-        "points": "8"
+        "name" : "Ryzen 5 5600G ",
+        "price" : "12000",
+        "points" : "12"
+      },
+      {
+        "name" : "Ryzen 3 3100",
+        "price" : "8000",
+        "points" : "8"
       }
-
     ]
   },
-
   "gpu" : {
-    "nvidia" : [{
-      "name": "RTX 3050",
-      "prise": "23000 ",
-      "points": "23"
-    },{
-      "name": "GTX 1660",
-      "prise": "21000",
-      "points": "21"
-    },{
-      "name": "GTX 1050TI",
-      "prise": "12000",
-      "points": "12"
-    },{
-      "name": "RTX 2060 ",
-      "prise": "26000 ",
-      "points": "26"
-    }
-
+    "nvidia" : [
+      {
+        "name" : "RTX 3050",
+        "price" : "23000",
+        "points" : "23"
+      },
+      {
+        "name" : "GTX 1660",
+        "price" : "21000",
+        "points" : "21"
+      },
+      {
+        "name" : "GTX 1050TI",
+        "price" : "12000",
+        "points" : "12"
+      },
+      {
+        "name" : "RTX 2060",
+        "price" : "26000",
+        "points" : "26"
+      }
     ],
-    "amd" : [{
-      "name": " Radeon RX 560 ",
-      "prise": "8500 ",
-      "points": "8"
-    },{
-      "name": "Radeon RX 5500 XT OC ",
-      "prise": "20000 ",
-      "points": "20"
-    },{
-      "name": "Radeon RX 6600 EAGLE ",
-      "prise": "26000 ",
-      "points": "26"
-    },{
-      "name": "RX 6600 XT ",
-      "prise": "35000 ",
-      "points": "35"
-    }
-
+    "amd" : [
+      {
+        "name" : "Radeon RX 560",
+        "price" : "8500",
+        "points" : "8"
+      },
+      {
+        "name" : "Radeon RX 5500 XT OC",
+        "price" : "20000",
+        "points" : "20"
+      },
+      {
+        "name" : "Radeon RX 6600 EAGLE",
+        "price" : "26000",
+        "points" : "26"
+      },
+      {
+        "name" : "RX 6600 XT",
+        "price" : "35000",
+        "points" : "35"
+      }
     ]
   },
-
   "motherboard" : {
-    "amd": [{
-      "name": "MSI MAG B550 TOMAHAWK ",
-      "prise": "15000",
-      "points": "15"
-    },{
-      "name": " MSI B450 GAMING PLUS MAX ",
-      "prise": "7500",
-      "points": "7"
-    }
-
+    "amd" : [
+      {
+        "name" : "MSI MAG B550 TOMAHAWK",
+        "price" : "15000",
+        "points" : "15"
+      },
+      {
+        "name" : " MSI B450 GAMING PLUS MAX",
+        "price" : "7500",
+        "points" : "7"
+      }
     ],
-    "intel": [{
-      "name": "MSI H510M-A PRO ",
-      "prise": "5000",
-      "points": "5"
-    },{
-      "name": "GIGABYTE B660 Gaming X DDR4 ",
-      "prise": "12000",
-      "points": "12"
-    }
-
+    "intel" : [
+      {
+        "name" : "MSI H510M-A PRO",
+        "price" : "5000",
+        "points" : "5"
+      },
+      {
+        "name" : "GIGABYTE B660 Gaming X DDR4",
+        "price" : "12000",
+        "points" : "12"
+      }
     ]
   },
-
-  "cooling": [{
-    "name": "Deepcool ICE EDGE MINI FS V2.0 ",
-    "prise": "700",
-    "points": "10"
-  },{
-    "name": "GIGABYTE Aorus Waterforce X 240 ",
-    "prise": "14000",
-    "points": "14"
-
-  }
-
+  "cooling" : [
+    {
+      "name" : "Deepcool ICE EDGE MINI FS V2.0",
+      "price" : "700",
+      "points" : "10"
+    },
+    {
+      "name" : "GIGABYTE Aorus Waterforce X 240",
+      "price" : "14000",
+      "points" : "14"
+    }
   ],
-
-  "ram": {
-    "ddr5": [{
-      "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц ",
-      "prise": "20000",
-      "points": "20"
-    }
-
+  "ram" : {
+    "ddr5" : [
+      {
+        "name" : "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц",
+        "price" : "20000",
+        "points" : "20"
+      }
     ],
-    "ddr4": [{
-      "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4 ",
-      "prise": "9000",
-      "points": "9"
-    },{
-      "name": "Kingston FURY Beast RGB 16 ГБ DDR4 ",
-      "prise": "5000 ",
-      "points": "5"
-    }
-
+    "ddr4" : [
+      {
+        "name" : "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4",
+        "price" : "9000",
+        "points" : "9"
+      },
+      {
+        "name" : "Kingston FURY Beast RGB 16 ГБ DDR4",
+        "price" : "5000",
+        "points" : "5"
+      }
     ]
   },
-
-  "power": [{
-    "name": "be quiet! System Power 9 700W ",
-    "prise": "6000",
-    "points": "6"
-  },{
-    "name": "be quiet! System Power 9 600W ",
-    "prise": "5000",
-    "points": "5"
-  },{
-    "name": "AeroCool VX Plus 600W ",
-    "prise": "2500",
-    "points": "2"
-  }
-
+  "power" : [
+    {
+      "name" : "be quiet! System Power 9 700W",
+      "price" : "6000",
+      "points" : "6"
+    },
+    {
+      "name" : "be quiet! System Power 9 600W",
+      "price" : "5000",
+      "points" : "5"
+    },
+    {
+      "name" : "AeroCool VX Plus 600W",
+      "price" : "2500",
+      "points" : "2"
+    }
   ],
-
-  "corpus": [ {
-    "name": "Ginzzu CL150 ",
-    "prise": "2500",
-    "points": "2"
-  }
-
+  "corpus" : [
+    {
+      "name" : "Ginzzu CL150",
+      "price" : "2500",
+      "points" : "2"
+    }
   ],
-
-  "disk": [{
-    "name": "Western Digital WD Blue 1 ТБ  ",
-    "prise": "3500",
-    "points": "3"
-  },{
-    "name": "Patriot Memory P210 1 ТБ    ",
-    "prise": "5000",
-    "points": "5"
-  },{
-    "name": "Kingston NV1 1 ТБ M.2  ",
-    "prise": "6500",
-    "points": "6"
-  }
-
+  "disk" : [
+    {
+      "name" : "Western Digital WD Blue 1 ТБ",
+      "price" : "3500",
+      "points" : "3"
+    },
+    {
+      "name" : "Patriot Memory P210 1 ТБ",
+      "price" : "5000",
+      "points" : "5"
+    },
+    {
+      "name" : "Kingston NV1 1 ТБ M.2",
+      "price" : "6500",
+      "points" : "6"
+    }
   ]
 }

@@ -8,7 +8,7 @@ public final class BuildProcess {
     Components components;
     public BuildProcess() {
         try {
-            components = new Components("E:\\Projects\\Java\\BuildPCBot\\src\\data\\components.json");
+            components = new Components("C:\\Users\\poter\\IdeaProjects\\BuildPCBot\\src\\data\\components.json");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
