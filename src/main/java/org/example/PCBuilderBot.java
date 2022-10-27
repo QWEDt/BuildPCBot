@@ -6,13 +6,14 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
 public class PCBuilderBot extends TelegramLongPollingBot {
     boolean isBuilding = false;
-    List<String> arguments;
+    List<String> arguments = new ArrayList<>();
     BuildProcess buildProcess = new BuildProcess();
     @Override
     public String getBotUsername() {
@@ -41,9 +42,12 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 if (arguments.size() < 3)
                 {
                     arguments.add(message.getText());
-                }
-                else {
+                    sendText(message, "ya jdu");
+                } else {
+                    System.out.println(arguments);
                     HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
+                    arguments = new ArrayList<>();
+                    System.out.println("oljsdx");
                     sendText(message, PC.toString());
                     isBuilding = false;
                 }
