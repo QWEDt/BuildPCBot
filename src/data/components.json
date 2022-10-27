@@ -38,7 +38,7 @@
         "price": "21000"
       },
       {
-        "name": "Ryzen 5 5600G ",
+        "name": "Ryzen 5 5600G",
         "price": "12000"
       },
       {
@@ -63,25 +63,25 @@
         "price": "12000"
       },
       {
-        "name": "RTX 2060 ",
-        "price": "26000 "
+        "name": "RTX 2060",
+        "price": "26000"
       }
     ],
     "amd" : [
       {
-        "name": " Radeon RX 560 ",
+        "name": " Radeon RX 560",
         "price": "8500"
       },
       {
-        "name": "Radeon RX 5500 XT OC ",
+        "name": "Radeon RX 5500 XT OC",
         "price": "20000"
       },
       {
-        "name": "Radeon RX 6600 EAGLE ",
+        "name": "Radeon RX 6600 EAGLE",
         "price": "26000"
       },
       {
-        "name": "RX 6600 XT ",
+        "name": "RX 6600 XT",
         "price": "35000"
       }
     ]
@@ -90,21 +90,21 @@
   "motherboard" : {
     "amd": [
       {
-        "name": "MSI MAG B550 TOMAHAWK ",
+        "name": "MSI MAG B550 TOMAHAWK",
         "price": "15000"
       },
       {
-        "name": " MSI B450 GAMING PLUS MAX ",
+        "name": " MSI B450 GAMING PLUS MAX",
         "price": "7500"
       }
     ],
     "intel": [
       {
-        "name": "MSI H510M-A PRO ",
+        "name": "MSI H510M-A PRO",
         "price": "5000"
       },
       {
-        "name": "GIGABYTE B660 Gaming X DDR4 ",
+        "name": "GIGABYTE B660 Gaming X DDR4",
         "price": "12000"
       }
     ]
@@ -112,11 +112,11 @@
 
   "cooling": [
     {
-      "name": "Deepcool ICE EDGE MINI FS V2.0 ",
+      "name": "Deepcool ICE EDGE MINI FS V2.0",
       "price": "700"
     },
     {
-      "name": "GIGABYTE Aorus Waterforce X 240 ",
+      "name": "GIGABYTE Aorus Waterforce X 240",
       "price": "14000"
     }
   ],
@@ -124,17 +124,17 @@
   "ram": {
     "ddr5": [
       {
-        "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц ",
+        "name": "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц",
         "price": "20000"
       }
     ],
     "ddr4": [
       {
-        "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4 ",
+        "name": "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4",
         "price": "9000"
       },
       {
-        "name": "Kingston FURY Beast RGB 16 ГБ DDR4 ",
+        "name": "Kingston FURY Beast RGB 16 ГБ DDR4",
         "price": "5000"
       }
     ]
@@ -142,38 +142,37 @@
 
   "power": [
     {
-      "name": "be quiet! System Power 9 700W ",
+      "name": "be quiet! System Power 9 700W",
       "price": "6000"
     },
     {
-      "name": "be quiet! System Power 9 600W ",
+      "name": "be quiet! System Power 9 600W",
       "price": "5000"
     },
     {
-      "name": "AeroCool VX Plus 600W ",
+      "name": "AeroCool VX Plus 600W",
       "price": "2500"
     }
-
   ],
 
   "corpus": [
     {
-      "name": "Ginzzu CL150 ",
+      "name": "Ginzzu CL150",
       "price": "2500"
     }
   ],
 
   "disk": [
     {
-      "name": "Western Digital WD Blue 1 ТБ  ",
+      "name": "Western Digital WD Blue 1 ТБ",
       "price": "3500"
     },
     {
-      "name": "Patriot Memory P210 1 ТБ    ",
+      "name": "Patriot Memory P210 1 ТБ",
       "price": "5000"
     },
     {
-      "name": "Kingston NV1 1 ТБ M.2  ",
+      "name": "Kingston NV1 1 ТБ M.2",
       "price": "6500"
     }
   ]
