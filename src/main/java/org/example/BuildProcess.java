@@ -8,7 +8,8 @@ public final class BuildProcess {
     Components components;
     public BuildProcess() {
         try {
-            components = new Components("C:\\Users\\poter\\IdeaProjects\\BuildPCBot\\src\\data\\components.json");
+            System.out.println("Working Directory = " + System.getProperty("user.dir"));
+            components = new Components("src/data/components.json");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -16,14 +17,14 @@ public final class BuildProcess {
     public HashMap<String, HashMap<String, String>> build(int money, String BrandCpu, String BrandGpu) {
         HashMap<String, Double> ratio = new HashMap<>();
 
-        ratio.put("cpu", 0.15);
-        ratio.put("gpu", 0.3);
-        ratio.put("motherboard", 0.12);
+        ratio.put("cpu", 0.2);
+        ratio.put("gpu", 0.4);
+        ratio.put("motherboard", 0.1);
         ratio.put("ram", 0.1);
-        ratio.put("cooling", 0.05);
-        ratio.put("power", 0.15);
-        ratio.put("corpus", 0.05);
-        ratio.put("disk", 0.08);
+        ratio.put("cooling", 0.03);
+        ratio.put("power", 0.07);
+        ratio.put("corpus", 0.03);
+        ratio.put("disk", 0.07);
 
         HashMap<String, HashMap<String, String>> assembled = new HashMap<>();
         assembled.put("cpu", searchBestComponent("cpu", BrandCpu, "", money * ratio.get("cpu")));
@@ -34,15 +35,22 @@ public final class BuildProcess {
         assembled.put("power", searchBestComponent("power", "", "", money * ratio.get("power")));
         assembled.put("corpus", searchBestComponent("corpus", "", "", money * ratio.get("corpus")));
         assembled.put("disk", searchBestComponent("disk", "", "", money * ratio.get("disk")));
+
         return assembled;
     }
 
     private HashMap<String, String> searchBestComponent(String component, String BrandCpu, String BrandGpu, double money) {
         List<HashMap<String, String>> whereToSearch = components.getComponent(component, BrandCpu, BrandGpu, "");
-        HashMap<String, String> bestComponent = whereToSearch.get(0);
+        HashMap<String, String> bestComponent = null;
         for (HashMap<String, String> toSearch : whereToSearch) {
-            if (Integer.parseInt(toSearch.get("price")) <= money && Integer.parseInt(toSearch.get("points")) > Integer.parseInt(bestComponent.get("points"))) {
-                bestComponent = toSearch;
+            if (bestComponent != null) {
+                if (Integer.parseInt(toSearch.get("price")) <= money && Integer.parseInt(toSearch.get("points")) < Integer.parseInt(bestComponent.get("points"))) {
+                    bestComponent = toSearch;
+                }
+            } else {
+                if (Integer.parseInt(toSearch.get("price")) <= money) {
+                    bestComponent = toSearch;
+                }
             }
         }
         return bestComponent;

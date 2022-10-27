@@ -2,105 +2,830 @@
   "cpu": {
     "intel" : [
       {
-        "name" : "i5 6600",
-        "price" : "9000",
-        "points" : "9"
-      },
+        "name" : "Celeron G5905",
+        "price" : "2800",
+		"socket" : "lga1200",
+		"tdp" : "58",
+		"igpu" : "1",
+        "points" : "1680"
+      },	
       {
-        "name" : "i7 9900",
-        "price" : "19000",
-        "points" : "19"
-      },
+        "name" : "Celeron G6900",
+        "price" : "3000",
+		"socket" : "lga1700",
+		"tdp" : "46",
+		"igpu" : "1",
+        "points" : "1340"
+      },		
+      {
+        "name" : "Pentium Gold G6405",
+        "price" : "5000",
+		"socket" : "lga1200",
+		"tdp" : "58",
+		"igpu" : "1",
+        "points" : "1359"
+      },	
+      {
+        "name" : "Pentium Gold G7400",
+        "price" : "5000",
+		"socket" : "lga1700",
+		"tdp" : "46",
+		"igpu" : "1",
+        "points" : "1021"
+      },	
+      {
+        "name" : "Pentium Gold G6400",
+        "price" : "5500",
+		"socket" : "lga1200",
+		"tdp" : "58",
+		"igpu" : "1",
+        "points" : "1385"
+      },	
+      {
+        "name" : "Pentium Gold G6600",
+        "price" : "6500",
+		"socket" : "lga1200",
+		"tdp" : "58",
+		"igpu" : "1",
+        "points" : "1339"
+      },	
+      {
+        "name" : "i3-10100F",
+        "price" : "6700",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "788"
+      },	
+      {
+        "name" : "i3-10105F",
+        "price" : "7000",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "775"
+      },	
+      {
+        "name" : "i3-12100F",
+        "price" : "8000",
+		"socket" : "lga1700",
+		"tdp" : "89",
+		"igpu" : "0",
+        "points" : "514"
+      },	
+      {
+        "name" : "i3-10100",
+        "price" : "8200",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "789"
+      },	
+      {
+        "name" : "i3-10105",
+        "price" : "8500",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "776"
+      },	
+      {
+        "name" : "i3-12100",
+        "price" : "9300",
+		"socket" : "lga1700",
+		"tdp" : "89",
+		"igpu" : "1",
+        "points" : "515"
+      },	
+      {
+        "name" : "i5-10400F",
+        "price" : "10000",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "578"
+      },	
       {
         "name" : "i5-11400F",
+        "price" : "12500",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "409"
+      },	
+      {
+        "name" : "i5-10400",
         "price" : "13000",
-        "points" : "13"
-      },
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "579"
+      },	
+      {
+        "name" : "i5-12400F",
+        "price" : "13800",
+		"socket" : "lga1700",
+		"tdp" : "117",
+		"igpu" : "0",
+        "points" : "336"
+      },	
+      {
+        "name" : "i5-11400",
+        "price" : "14000",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "410"
+      },	
+      {
+        "name" : "i5-10600KF",
+        "price" : "14300",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "0",
+        "points" : "504"
+      },	
+      {
+        "name" : "i5-11500",
+        "price" : "15000",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "397"
+      },	
+      {
+        "name" : "i5-12400",
+        "price" : "15000",
+		"socket" : "lga1700",
+		"tdp" : "117",
+		"igpu" : "1",
+        "points" : "337"
+      },	
+      {
+        "name" : "i5-12500",
+        "price" : "17000",
+		"socket" : "lga1700",
+		"tdp" : "117",
+		"igpu" : "1",
+        "points" : "317"
+      },	
+      {
+        "name" : "i5-11600",
+        "price" : "17900",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "378"
+      },	
+      {
+        "name" : "i5-11600K",
+        "price" : "18500",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "1",
+        "points" : "337"
+      },	
+      {
+        "name" : "i5-10600K",
+        "price" : "19200",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "1",
+        "points" : "505"
+      },	
+      {
+        "name" : "i5-11600KF",
+        "price" : "19600",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "0",
+        "points" : "336"
+      },	
+      {
+        "name" : "i5-12600",
+        "price" : "20500",
+		"socket" : "lga1700",
+		"tdp" : "117",
+		"igpu" : "1",
+        "points" : "293"
+      },	
+      {
+        "name" : "i7-10700F",
+        "price" : "23500",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "419"
+      },	
+      {
+        "name" : "i7-11700F",
+        "price" : "23500",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "294"
+      },	
+      {
+        "name" : "i5-12600KF",
+        "price" : "24000",
+		"socket" : "lga1700",
+		"tdp" : "150",
+		"igpu" : "0",
+        "points" : "177"
+      },	
+      {
+        "name" : "i7-11700",
+        "price" : "24200",
+		"socket" : "lga1200",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "295"
+      },	
+      {
+        "name" : "i5-12600K",
+        "price" : "24500",
+		"socket" : "lga1700",
+		"tdp" : "150",
+		"igpu" : "1",
+        "points" : "178"
+      },	
+      {
+        "name" : "i7-11700K",
+        "price" : "28800",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "1",
+        "points" : "215"
+      },	
+      {
+        "name" : "i7-11700KF",
+        "price" : "29000",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "0",
+        "points" : "214"
+      },	
+      {
+        "name" : "i7-12700F",
+        "price" : "30000",
+		"socket" : "lga1700",
+		"tdp" : "180",
+		"igpu" : "0",
+        "points" : "131"
+      },	
+      {
+        "name" : "i9-11900K",
+        "price" : "30300",
+		"socket" : "lga1200",
+		"tdp" : "125",
+		"igpu" : "1",
+        "points" : "198"
+      },	
+      {
+        "name" : "i7-12700",
+        "price" : "32300",
+		"socket" : "lga1700",
+		"tdp" : "180",
+		"igpu" : "1",
+        "points" : "132"
+      },	
+      {
+        "name" : "i7-12700KF",
+        "price" : "33000",
+		"socket" : "lga1700",
+		"tdp" : "190",
+		"igpu" : "0",
+        "points" : "111"
+      },	
       {
         "name" : "i7-12700K",
-        "price" : "35000",
-        "points" : "35"
-      },
+        "price" : "36000",
+		"socket" : "lga1700",
+		"tdp" : "190",
+		"igpu" : "1",
+        "points" : "112"
+      },	
       {
-        "name" : " i3-10105F",
-        "price" : "6500",
-        "points" : "6"
+        "name" : "i9-12900F",
+        "price" : "38300",
+		"socket" : "lga1700",
+		"tdp" : "202",
+		"igpu" : "0",
+        "points" : "96",
+        "help" : "помогите, умоляю"
       }
     ],
     "amd" : [
+      	
       {
-        "name" : "Ryzen 9 5900X",
-        "price" : "30500",
-        "points" : "30"
+        "name" : "A6-9500E",
+        "price" : "1650",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "2020"
+      },
+      {
+        "name" : "A6-9400",
+        "price" : "1800",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "1708"
+      },
+      {
+        "name" : "A6-9500",
+        "price" : "2000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "2007"
+      },
+      {
+        "name" : "A6-8570",
+        "price" : "2300",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "1994"
+      },
+      {
+        "name" : "Athlon X4 950",
+        "price" : "2600",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "1490"
+      },
+      {
+        "name" : "A8-9600",
+        "price" : "4400",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "1554"
+      },
+      {
+        "name" : "Athlon 200GE",
+        "price" : "4500",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "1387"
+      },
+      {
+        "name" : "Athlon 3000G",
+        "price" : "4500",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "1325"
+      },
+      {
+        "name" : "Athlon Silver PRO 3125GE",
+        "price" : "5000",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "1305"
+      },
+      {
+        "name" : "A12-9800E",
+        "price" : "5500",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "1520"
+      },
+      {
+        "name" : "Athlon PRO 300GE",
+        "price" : "6000",
+		"socket" : "am4",
+		"tdp" : "35",
+		"igpu" : "1",
+        "points" : "1326"
+      },
+      {
+        "name" : "Ryzen 3 1200",
+        "price" : "6500",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "1056"
+      },
+      {
+        "name" : "Ryzen 3 4100",
+        "price" : "8700",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "648"
+      },
+      {
+        "name" : "Ryzen 3 3300X",
+        "price" : "8800",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "556"
+      },
+      {
+        "name" : "Ryzen 3 PRO 4350G",
+        "price" : "9000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "666"
+      },
+      {
+        "name" : "Ryzen 3 3200G",
+        "price" : "9700",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "952"
+      },
+      {
+        "name" : "Ryzen 5 4500",
+        "price" : "10300",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "444"
+      },
+      {
+        "name" : "Ryzen 3 5300G",
+        "price" : "11000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "580"
       },
       {
         "name" : "Ryzen 5 3600",
-        "price" : "9500",
-        "points" : "9"
+        "price" : "11000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "390"
+      },
+      {
+        "name" : "Ryzen 5 PRO 4650G",
+        "price" : "11500",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "436"
+      },
+      {
+        "name" : "Ryzen 5 5500",
+        "price" : "12800",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "345"
+      },
+      {
+        "name" : "Ryzen 5 5600G",
+        "price" : "13000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "333"
+      },
+      {
+        "name" : "Ryzen 5 4600G",
+        "price" : "13800",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "456"
+      },
+      {
+        "name" : "Ryzen 5 PRO 5650G",
+        "price" : "14000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "325"
+      },
+      {
+        "name" : "Ryzen 5 5600",
+        "price" : "16000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "286"
+      },
+      {
+        "name" : "Ryzen 5 5600X",
+        "price" : "16000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "279"
+      },
+      {
+        "name" : "Ryzen 7 3700X",
+        "price" : "16300",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "262"
+      },
+      {
+        "name" : "Ryzen 7 PRO 4750G",
+        "price" : "18000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "312"
+      },
+      {
+        "name" : "Ryzen 7 5700G",
+        "price" : "19000",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "1",
+        "points" : "216"
+      },
+      {
+        "name" : "Ryzen 7 3800X",
+        "price" : "21000",
+		"socket" : "am4",
+		"tdp" : "105",
+		"igpu" : "0",
+        "points" : "241"
       },
       {
         "name" : "Ryzen 7 5800X",
-        "price" : "21000",
-        "points" : "21"
+        "price" : "23000",
+		"socket" : "am4",
+		"tdp" : "105",
+		"igpu" : "0",
+        "points" : "165"
       },
       {
-        "name" : "Ryzen 5 5600G ",
-        "price" : "12000",
-        "points" : "12"
+        "name" : "Ryzen 7 5700X",
+        "price" : "23800",
+		"socket" : "am4",
+		"tdp" : "65",
+		"igpu" : "0",
+        "points" : "183"
       },
       {
-        "name" : "Ryzen 3 3100",
-        "price" : "8000",
-        "points" : "8"
+        "name" : "Ryzen 9 5900X",
+        "price" : "31300",
+		"socket" : "am4",
+		"tdp" : "105",
+		"igpu" : "0",
+        "points" : "87"
+      },
+      {
+        "name" : "Ryzen 9 5950X",
+        "price" : "39800",
+		"socket" : "am4",
+		"tdp" : "105",
+		"igpu" : "0",
+        "points" : "67"
       }
     ]
   },
   "gpu" : {
     "nvidia" : [
       {
-        "name" : "RTX 3050",
-        "price" : "23000",
-        "points" : "23"
+        "name" : "GT 710",
+        "price" : "4100",
+		"tdp" : "20",
+        "points" : "833"
+      },
+      {
+        "name" : "GT 730",
+        "price" : "4700",
+		"tdp" : "50",
+        "points" : "746"
+      },
+      {
+        "name" : "GT 1030",
+        "price" : "6000",
+		"tdp" : "30",
+        "points" : "457"
+      },
+      {
+        "name" : "GTX 1630",
+        "price" : "11000",
+		"tdp" : "75",
+        "points" : "283"
+      },
+      {
+        "name" : "GTX 1050 Ti",
+        "price" : "13600",
+		"tdp" : "75",
+        "points" : "238"
+      },
+      {
+        "name" : "GTX 1650",
+        "price" : "13000",
+		"tdp" : "75",
+        "points" : "192"
       },
       {
         "name" : "GTX 1660",
         "price" : "21000",
-        "points" : "21"
+		"tdp" : "120",
+        "points" : "117"
       },
       {
-        "name" : "GTX 1050TI",
-        "price" : "12000",
-        "points" : "12"
+        "name" : "GTX 1660 SUPER",
+        "price" : "22300",
+		"tdp" : "125",
+        "points" : "99"
+      },
+      {
+        "name" : "GTX 1660 Ti",
+        "price" : "24000",
+		"tdp" : "120",
+        "points" : "98"
       },
       {
         "name" : "RTX 2060",
-        "price" : "26000",
-        "points" : "26"
-      }
-    ],
-    "amd" : [
+        "price" : "24000",
+		"tdp" : "175",
+        "points" : "79"
+      },
       {
-        "name" : "Radeon RX 560",
-        "price" : "8500",
+        "name" : "RTX 2060 SUPER",
+        "price" : "30000",
+		"tdp" : "175",
+        "points" : "50"
+      },
+      {
+        "name" : "RTX 3050",
+        "price" : "23300",
+		"tdp" : "130",
+        "points" : "85"
+      },
+      {
+        "name" : "RTX 3060",
+        "price" : "30900",
+		"tdp" : "170",
+        "points" : "43"
+      },
+      {
+        "name" : "RTX 3060 Ti",
+        "price" : "35500",
+		"tdp" : "220",
+        "points" : "19"
+      },
+      {
+        "name" : "RTX 3070",
+        "price" : "41000",
+		"tdp" : "220",
+        "points" : "13"
+      },
+      {
+        "name" : "RTX 3070 Ti",
+        "price" : "50000",
+		"tdp" : "290",
+        "points" : "10"
+      },
+      {
+        "name" : "RTX 3080",
+        "price" : "65000",
+		"tdp" : "320",
         "points" : "8"
       },
       {
-        "name" : "Radeon RX 5500 XT OC",
-        "price" : "20000",
-        "points" : "20"
+        "name" : "RTX 3080 Ti",
+        "price" : "90000",
+		"tdp" : "350",
+        "points" : "5"
       },
       {
-        "name" : "Radeon RX 6600 EAGLE",
-        "price" : "26000",
-        "points" : "26"
+        "name" : "RTX 3090",
+        "price" : "100000",
+		"tdp" : "350",
+        "points" : "4"
+      },
+      {
+        "name" : "RTX 3090 Ti",
+        "price" : "125000",
+		"tdp" : "450",
+        "points" : "2"
+      },
+      {
+        "name" : "RTX 4090",
+        "price" : "160000",
+		"tdp" : "450",
+        "points" : "1"
+      }
+    ],
+	"amd" : [
+      {
+        "name" : "Radeon R7 240",
+        "price" : "3800",
+		"tdp" : "50",
+        "points" : "733"
+      },
+      {
+        "name" : "RX 550",
+        "price" : "7000",
+		"tdp" : "50",
+        "points" : "435"
+      },
+      {
+        "name" : "RX 560",
+        "price" : "10000",
+		"tdp" : "75",
+        "points" : "356"
+      },
+      {
+        "name" : "RX 570",
+        "price" : "13000",
+		"tdp" : "120",
+        "points" : "216"
+      },
+      {
+        "name" : "RX 580",
+        "price" : "16000",
+		"tdp" : "185",
+        "points" : "166"
+      },
+      {
+        "name" : "RX 6400",
+        "price" : "14000",
+		"tdp" : "55",
+        "points" : "219"
+      },
+      {
+        "name" : "RX 6500 XT",
+        "price" : "16000",
+		"tdp" : "110",
+        "points" : "156"
+      },
+      {
+        "name" : "RX 6600",
+        "price" : "27000",
+		"tdp" : "130",
+        "points" : "73"
       },
       {
         "name" : "RX 6600 XT",
+        "price" : "33000",
+		"tdp" : "160",
+        "points" : "57"
+      },
+      {
+        "name" : "RX 6650 XT",
+        "price" : "32000",
+		"tdp" : "175",
+        "points" : "40"
+      },
+      {
+        "name" : "RX 6700",
         "price" : "35000",
-        "points" : "35"
+		"tdp" : "175",
+        "points" : "30"
+      },
+      {
+        "name" : "RX 6700 XT",
+        "price" : "38000",
+		"tdp" : "230",
+        "points" : "27"
+      },
+      {
+        "name" : "RX 6750 XT",
+        "price" : "46000",
+		"tdp" : "250",
+        "points" : "20"
+      },
+      {
+        "name" : "RX 6800",
+        "price" : "50000",
+		"tdp" : "250",
+        "points" : "16"
+      },
+      {
+        "name" : "RX 6800 XT",
+        "price" : "64000",
+		"tdp" : "300",
+        "points" : "9"
+      },
+      {
+        "name" : "RX 6900 XT",
+        "price" : "72000",
+		"tdp" : "320",
+        "points" : "7"
+      },
+      {
+        "name" : "RX 6950 XT",
+        "price" : "83000",
+		"tdp" : "350",
+        "points" : "3"
       }
-    ]
-  },
+	]  
+	
+},
   "motherboard" : {
     "amd" : [
       {
@@ -151,12 +876,12 @@
       {
         "name" : "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4",
         "price" : "9000",
-        "points" : "9"
+        "points" : "1"
       },
       {
         "name" : "Kingston FURY Beast RGB 16 ГБ DDR4",
         "price" : "5000",
-        "points" : "5"
+        "points" : "2"
       }
     ]
   },
@@ -164,23 +889,28 @@
     {
       "name" : "be quiet! System Power 9 700W",
       "price" : "6000",
-      "points" : "6"
+      "points" : "1"
     },
     {
       "name" : "be quiet! System Power 9 600W",
       "price" : "5000",
-      "points" : "5"
+      "points" : "2"
     },
     {
       "name" : "AeroCool VX Plus 600W",
       "price" : "2500",
-      "points" : "2"
+      "points" : "3"
     }
   ],
   "corpus" : [
     {
       "name" : "Ginzzu CL150",
       "price" : "2500",
+      "points" : "1"
+    },
+    {
+      "name" : "ExeGate BAA-106",
+      "price" : "900",
       "points" : "2"
     }
   ],
@@ -193,12 +923,12 @@
     {
       "name" : "Patriot Memory P210 1 ТБ",
       "price" : "5000",
-      "points" : "5"
+      "points" : "2"
     },
     {
       "name" : "Kingston NV1 1 ТБ M.2",
       "price" : "6500",
-      "points" : "6"
+      "points" : "1"
     }
   ]
 }
