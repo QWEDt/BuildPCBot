@@ -47,8 +47,28 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                     System.out.println(arguments);
                     HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
                     arguments = new ArrayList<>();
-                    System.out.println("oljsdx");
-                    sendText(message, PC.toString());
+
+                    String answer;
+                    try {
+                        for (String key : PC.keySet()) {
+                            if (PC.get(key) == null) {
+                                throw new Error();
+                            }
+                        }
+
+                        answer = "Ваш процессор: Наименование " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
+                        answer += "Ваша материнская плата: Наименование " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
+                        answer += "Ваша видеокарта: Наименование " + PC.get("gpu").get("name") + " | цена " + PC.get("gpu").get("price") + "\n";
+                        answer += "Ваша озу: Наименование " + PC.get("ram").get("name") + " | цена " + PC.get("ram").get("price") + "\n";
+                        answer += "Ваше охлаждение: Наименование " + PC.get("cooling").get("name") + " | цена " + PC.get("cooling").get("price") + "\n";
+                        answer += "Ваш блок питания: Наименование " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
+                        answer += "Ваш диск: Наименование " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
+                        answer += "Ваш корпус: Наименование " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
+                    } catch (Error e) {
+                        answer = "Сорри, времена тяжелые. На это ничего не собрать";
+                    }
+
+                    sendText(message, answer);
                     isBuilding = false;
                 }
             }
