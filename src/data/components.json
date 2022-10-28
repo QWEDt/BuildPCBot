@@ -7,7 +7,7 @@
 		"socket" : "lga1200",
 		"tdp" : "58",
 		"igpu" : "1",
-        "points" : "1680"
+        "points" : "1"
       },	
       {
         "name" : "Celeron G6900",
@@ -15,7 +15,7 @@
 		"socket" : "lga1700",
 		"tdp" : "46",
 		"igpu" : "1",
-        "points" : "1340"
+        "points" : "4"
       },		
       {
         "name" : "Pentium Gold G6405",
@@ -23,7 +23,7 @@
 		"socket" : "lga1200",
 		"tdp" : "58",
 		"igpu" : "1",
-        "points" : "1359"
+        "points" : "3"
       },	
       {
         "name" : "Pentium Gold G7400",
@@ -31,7 +31,7 @@
 		"socket" : "lga1700",
 		"tdp" : "46",
 		"igpu" : "1",
-        "points" : "1021"
+        "points" : "6"
       },	
       {
         "name" : "Pentium Gold G6400",
@@ -39,7 +39,7 @@
 		"socket" : "lga1200",
 		"tdp" : "58",
 		"igpu" : "1",
-        "points" : "1385"
+        "points" : "2"
       },	
       {
         "name" : "Pentium Gold G6600",
@@ -47,7 +47,7 @@
 		"socket" : "lga1200",
 		"tdp" : "58",
 		"igpu" : "1",
-        "points" : "1339"
+        "points" : "5"
       },	
       {
         "name" : "i3-10100F",
@@ -55,7 +55,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "788"
+        "points" : "9"
       },	
       {
         "name" : "i3-10105F",
@@ -63,7 +63,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "775"
+        "points" : "10"
       },	
       {
         "name" : "i3-12100F",
@@ -71,7 +71,7 @@
 		"socket" : "lga1700",
 		"tdp" : "89",
 		"igpu" : "0",
-        "points" : "514"
+        "points" : "12"
       },	
       {
         "name" : "i3-10100",
@@ -79,7 +79,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "789"
+        "points" : "7"
       },	
       {
         "name" : "i3-10105",
@@ -87,7 +87,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "776"
+        "points" : "8"
       },	
       {
         "name" : "i3-12100",
@@ -95,7 +95,7 @@
 		"socket" : "lga1700",
 		"tdp" : "89",
 		"igpu" : "1",
-        "points" : "515"
+        "points" : "11"
       },	
       {
         "name" : "i5-10400F",
@@ -103,7 +103,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "578"
+        "points" : "14"
       },	
       {
         "name" : "i5-11400F",
@@ -111,7 +111,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "409"
+        "points" : "16"
       },	
       {
         "name" : "i5-10400",
@@ -119,7 +119,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "579"
+        "points" : "13"
       },	
       {
         "name" : "i5-12400F",
@@ -127,7 +127,7 @@
 		"socket" : "lga1700",
 		"tdp" : "117",
 		"igpu" : "0",
-        "points" : "336"
+        "points" : "24"
       },	
       {
         "name" : "i5-11400",
@@ -135,7 +135,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "410"
+        "points" : "15"
       },	
       {
         "name" : "i5-10600KF",
@@ -143,7 +143,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "0",
-        "points" : "504"
+        "points" : "19"
       },	
       {
         "name" : "i5-11500",
@@ -151,7 +151,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "397"
+        "points" : "17"
       },	
       {
         "name" : "i5-12400",
@@ -159,7 +159,7 @@
 		"socket" : "lga1700",
 		"tdp" : "117",
 		"igpu" : "1",
-        "points" : "337"
+        "points" : "23"
       },	
       {
         "name" : "i5-12500",
@@ -167,7 +167,7 @@
 		"socket" : "lga1700",
 		"tdp" : "117",
 		"igpu" : "1",
-        "points" : "317"
+        "points" : "25"
       },	
       {
         "name" : "i5-11600",
@@ -175,7 +175,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "378"
+        "points" : "18"
       },	
       {
         "name" : "i5-11600K",
@@ -183,7 +183,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "1",
-        "points" : "337"
+        "points" : "21"
       },	
       {
         "name" : "i5-10600K",
@@ -191,7 +191,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "1",
-        "points" : "505"
+        "points" : "18"
       },	
       {
         "name" : "i5-11600KF",
@@ -199,7 +199,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "0",
-        "points" : "336"
+        "points" : "22"
       },	
       {
         "name" : "i5-12600",
@@ -207,7 +207,7 @@
 		"socket" : "lga1700",
 		"tdp" : "117",
 		"igpu" : "1",
-        "points" : "293"
+        "points" : "30"
       },	
       {
         "name" : "i7-10700F",
@@ -215,7 +215,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "419"
+        "points" : "27"
       },	
       {
         "name" : "i7-11700F",
@@ -223,7 +223,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "294"
+        "points" : "29"
       },	
       {
         "name" : "i5-12600KF",
@@ -231,7 +231,7 @@
 		"socket" : "lga1700",
 		"tdp" : "150",
 		"igpu" : "0",
-        "points" : "177"
+        "points" : "32"
       },	
       {
         "name" : "i7-11700",
@@ -239,7 +239,7 @@
 		"socket" : "lga1200",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "295"
+        "points" : "28"
       },	
       {
         "name" : "i5-12600K",
@@ -247,7 +247,7 @@
 		"socket" : "lga1700",
 		"tdp" : "150",
 		"igpu" : "1",
-        "points" : "178"
+        "points" : "31"
       },	
       {
         "name" : "i7-11700K",
@@ -255,7 +255,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "1",
-        "points" : "215"
+        "points" : "30"
       },	
       {
         "name" : "i7-11700KF",
@@ -263,7 +263,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "0",
-        "points" : "214"
+        "points" : "31"
       },	
       {
         "name" : "i7-12700F",
@@ -271,7 +271,7 @@
 		"socket" : "lga1700",
 		"tdp" : "180",
 		"igpu" : "0",
-        "points" : "131"
+        "points" : "35"
       },	
       {
         "name" : "i9-11900K",
@@ -279,7 +279,7 @@
 		"socket" : "lga1200",
 		"tdp" : "125",
 		"igpu" : "1",
-        "points" : "198"
+        "points" : "33"
       },	
       {
         "name" : "i7-12700",
@@ -287,7 +287,7 @@
 		"socket" : "lga1700",
 		"tdp" : "180",
 		"igpu" : "1",
-        "points" : "132"
+        "points" : "34"
       },	
       {
         "name" : "i7-12700KF",
@@ -295,7 +295,7 @@
 		"socket" : "lga1700",
 		"tdp" : "190",
 		"igpu" : "0",
-        "points" : "111"
+        "points" : "37"
       },	
       {
         "name" : "i7-12700K",
@@ -303,17 +303,97 @@
 		"socket" : "lga1700",
 		"tdp" : "190",
 		"igpu" : "1",
-        "points" : "112"
+        "points" : "36"
       },	
       {
         "name" : "i9-12900F",
         "price" : "38300",
 		"socket" : "lga1700",
-		"tdp" : "202",
+		"tdp" : "200",
 		"igpu" : "0",
-        "points" : "96",
-        "help" : "помогите, умоляю"
+        "points" : "41"
+      },	
+      {
+        "name" : "i9-12900",
+        "price" : "40800",
+		"socket" : "lga1700",
+		"tdp" : "200",
+		"igpu" : "1",
+        "points" : "40"
+      },	
+      {
+        "name" : "i9-12900KF",
+        "price" : "43000",
+		"socket" : "lga1700",
+		"tdp" : "240",
+		"igpu" : "0",
+        "points" : "43"
+      },	
+      {
+        "name" : "i9-12900K",
+        "price" : "45000",
+		"socket" : "lga1700",
+		"tdp" : "240",
+		"igpu" : "1",
+        "points" : "42"
+      },	
+      {
+        "name" : "i9-12900KS",
+        "price" : "80000",
+		"socket" : "lga1700",
+		"tdp" : "270",
+		"igpu" : "1",
+        "points" : "44"
+      },	
+      {
+        "name" : "i9-13900KF",
+        "price" : "61000",
+		"socket" : "lga1700",
+		"tdp" : "255",
+		"igpu" : "0",
+        "points" : "48"
+      },	
+      {
+        "name" : "i9-13900K",
+        "price" : "64000",
+		"socket" : "lga1700",
+		"tdp" : "255",
+		"igpu" : "1",
+        "points" : "47"
+      },	
+      {
+        "name" : "i7-13700KF",
+        "price" : "43000",
+		"socket" : "lga1700",
+		"tdp" : "255",
+		"igpu" : "0",
+        "points" : "46"
+      },	
+      {
+        "name" : "i7-13700K",
+        "price" : "47000",
+		"socket" : "lga1700",
+		"tdp" : "255",
+		"igpu" : "1",
+        "points" : "45"
+      },	
+      {
+        "name" : "i5-13600KF",
+        "price" : "34000",
+		"socket" : "lga1700",
+		"tdp" : "180",
+		"igpu" : "0",
+        "points" : "39"
+      },	
+      {
+        "name" : "i5-13600K",
+        "price" : "36000",
+		"socket" : "lga1700",
+		"tdp" : "180",
+		"igpu" : "1",
+        "points" : "38"
       }
+	  
     ],
     "amd" : [
       	
@@ -323,7 +403,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "2020"
+        "points" : "1"
       },
       {
         "name" : "A6-9400",
@@ -331,7 +411,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "1708"
+        "points" : "4"
       },
       {
         "name" : "A6-9500",
@@ -339,7 +419,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "2007"
+        "points" : "2"
       },
       {
         "name" : "A6-8570",
@@ -347,7 +427,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "1994"
+        "points" : "3"
       },
       {
         "name" : "Athlon X4 950",
@@ -363,7 +443,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "1554"
+        "points" : "5"
       },
       {
         "name" : "Athlon 200GE",
@@ -371,7 +451,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "1387"
+        "points" : "7"
       },
       {
         "name" : "Athlon 3000G",
@@ -379,7 +459,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "1325"
+        "points" : "8"
       },
       {
         "name" : "Athlon Silver PRO 3125GE",
@@ -387,7 +467,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "1305"
+        "points" : "10"
       },
       {
         "name" : "A12-9800E",
@@ -395,7 +475,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "1520"
+        "points" : "6"
       },
       {
         "name" : "Athlon PRO 300GE",
@@ -403,7 +483,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "1326"
+        "points" : "9"
       },
       {
         "name" : "Ryzen 3 1200",
@@ -411,7 +491,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "1056"
+        "points" : "11"
       },
       {
         "name" : "Ryzen 3 4100",
@@ -419,7 +499,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "648"
+        "points" : "14"
       },
       {
         "name" : "Ryzen 3 3300X",
@@ -427,7 +507,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "556"
+        "points" : "15"
       },
       {
         "name" : "Ryzen 3 PRO 4350G",
@@ -435,7 +515,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "666"
+        "points" : "13"
       },
       {
         "name" : "Ryzen 3 3200G",
@@ -443,7 +523,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "952"
+        "points" : "12"
       },
       {
         "name" : "Ryzen 5 4500",
@@ -451,7 +531,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "444"
+        "points" : "17"
       },
       {
         "name" : "Ryzen 3 5300G",
@@ -459,7 +539,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "580"
+        "points" : "16"
       },
       {
         "name" : "Ryzen 5 3600",
@@ -467,7 +547,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "390"
+        "points" : "19"
       },
       {
         "name" : "Ryzen 5 PRO 4650G",
@@ -475,7 +555,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "436"
+        "points" : "18"
       },
       {
         "name" : "Ryzen 5 5500",
@@ -483,7 +563,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "345"
+        "points" : "21"
       },
       {
         "name" : "Ryzen 5 5600G",
@@ -491,7 +571,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "333"
+        "points" : "22"
       },
       {
         "name" : "Ryzen 5 4600G",
@@ -499,7 +579,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "456"
+        "points" : "20"
       },
       {
         "name" : "Ryzen 5 PRO 5650G",
@@ -507,7 +587,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "325"
+        "points" : "25"
       },
       {
         "name" : "Ryzen 5 5600",
@@ -515,7 +595,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "286"
+        "points" : "26"
       },
       {
         "name" : "Ryzen 5 5600X",
@@ -523,7 +603,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "279"
+        "points" : "27"
       },
       {
         "name" : "Ryzen 7 3700X",
@@ -531,7 +611,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "262"
+        "points" : "23"
       },
       {
         "name" : "Ryzen 7 PRO 4750G",
@@ -539,7 +619,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "312"
+        "points" : "28"
       },
       {
         "name" : "Ryzen 7 5700G",
@@ -547,7 +627,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "216"
+        "points" : "29"
       },
       {
         "name" : "Ryzen 7 3800X",
@@ -555,7 +635,7 @@
 		"socket" : "am4",
 		"tdp" : "105",
 		"igpu" : "0",
-        "points" : "241"
+        "points" : "24"
       },
       {
         "name" : "Ryzen 7 5800X",
@@ -563,7 +643,7 @@
 		"socket" : "am4",
 		"tdp" : "105",
 		"igpu" : "0",
-        "points" : "165"
+        "points" : "21"
       },
       {
         "name" : "Ryzen 7 5700X",
@@ -571,7 +651,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "183"
+        "points" : "30"
       },
       {
         "name" : "Ryzen 9 5900X",
@@ -579,7 +659,7 @@
 		"socket" : "am4",
 		"tdp" : "105",
 		"igpu" : "0",
-        "points" : "87"
+        "points" : "32"
       },
       {
         "name" : "Ryzen 9 5950X",
@@ -587,137 +667,138 @@
 		"socket" : "am4",
 		"tdp" : "105",
 		"igpu" : "0",
-        "points" : "67"
+        "points" : "33"
       }
     ]
-  },
+	},
+  
   "gpu" : {
     "nvidia" : [
       {
         "name" : "GT 710",
         "price" : "4100",
 		"tdp" : "20",
-        "points" : "833"
+        "points" : "1"
       },
       {
         "name" : "GT 730",
         "price" : "4700",
 		"tdp" : "50",
-        "points" : "746"
+        "points" : "2"
       },
       {
         "name" : "GT 1030",
         "price" : "6000",
 		"tdp" : "30",
-        "points" : "457"
+        "points" : "3"
       },
       {
         "name" : "GTX 1630",
         "price" : "11000",
 		"tdp" : "75",
-        "points" : "283"
+        "points" : "4"
       },
       {
         "name" : "GTX 1050 Ti",
         "price" : "13600",
 		"tdp" : "75",
-        "points" : "238"
+        "points" : "5"
       },
       {
         "name" : "GTX 1650",
         "price" : "13000",
 		"tdp" : "75",
-        "points" : "192"
+        "points" : "6"
       },
       {
         "name" : "GTX 1660",
         "price" : "21000",
 		"tdp" : "120",
-        "points" : "117"
+        "points" : "7"
       },
       {
         "name" : "GTX 1660 SUPER",
         "price" : "22300",
 		"tdp" : "125",
-        "points" : "99"
+        "points" : "8"
       },
       {
         "name" : "GTX 1660 Ti",
         "price" : "24000",
 		"tdp" : "120",
-        "points" : "98"
+        "points" : "9"
       },
       {
         "name" : "RTX 2060",
         "price" : "24000",
 		"tdp" : "175",
-        "points" : "79"
+        "points" : "11"
       },
       {
         "name" : "RTX 2060 SUPER",
         "price" : "30000",
 		"tdp" : "175",
-        "points" : "50"
+        "points" : "12"
       },
       {
         "name" : "RTX 3050",
         "price" : "23300",
 		"tdp" : "130",
-        "points" : "85"
+        "points" : "10"
       },
       {
         "name" : "RTX 3060",
         "price" : "30900",
 		"tdp" : "170",
-        "points" : "43"
+        "points" : "13"
       },
       {
         "name" : "RTX 3060 Ti",
         "price" : "35500",
 		"tdp" : "220",
-        "points" : "19"
+        "points" : "14"
       },
       {
         "name" : "RTX 3070",
         "price" : "41000",
 		"tdp" : "220",
-        "points" : "13"
+        "points" : "15"
       },
       {
         "name" : "RTX 3070 Ti",
         "price" : "50000",
 		"tdp" : "290",
-        "points" : "10"
+        "points" : "16"
       },
       {
         "name" : "RTX 3080",
         "price" : "65000",
 		"tdp" : "320",
-        "points" : "8"
+        "points" : "17"
       },
       {
         "name" : "RTX 3080 Ti",
         "price" : "90000",
 		"tdp" : "350",
-        "points" : "5"
+        "points" : "18"
       },
       {
         "name" : "RTX 3090",
         "price" : "100000",
 		"tdp" : "350",
-        "points" : "4"
+        "points" : "19"
       },
       {
         "name" : "RTX 3090 Ti",
         "price" : "125000",
 		"tdp" : "450",
-        "points" : "2"
+        "points" : "20"
       },
       {
         "name" : "RTX 4090",
         "price" : "160000",
 		"tdp" : "450",
-        "points" : "1"
+        "points" : "21"
       }
     ],
 	"amd" : [
@@ -725,103 +806,103 @@
         "name" : "Radeon R7 240",
         "price" : "3800",
 		"tdp" : "50",
-        "points" : "733"
+        "points" : "1"
       },
       {
         "name" : "RX 550",
         "price" : "7000",
 		"tdp" : "50",
-        "points" : "435"
+        "points" : "1"
       },
       {
         "name" : "RX 560",
         "price" : "10000",
 		"tdp" : "75",
-        "points" : "356"
+        "points" : "2"
       },
       {
         "name" : "RX 570",
         "price" : "13000",
 		"tdp" : "120",
-        "points" : "216"
+        "points" : "4"
       },
       {
         "name" : "RX 580",
         "price" : "16000",
 		"tdp" : "185",
-        "points" : "166"
+        "points" : "5"
       },
       {
         "name" : "RX 6400",
         "price" : "14000",
 		"tdp" : "55",
-        "points" : "219"
+        "points" : "3"
       },
       {
         "name" : "RX 6500 XT",
         "price" : "16000",
 		"tdp" : "110",
-        "points" : "156"
+        "points" : "6"
       },
       {
         "name" : "RX 6600",
         "price" : "27000",
 		"tdp" : "130",
-        "points" : "73"
+        "points" : "7"
       },
       {
         "name" : "RX 6600 XT",
         "price" : "33000",
 		"tdp" : "160",
-        "points" : "57"
+        "points" : "8"
       },
       {
         "name" : "RX 6650 XT",
         "price" : "32000",
 		"tdp" : "175",
-        "points" : "40"
+        "points" : "9"
       },
       {
         "name" : "RX 6700",
         "price" : "35000",
 		"tdp" : "175",
-        "points" : "30"
+        "points" : "10"
       },
       {
         "name" : "RX 6700 XT",
         "price" : "38000",
 		"tdp" : "230",
-        "points" : "27"
+        "points" : "11"
       },
       {
         "name" : "RX 6750 XT",
         "price" : "46000",
 		"tdp" : "250",
-        "points" : "20"
+        "points" : "12"
       },
       {
         "name" : "RX 6800",
         "price" : "50000",
 		"tdp" : "250",
-        "points" : "16"
+        "points" : "13"
       },
       {
         "name" : "RX 6800 XT",
         "price" : "64000",
 		"tdp" : "300",
-        "points" : "9"
+        "points" : "14"
       },
       {
         "name" : "RX 6900 XT",
         "price" : "72000",
 		"tdp" : "320",
-        "points" : "7"
+        "points" : "15"
       },
       {
         "name" : "RX 6950 XT",
         "price" : "83000",
 		"tdp" : "350",
-        "points" : "3"
+        "points" : "16"
       }
 	]  
 	
@@ -829,39 +910,975 @@
   "motherboard" : {
     "amd" : [
       {
-        "name" : "MSI MAG B550 TOMAHAWK",
-        "price" : "15000",
-        "points" : "15"
+        "name" : "MSI A320M-A PRO",
+        "price" : "4500",
+		"socket" : "am4",
+		"chipset" : "a320",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "1"
       },
       {
-        "name" : " MSI B450 GAMING PLUS MAX",
-        "price" : "7500",
-        "points" : "7"
-      }
-    ],
-    "intel" : [
+        "name" : "GIGABYTE GA-A320M-H",
+        "price" : "4800",
+		"socket" : "am4",
+		"chipset" : "a320",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "2"
+      },
       {
-        "name" : "MSI H510M-A PRO",
+        "name" : "ASUS PRIME A320M-K",
         "price" : "5000",
+		"socket" : "am4",
+		"chipset" : "a320",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "3"
+      },
+      {
+        "name" : "GIGABYTE B450M H",
+        "price" : "6000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "4"
+      },
+      {
+        "name" : "MSI B450M-A PRO MAX",
+        "price" : "6000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
         "points" : "5"
       },
       {
-        "name" : "GIGABYTE B660 Gaming X DDR4",
-        "price" : "12000",
+        "name" : "ASUS PRIME A320M-C R2.0",
+        "price" : "6500",
+		"socket" : "am4",
+		"chipset" : "a320",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "6"
+      },
+      {
+        "name" : "GIGABYTE B450 Gaming X",
+        "price" : "6500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "7"
+      },
+      {
+        "name" : "GIGABYTE B450M DS3H",
+        "price" : "6500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "8"
+      },
+      {
+        "name" : "ASUS PRIME B450-PLUS",
+        "price" : "7000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "9"
+      },
+      {
+        "name" : "MSI B450-A PRO MAX",
+        "price" : "7000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "10"
+      },
+      {
+        "name" : "MSI B450M PRO VDH MAX",
+        "price" : "7000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "11"
+      },
+      {
+        "name" : "ASUS PRIME B450M-A II",
+        "price" : "7500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
         "points" : "12"
+      },
+      {
+        "name" : "ASUS TUF B450M-PRO GAMING",
+        "price" : "7500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "13"
+      },
+      {
+        "name" : "GIGABYTE B450 AORUS M",
+        "price" : "7500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "14"
+      },
+      {
+        "name" : "MSI B450 GAMING PLUS MAX",
+        "price" : "7500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "15"
+      },
+      {
+        "name" : "GIGABYTE B450 AORUS ELITE",
+        "price" : "8000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "16"
+      },
+      {
+        "name" : "GIGABYTE B450 AORUS ELITE V2",
+        "price" : "8000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "17"
+      },
+      {
+        "name" : "MSI B450M MORTAR MAX",
+        "price" : "8000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "18"
+      },
+      {
+        "name" : "ASUS TUF GAMING B450M-PLUS II",
+        "price" : "8500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "19"
+      },
+      {
+        "name" : "MSI B450 TOMAHAWK MAX II",
+        "price" : "8500",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "20"
+      },
+      {
+        "name" : "ASUS PRIME B550M-K",
+        "price" : "9000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "21"
+      },
+      {
+        "name" : "ASUS TUF GAMING B450-PLUS II",
+        "price" : "9000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "22"
+      },
+      {
+        "name" : "ASUS TUF GAMING B450M-PRO S",
+        "price" : "9000",
+		"socket" : "am4",
+		"chipset" : "b450",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "23"
+      },
+      {
+        "name" : "ASUS PRIME B550M-PLUS",
+        "price" : "10000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "24"
+      },
+      {
+        "name" : "ASUS PRIME B550M-A",
+        "price" : "10000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "25"
+      },
+      {
+        "name" : "GIGABYTE B550M AORUS ELITE",
+        "price" : "10000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "26"
+      },
+      {
+        "name" : "MSI B550 GAMING GEN3",
+        "price" : "10000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "27"
+      },
+      {
+        "name" : "MSI B550M PRO-VDH WiFi",
+        "price" : "10000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "28"
+      },
+      {
+        "name" : "ASUS TUF GAMING B550M-E",
+        "price" : "10500",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "29"
+      },
+      {
+        "name" : "GIGABYTE B550M AORUS PRO-P",
+        "price" : "10500",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "30"
+      },
+      {
+        "name" : "MSI MPG B550 GAMING PLUS",
+        "price" : "11000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "31"
+      },
+      {
+        "name" : "ASUS TUF GAMING B550-PLUS",
+        "price" : "12000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "32"
+      },
+      {
+        "name" : "ASUS TUF GAMING B550M-PLUS",
+        "price" : "12000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "33"
+      },
+      {
+        "name" : "GIGABYTE B550 AORUS ELITE V2",
+        "price" : "12000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "34"
+      },
+      {
+        "name" : "MSI MAG B550 TOMAHAWK",
+        "price" : "12000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "35"
+      },
+      {
+        "name" : "MSI MAG B550M MORTAR",
+        "price" : "12000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "36"
+      },
+      {
+        "name" : "ASUS TUF GAMING B550-PRO",
+        "price" : "13000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "37"
+      },
+      {
+        "name" : "GIGABYTE B550 AORUS PRO AC",
+        "price" : "13000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "38"
+      },
+      {
+        "name" : "MSI MAG B550 TOMAHAWK MAX WiFi",
+        "price" : "13500",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "39"
+      },
+      {
+        "name" : "ASUS ROG STRIX B550-A GAMING",
+        "price" : "14000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "40"
+      },
+      {
+        "name" : "ASUS ROG STRIX B550-F GAMING",
+        "price" : "15000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "41"
+      },
+      {
+        "name" : "ASUS ROG STRIX B550-I GAMING",
+        "price" : "18000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "mini-itx",
+		"slots_ram" : "2",
+        "points" : "42"
+      },
+      {
+        "name" : "MSI MEG B550 UNIFY",
+        "price" : "19000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "43"
+      },
+      {
+        "name" : "ASUS ProArt B550-CREATOR",
+        "price" : "20000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "44"
+      },
+      {
+        "name" : "ASUS ROG STRIX B550-XE GAMING",
+        "price" : "22000",
+		"socket" : "am4",
+		"chipset" : "b550",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "45"
       }
+      
+    ],
+    "intel" : [
+      {
+        "name" : "ASRock H510M-HVS R2.0",
+        "price" : "5000",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "1"
+      },
+      {
+        "name" : "GIGABYTE H510M S2",
+        "price" : "5000",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "2"
+      },
+      {
+        "name" : "MSI H510M PRO-E",
+        "price" : "5000",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "3"
+      },
+      {
+        "name" : "ASRock H510M-HDV/M.2",
+        "price" : "5200",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "4"
+      },
+      {
+        "name" : "GIGABYTE H510M H",
+        "price" : "5200",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "5"
+      },
+      {
+        "name" : "ASUS PRIME H510M-R",
+        "price" : "5500",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "6"
+      },
+      {
+        "name" : "GIGABYTE H510M S2H V2",
+        "price" : "5500",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "7"
+      },
+      {
+        "name" : "MSI H510M-A PRO",
+        "price" : "5500",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "8"
+      },
+      {
+        "name" : "ASUS PRIME H510M-K",
+        "price" : "6000",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "9"
+      },
+      {
+        "name" : "GIGABYTE B560M H",
+        "price" : "6000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "10"
+      },
+      {
+        "name" : "MSI B560M PRO-E",
+        "price" : "6500",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "11"
+		},
+      {
+        "name" : "GIGABYTE B560M DS3H V2",
+        "price" : "7000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "12"
+      },
+      {
+        "name" : "GIGABYTE H610M H DDR4",
+        "price" : "7500",
+		"socket" : "lga1700",
+		"chipset" : "h610",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "13"
+      },
+      {
+        "name" : "GIGABYTE B560 HD3",
+        "price" : "8000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "14"
+      },
+      {
+        "name" : "GIGABYTE B560M D3H",
+        "price" : "8000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "15"
+      },
+      {
+        "name" : "MSI B560M PRO-VDH",
+        "price" : "8000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "16"
+      },
+      {
+        "name" : "MSI PRO B660M-E DDR4",
+        "price" : "8000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "17"
+      },
+      {
+        "name" : "GIGABYTE B560M AORUS ELITE",
+        "price" : "9000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "18"
+      },
+      {
+        "name" : "GIGABYTE B660M GAMING DDR4",
+        "price" : "9000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "19"
+      },
+      {
+        "name" : "GIGABYTE Z590 D",
+        "price" : "9000",
+		"socket" : "lga1200",
+		"chipset" : "z590",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "20"
+      },
+      {
+        "name" : "MSI H510I PRO WiFi",
+        "price" : "9000",
+		"socket" : "lga1200",
+		"chipset" : "h510",
+		"radiators" : "1",
+		"form" : "mini-itx",
+		"slots_ram" : "4",
+        "points" : "21"
+      },
+      {
+        "name" : "MSI MAG B560 TORPEDO",
+        "price" : "9000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "22"
+      },
+      {
+        "name" : "MSI MAG B560M BAZOOKA",
+        "price" : "9000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "23"
+      },
+      {
+        "name" : "MSI PRO B660M-B DDR4",
+        "price" : "9000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "0",
+		"form" : "micro-atx",
+		"slots_ram" : "2",
+        "points" : "24"
+      },
+      {
+        "name" : "ASUS PRIME B560-PLUS",
+        "price" : "9200",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "25"
+      },
+      {
+        "name" : "MSI MAG B560M MORTAR",
+        "price" : "9500",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "26"
+      },
+      {
+        "name" : "GIGABYTE B560M AORUS PRO",
+        "price" : "10000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "27"
+      },
+      {
+        "name" : "GIGABYTE B660M DS3H DDR4",
+        "price" : "10000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "28"
+      },
+      {
+        "name" : "MSI B560-A PRO",
+        "price" : "10000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "29"
+      },
+      {
+        "name" : "MSI MAG B560 TOMAHAWK WiFi",
+        "price" : "10000",
+		"socket" : "lga1200",
+		"chipset" : "b560",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "30"
+      },
+      {
+        "name" : "MSI Z590-A PRO",
+        "price" : "10000",
+		"socket" : "lga1200",
+		"chipset" : "z590",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "31"
+      },
+      {
+        "name" : "GIGABYTE B660 DS3H AX DDR4",
+        "price" : "11000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "32"
+      },
+      {
+        "name" : "GIGABYTE Z590 GAMING X",
+        "price" : "11000",
+		"socket" : "lga1200",
+		"chipset" : "z590",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "33"
+      },
+      {
+        "name" : "GIGABYTE Z590M GAMING X",
+        "price" : "11000",
+		"socket" : "lga1200",
+		"chipset" : "z590",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "34"
+      },
+      {
+        "name" : "GIGABYTE B660M GAMING X AX DDR4",
+        "price" : "12000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "35"
+      },
+      {
+        "name" : "MSI PRO B660-A DDR4",
+        "price" : "12000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "36"
+      },
+      {
+        "name" : "GIGABYTE B660 GAMING X DDR4",
+        "price" : "13000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "37"
+      },
+      {
+        "name" : "GIGABYTE Z590 VISION G",
+        "price" : "13000",
+		"socket" : "lga1200",
+		"chipset" : "z590",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "38"
+      },
+      {
+        "name" : "MSI PRO B660M-A WiFi DDR4",
+        "price" : "13000",
+		"socket" : "lga1700",
+		"chipset" : "b660",
+		"radiators" : "1",
+		"form" : "micro-atx",
+		"slots_ram" : "4",
+        "points" : "39"
+      },
+      {
+        "name" : "GIGABYTE Z690 UD DDR4",
+        "price" : "15000",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "40"
+      },
+      {
+        "name" : "MSI PRO Z690-P DDR4",
+        "price" : "15000",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "41"
+      },
+      {
+        "name" : "MSI PRO Z690-A DDR4",
+        "price" : "16200",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "42"
+      },
+      {
+        "name" : "GIGABYTE Z690 GAMING X DDR4",
+        "price" : "17000",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "43"
+      },
+      {
+        "name" : "GIGABYTE Z690 AORUS ELITE DDR4",
+        "price" : "18500",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "44"
+      },
+      {
+        "name" : "ASRock Z690 Extreme",
+        "price" : "20000",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "45"
+      },
+      {
+        "name" : "ASUS ROG STRIX Z690-A GAMING WiFi DDR4",
+        "price" : "27000",
+		"socket" : "lga1700",
+		"chipset" : "z690",
+		"radiators" : "1",
+		"form" : "standart-atx",
+		"slots_ram" : "4",
+        "points" : "46"
+      }
+
     ]
   },
   "cooling" : [
     {
-      "name" : "Deepcool ICE EDGE MINI FS V2.0",
+      "name" : " Deepcool ICE EDGE MINI FS V2.0",
       "price" : "700",
+      "water" : "0",
+      "points" : "1"
+    },
+    {
+      "name" : "DEEPCOOL GAMMAXX 400 V2",
+      "price" : "1800",
+	  "water" : "0",
+      "points" : "2"
+    },
+    {
+      "name" : "DEEPCOOL REDHAT",
+      "price" : "3600",
+	  "water" : "0",
+      "points" : "4"
+    },
+    {
+      "name" : "ID-COOLING SE-226-XT Black",
+      "price" : "4500",
+	  "water" : "0",
+      "points" : "5"
+    },
+    {
+      "name" : "be quiet! DARK ROCK PRO 4",
+      "price" : "9900",
+	  "water" : "0",
+      "points" : "8"
+    },
+    {
+      "name" : "Noctua NH-D15",
+      "price" : "12000",
+	  "water" : "0",
       "points" : "10"
     },
     {
-      "name" : "GIGABYTE Aorus Waterforce X 240",
-      "price" : "14000",
-      "points" : "14"
+      "name" : "Xilence Performance A+ LiQuRizer LQ360",
+      "price" : "7000",
+	  "water" : "1",
+      "points" : "12"
+    },
+    {
+      "name" : "Arctic Cooling Liquid Freezer II-360",
+      "price" : "13600",
+	  "water" : "1",
+      "points" : "15"
+    },
+    {
+      "name" : "Arctic Cooling Liquid Freezer II-420",
+      "price" : "18000",
+	  "water" : "1",
+      "points" : "17"
     }
   ],
   "ram" : {
@@ -874,61 +1891,249 @@
     ],
     "ddr4" : [
       {
-        "name" : "Kingston FURY Beast 32 ГБ (16 ГБ x 2 шт.) DDR4",
-        "price" : "9000",
-        "points" : "1"
+        "name" : "A-Data XPG GAMMIX D20 (8ГБ х 1шт.)",
+        "price" : "2300",
+        "points" : "3"
       },
       {
-        "name" : "Kingston FURY Beast RGB 16 ГБ DDR4",
-        "price" : "5000",
-        "points" : "2"
+        "name" : "G.Skill RIPJAWS V 16 ГБ (8ГБ х 2шт.)",
+        "price" : "4700",
+        "points" : "5"
+      },
+      {
+        "name" : "G.Skill RIPJAWS V 32 ГБ (16ГБ х 2шт.)",
+        "price" : "7700",
+        "points" : "10"
+      },
+      {
+        "name" : "G.Skill RIPJAWS V 64 ГБ (32ГБ х 2шт.)",
+        "price" : "15400",
+        "points" : "20"
       }
     ]
   },
   "power" : [
     {
-      "name" : "be quiet! System Power 9 700W",
-      "price" : "6000",
+      "name" : "DeepCool PF400",
+      "price" : "2000",
+	  "watt" : "400",
+	  "plus" : "none",
+      "points" : "0"
+    }, 
+    {
+      "name" : "DeepCool DE600",
+      "price" : "2250",
+	  "watt" : "450",
+	  "plus" : "none",
       "points" : "1"
     },
     {
-      "name" : "be quiet! System Power 9 600W",
-      "price" : "5000",
+      "name" : "Chieftec Element 700W",
+      "price" : "4000",
+	  "watt" : "700",
+	  "plus" : "bronze",
       "points" : "2"
     },
     {
-      "name" : "AeroCool VX Plus 600W",
-      "price" : "2500",
+      "name" : "Chieftec Proton 500W",
+      "price" : "4000",
+	  "watt" : "500",
+	  "plus" : "bronze",
       "points" : "3"
+    },
+    {
+      "name" : "Chieftec Proton 600W",
+      "price" : "5600",
+	  "watt" : "600",
+	  "plus" : "bronze",
+      "points" : "4"
+    },
+    {
+      "name" : "Chieftec Proton 650W",
+      "price" : "6000",
+	  "watt" : "650",
+	  "plus" : "bronze",
+      "points" : "5"
+    },
+    {
+      "name" : "Chieftec Proton 750W",
+      "price" : "6600",
+	  "watt" : "750",
+	  "plus" : "bronze",
+      "points" : "6"
+    },
+    {
+      "name" : "Chieftec CORE 600W",
+      "price" : "4000",
+	  "watt" : "500",
+	  "plus" : "gold",
+      "points" : "7"
+    },
+    {
+      "name" : "Chieftec CORE 700W",
+      "price" : "6300",
+	  "watt" : "700",
+	  "plus" : "gold",
+      "points" : "10"
+    },
+    {
+      "name" : "Chieftec PowerUP 650W",
+      "price" : "7400",
+	  "watt" : "650",
+	  "plus" : "gold",
+      "points" : "8"
+    },
+    {
+      "name" : "Chieftec POWER SMART 650W",
+      "price" : "7500",
+	  "watt" : "650",
+	  "plus" : "gold",
+      "points" : "9"
+    },
+    {
+      "name" : "Chieftec Polaris PPS-850FC",
+      "price" : "9100",
+	  "watt" : "850",
+	  "plus" : "gold",
+      "points" : "11"
+    },
+    {
+      "name" : "Chieftec Polaris PPS-1050FC",
+      "price" : "10200",
+	  "watt" : "1050",
+	  "plus" : "gold",
+      "points" : "12"
+    },
+    {
+      "name" : "Seasonic FOCUS Plus Gold 850W",
+      "price" : "18000",
+	  "watt" : "850",
+	  "plus" : "gold",
+      "points" : "20"
     }
   ],
   "corpus" : [
     {
       "name" : "Ginzzu CL150",
       "price" : "2500",
-      "points" : "1"
+      "points" : "2"
     },
     {
       "name" : "ExeGate BAA-106",
       "price" : "900",
-      "points" : "2"
+      "points" : "1"
+    },
+    {
+      "name" : "be quiet! PURE BASE 500DX",
+      "price" : "12000",
+      "points" : "15"
+    },
+    {
+      "name" : "Corsair 4000D AIRFLOW",
+      "price" : "13800",
+      "points" : "16"
+    },
+    {
+      "name" : "Cougar MX330-F",
+      "price" : "5000",
+      "points" : "8"
+    },
+    {
+      "name" : "DEEPCOOL MATREXX 55 MESH ADD-RGB 4F",
+      "price" : "6900",
+      "points" : "12"
     }
   ],
   "disk" : [
     {
-      "name" : "Western Digital WD Blue 1 ТБ",
+      "name" : "Western Digital WD Blue 1ТБ",
       "price" : "3500",
-      "points" : "3"
+	  "type" : "hdd",
+      "points" : "1"
     },
     {
-      "name" : "Patriot Memory P210 1 ТБ",
-      "price" : "5000",
+      "name" : "Seagate BarraCuda 1ТБ",
+      "price" : "3700",
+	  "type" : "hdd",
       "points" : "2"
     },
     {
-      "name" : "Kingston NV1 1 ТБ M.2",
-      "price" : "6500",
-      "points" : "1"
+      "name" : "Seagate BarraCuda 2ТБ",
+      "price" : "5000",
+	  "type" : "hdd",
+      "points" : "5"
+    },
+    {
+      "name" : "Kingston A400 240ГБ",
+      "price" : "2200",
+	  "type" : "ssd",
+      "points" : "3"
+    },
+    {
+      "name" : "Kingston A400 480ГБ",
+      "price" : "3800",
+	  "type" : "ssd",
+      "points" : "6"
+    },
+    {
+      "name" : "Kingston A400 960ГБ",
+      "price" : "7800",
+	  "type" : "ssd",
+      "points" : "11"
+    },
+    {
+      "name" : "Samsung 870 EVO 250ГБ",
+      "price" : "4300",
+	  "type" : "ssd",
+      "points" : "4"
+    },
+    {
+      "name" : "Samsung 870 EVO 500ГБ",
+      "price" : "8100",
+	  "type" : "ssd",
+      "points" : "7"
+    },
+    {
+      "name" : "Samsung 870 EVO 1ТБ",
+      "price" : "11500",
+	  "type" : "ssd",
+      "points" : "12"
+    },
+    {
+      "name" : "Samsung 870 EVO 2ТБ",
+      "price" : "19900",
+	  "type" : "ssd",
+      "points" : "22"
+    },
+    {
+      "name" : "Kingston KC3000 512ГБ",
+      "price" : "7400",
+	  "type" : "ssd",
+      "points" : "8"
+    },
+    {
+      "name" : "Kingston KC3000 1ТБ",
+      "price" : "11800",
+	  "type" : "ssd",
+      "points" : "13"
+    },
+    {
+      "name" : "Samsung 970 EVO Plus 500ГБ",
+      "price" : "6600",
+	  "type" : "ssd",
+      "points" : "10"
+    },
+    {
+      "name" : "Samsung 980 500ГБ",
+      "price" : "6600",
+	  "type" : "ssd",
+      "points" : "9"
+    },
+    {
+      "name" : "Samsung 970 EVO Plus 1ТБ",
+      "price" : "11800",
+	  "type" : "ssd",
+      "points" : "14"
     }
   ]
 }

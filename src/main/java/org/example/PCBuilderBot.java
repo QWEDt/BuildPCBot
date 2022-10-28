@@ -39,40 +39,45 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                         break;
                 }
             } else if (!Objects.equals(message.getText(), "/cancel")){
-                if (arguments.size() < 3)
+                if (arguments.size() < 2)
                 {
                     arguments.add(message.getText());
                     sendText(message, "ya jdu");
                 } else {
-                    System.out.println(arguments);
+                    arguments.add(message.getText());
                     HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
                     arguments = new ArrayList<>();
 
                     String answer;
                     try {
+                        if (PC.size() < 8)
+                        {
+                            throw new Error();
+                        }
                         for (String key : PC.keySet()) {
                             if (PC.get(key) == null) {
+                                System.out.println(key);
                                 throw new Error();
                             }
                         }
 
-                        answer = "Ваш процессор: Наименование " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
-                        answer += "Ваша материнская плата: Наименование " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
-                        answer += "Ваша видеокарта: Наименование " + PC.get("gpu").get("name") + " | цена " + PC.get("gpu").get("price") + "\n";
-                        answer += "Ваша озу: Наименование " + PC.get("ram").get("name") + " | цена " + PC.get("ram").get("price") + "\n";
-                        answer += "Ваше охлаждение: Наименование " + PC.get("cooling").get("name") + " | цена " + PC.get("cooling").get("price") + "\n";
-                        answer += "Ваш блок питания: Наименование " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
-                        answer += "Ваш диск: Наименование " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
-                        answer += "Ваш корпус: Наименование " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
+                        answer = "Ваш процессор: " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
+                        answer += "Ваша материнская плата: " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
+                        answer += "Ваша видеокарта: " + PC.get("gpu").get("name") + " | цена " + PC.get("gpu").get("price") + "\n";
+                        answer += "Ваша озу: " + PC.get("ram").get("name") + " | цена " + PC.get("ram").get("price") + "\n";
+                        answer += "Ваше охлаждение: " + PC.get("cooling").get("name") + " | цена " + PC.get("cooling").get("price") + "\n";
+                        answer += "Ваш блок питания: " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
+                        answer += "Ваш диск: " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
+                        answer += "Ваш корпус: " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
                     } catch (Error e) {
                         answer = "Сорри, времена тяжелые. На это ничего не собрать";
                     }
-
                     sendText(message, answer);
                     isBuilding = false;
                 }
             }
             else {
+                arguments = new ArrayList<>();
                 isBuilding = false;
                 sendText(message, "Сборка отменена");
             }
