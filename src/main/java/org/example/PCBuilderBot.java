@@ -6,14 +6,16 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
+@Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
-    boolean isBuilding = false;
-    List<String> arguments = new ArrayList<>();
+    // Список всех юзеров, нужен для хранения состояния сборки пк.
+    HashMap<Long, List<String>> users = new HashMap<>();
     BuildProcess buildProcess = new BuildProcess();
     @Override
     public String getBotUsername() {
@@ -29,24 +31,28 @@ public class PCBuilderBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
-            if (!isBuilding) {
+            if (users.get(message.getChatId()) == null) {
                 switch (message.getText()) {
                     case "/BuildPC":
                         sendText(message, "Введите бюджет.");
-                        isBuilding = true;
+                        users.put(message.getChatId(), new ArrayList<>());
                         break;
                     case "/start":
                         break;
                 }
-            } else if (!Objects.equals(message.getText(), "/cancel")){
-                if (arguments.size() < 2)
+            } else if (!Objects.equals(message.getText(), "/cancel")) {
+                List<String> userArguments = users.get(message.getChatId());
+                if (userArguments.size() < 2)
                 {
-                    arguments.add(message.getText());
+                    userArguments.add(message.getText());
                     sendText(message, "ya jdu");
                 } else {
-                    arguments.add(message.getText());
-                    HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
-                    arguments = new ArrayList<>();
+                    userArguments.add(message.getText());
+
+                    HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(
+                            userArguments.get(0)), userArguments.get(1), userArguments.get(2));
+
+                    users.remove(message.getChatId());
 
                     String answer;
                     try {
@@ -73,12 +79,10 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                         answer = "Сорри, времена тяжелые. На это ничего не собрать";
                     }
                     sendText(message, answer);
-                    isBuilding = false;
                 }
             }
             else {
-                arguments = new ArrayList<>();
-                isBuilding = false;
+                users.remove(message.getChatId());
                 sendText(message, "Сборка отменена");
             }
         }
