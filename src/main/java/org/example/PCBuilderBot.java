@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.errors.ComponentNotFoundException;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -29,16 +30,16 @@ public class PCBuilderBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
+        System.out.println("Start");
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
             if (users.get(message.getChatId()) == null) {
                 switch (message.getText()) {
-                    case "/BuildPC":
+                    case "/BuildPC" -> {
                         sendText(message, "Введите бюджет.");
                         users.put(message.getChatId(), new ArrayList<>());
-                        break;
-                    case "/start":
-                        break;
+                    }
+                    case "/start" -> sendText(message, "Start");
                 }
             } else if (!Objects.equals(message.getText(), "/cancel")) {
                 List<String> userArguments = users.get(message.getChatId());
@@ -56,16 +57,16 @@ public class PCBuilderBot extends TelegramLongPollingBot {
 
                     String answer;
                     try {
-                        if (PC.size() < 8)
+                        if (PC == null)
                         {
-                            throw new Error();
+                            throw new ComponentNotFoundException();
                         }
-                        for (String key : PC.keySet()) {
+/*                        for (String key : PC.keySet()) {
                             if (PC.get(key) == null) {
                                 System.out.println(key);
                                 throw new Error();
                             }
-                        }
+                        }*/
 
                         answer = "Ваш процессор: " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
                         answer += "Ваша материнская плата: " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
@@ -75,7 +76,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                         answer += "Ваш блок питания: " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
                         answer += "Ваш диск: " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
                         answer += "Ваш корпус: " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
-                    } catch (Error e) {
+                    } catch (ComponentNotFoundException e) {
                         answer = "Сорри, времена тяжелые. На это ничего не собрать";
                     }
                     sendText(message, answer);
@@ -86,6 +87,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 sendText(message, "Сборка отменена");
             }
         }
+        System.out.println(users);
     }
 
     public void sendText(Message message, String text) {
