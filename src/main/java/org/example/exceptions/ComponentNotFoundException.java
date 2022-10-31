@@ -1,6 +1,6 @@
-package org.example.errors;
+package org.example.exceptions;
 
-public class ComponentNotFoundException extends Error {
+public class ComponentNotFoundException extends Exception {
     public ComponentNotFoundException() {
         super("Не удалось найти компонент(ы)");
     }

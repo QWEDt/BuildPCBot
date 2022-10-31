@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.errors.ComponentNotFoundException;
+import org.example.exceptions.ComponentNotFoundException;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -11,8 +11,7 @@ public final class BuildProcess {
     Components components;
     public BuildProcess() {
         try {
-            System.out.println("Working Directory = " + System.getProperty("user.dir"));
-            components = new Components("src/data/components.json");
+            components = new Components("src/main/resources/components.json");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -69,9 +68,9 @@ public final class BuildProcess {
      * @param component Компонент который мы хотим найти
      * @param BrandCpu Производитель цпу
      * @param BrandGpu Производитель гпу
-     * @param money Бюджет для текущего компоненты
+     * @param money Бюджет для текущей компоненты
      * @return Лучший компонент
-     * @throws Error В случае нехватки денег
+     * @throws ComponentNotFoundException В случае нехватки денег
      */
     private HashMap<String, String> searchBestComponent(String component, String BrandCpu, String BrandGpu, double money) throws ComponentNotFoundException {
         List<HashMap<String, String>> whereToSearch = components.getComponent(component, BrandCpu, BrandGpu, "");
