@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.errors.ComponentNotFoundException;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +17,14 @@ public final class BuildProcess {
             e.printStackTrace();
         }
     }
+
+    /**
+     *
+     * @param money Бюджет на сборку пк
+     * @param BrandCpu Производитель цпу и мат. платы
+     * @param BrandGpu Производитель видеокарты
+     * @return Сборка компьютера из элементов или null в случае нехватки денег.
+     */
     public HashMap<String, HashMap<String, String>> build(int money, String BrandCpu, String BrandGpu) {
         HashMap<String, Double> ratio = new HashMap<>();
 
@@ -42,11 +52,11 @@ public final class BuildProcess {
         for (String componentsPart : componentsParts) {
             try {
                 assembled.put(componentsPart, searchBestComponent(componentsPart, BrandCpu, BrandGpu, money * ratio.get(componentsPart)));
-            } catch (Error e) {
+            } catch (ComponentNotFoundException e) {
                 try {
                     assembled.put(componentsPart, searchBestComponent(componentsPart, BrandCpu, BrandGpu, money * ratio.get(componentsPart) + money * ratio.get("extra")));
-                } catch (Error er) {
-                    return assembled;
+                } catch (ComponentNotFoundException er) {
+                    return null;
                 }
             }
         }
@@ -54,7 +64,16 @@ public final class BuildProcess {
         return assembled;
     }
 
-    private HashMap<String, String> searchBestComponent(String component, String BrandCpu, String BrandGpu, double money) throws Error {
+    /**
+     * Ищет лучшую комплектующую с текущими параметрами
+     * @param component Компонент который мы хотим найти
+     * @param BrandCpu Производитель цпу
+     * @param BrandGpu Производитель гпу
+     * @param money Бюджет для текущего компоненты
+     * @return Лучший компонент
+     * @throws Error В случае нехватки денег
+     */
+    private HashMap<String, String> searchBestComponent(String component, String BrandCpu, String BrandGpu, double money) throws ComponentNotFoundException {
         List<HashMap<String, String>> whereToSearch = components.getComponent(component, BrandCpu, BrandGpu, "");
         HashMap<String, String> bestComponent = null;
         for (HashMap<String, String> toSearch : whereToSearch) {
@@ -70,7 +89,7 @@ public final class BuildProcess {
         }
         if (bestComponent == null)
         {
-            throw new Error("No component");
+            throw new ComponentNotFoundException();
         }
         return bestComponent;
     }
