@@ -11,7 +11,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import javax.inject.Singleton;
 import java.util.HashMap;
 
-@Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
     // Список всех юзеров, нужен для хранения состояния сборки пк.
     //HashMap<Long, User> users = new HashMap<>();
@@ -34,72 +33,60 @@ public class PCBuilderBot extends TelegramLongPollingBot {
             if (users.getUser(message.getChatId()) == null) {
 
                 switch (message.getText()) {
-                    case "/BuildPC" -> {
+                    case "/BuildPC":
                         sendText(message, "Введите бюджет.");
-                        users.appendUser(message.getChatId());
-                    }
-                    case "/start" -> sendText(message, "Start");
+                        isBuilding = true;
+                        break;
+                    case "/start":
+                        break;
                 }
-            } else if (!"/cancel".equals(message.getText())) {
-                User user = users.getUser(message.getChatId());
-                switch (user.getStep()) {
-                    case 0 -> {
-                        user.setMoney(Integer.parseInt(message.getText()));
-                        sendText(message, "Введите производителя цпу (intel/amd)");
-                        user.nextStep();
-                    }
-                    case 1 -> {
-                        user.setBrandCPU(message.getText());
-                        sendText(message, "Введите производителя гпу (nvidia/amd)");
-                        user.nextStep();
-                    }
-                    case 2 -> {
-                        user.setBrandGPU(message.getText());
-                        HashMap<String, HashMap<String, String>> PC = buildProcess.build(
-                                user.getMoney(), user.getBrandCPU(), user.getBrandGPU());
-                        try {
-                            users.deleteUser(user.getChatId());
-                        } catch (UserNotFoundException e) {
-                            throw new RuntimeException(e);
+            } else if (!Objects.equals(message.getText(), "/cancel")){
+                if (arguments.size() < 2)
+                {
+                    arguments.add(message.getText());
+                    sendText(message, "ya jdu");
+                } else {
+                    arguments.add(message.getText());
+                    HashMap<String, HashMap<String, String>> PC = buildProcess.build(Integer.parseInt(arguments.get(0)), arguments.get(1), arguments.get(2));
+                    arguments = new ArrayList<>();
+
+                    String answer;
+                    try {
+                        if (PC.size() < 8)
+                        {
+                            throw new Error();
                         }
-                        sendText(message, generateAnswer(PC));
+                        for (String key : PC.keySet()) {
+                            if (PC.get(key) == null) {
+                                System.out.println(key);
+                                throw new Error();
+                            }
+                        }
+
+                        answer = "Ваш процессор: " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
+                        answer += "Ваша материнская плата: " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
+                        answer += "Ваша видеокарта: " + PC.get("gpu").get("name") + " | цена " + PC.get("gpu").get("price") + "\n";
+                        answer += "Ваша озу: " + PC.get("ram").get("name") + " | цена " + PC.get("ram").get("price") + "\n";
+                        answer += "Ваше охлаждение: " + PC.get("cooling").get("name") + " | цена " + PC.get("cooling").get("price") + "\n";
+                        answer += "Ваш блок питания: " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
+                        answer += "Ваш диск: " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
+                        answer += "Ваш корпус: " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
+                    } catch (Error e) {
+                        answer = "Сорри, времена тяжелые. На это ничего не собрать";
                     }
-                    //TODO Default
+                    sendText(message, answer);
+                    isBuilding = false;
                 }
-            } else {
-                try {
-                    users.deleteUser(message.getChatId());
-                } catch (UserNotFoundException e) {
-                    throw new RuntimeException(e);
-                }
+            }
+            else {
+                arguments = new ArrayList<>();
+                isBuilding = false;
                 sendText(message, "Сборка отменена");
             }
         }
     }
 
-    private String generateAnswer(HashMap<String, HashMap<String, String>> PC) {
-        String answer;
-        try {
-            if (PC == null)
-            {
-                throw new ComponentNotFoundException();
-            }
-
-            answer = "Ваш процессор: " + PC.get("cpu").get("name") + " | цена " + PC.get("cpu").get("price") + "\n";
-            answer += "Ваша материнская плата: " + PC.get("motherboard").get("name") + " | цена " + PC.get("motherboard").get("price") + "\n";
-            answer += "Ваша видеокарта: " + PC.get("gpu").get("name") + " | цена " + PC.get("gpu").get("price") + "\n";
-            answer += "Ваша озу: " + PC.get("ram").get("name") + " | цена " + PC.get("ram").get("price") + "\n";
-            answer += "Ваше охлаждение: " + PC.get("cooling").get("name") + " | цена " + PC.get("cooling").get("price") + "\n";
-            answer += "Ваш блок питания: " + PC.get("power").get("name") + " | цена " + PC.get("power").get("price") + "\n";
-            answer += "Ваш диск: " + PC.get("disk").get("name") + " | цена " + PC.get("disk").get("price") + "\n";
-            answer += "Ваш корпус: " + PC.get("corpus").get("name") + " | цена " + PC.get("corpus").get("price") + "\n";
-        } catch (ComponentNotFoundException e) {
-            answer = "Сорри, времена тяжелые. На это ничего не собрать";
-        }
-        return answer;
-    }
-
-    private void sendText(Message message, String text) {
+    public void sendText(Message message, String text) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(message.getChatId());
         sendMessage.setText(text);
