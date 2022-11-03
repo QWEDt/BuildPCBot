@@ -3,13 +3,13 @@ package org.example.components;
 public class Processor extends Component {
     private final String socket;
     private final int tdp;
+    private final String igpu;
 
-    public Processor(String name, int price, int points, String socket, int tdp) {
-        this.name = name;
-        this.price = price;
-        this.points = points;
+    public Processor(String name, int price, String socket, int tdp, String igpu) {
+        super(name, price);
         this.socket = socket;
         this.tdp = tdp;
+        this.igpu = igpu;
     }
 
     public String getSocket() {
@@ -18,5 +18,9 @@ public class Processor extends Component {
 
     public int getTdp() {
         return tdp;
+    }
+
+    public String getIgpu() {
+        return igpu;
     }
 }

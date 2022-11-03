@@ -3,10 +3,8 @@ package org.example.components;
 public class Cooling extends Component {
     private final boolean water;
 
-    public Cooling(String name, int price, int points, boolean water) {
-        this.name = name;
-        this.price = price;
-        this.points = points;
+    public Cooling(String name, int price, boolean water) {
+        super(name, price);
         this.water = water;
     }
 

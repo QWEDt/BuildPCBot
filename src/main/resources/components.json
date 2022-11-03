@@ -435,7 +435,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "0",
-        "points" : "1490"
+        "points" : "5"
       },
       {
         "name" : "A8-9600",
@@ -443,7 +443,7 @@
 		"socket" : "am4",
 		"tdp" : "65",
 		"igpu" : "1",
-        "points" : "5"
+        "points" : "6"
       },
       {
         "name" : "Athlon 200GE",
@@ -451,7 +451,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "7"
+        "points" : "8"
       },
       {
         "name" : "Athlon 3000G",
@@ -475,7 +475,7 @@
 		"socket" : "am4",
 		"tdp" : "35",
 		"igpu" : "1",
-        "points" : "6"
+        "points" : "7"
       },
       {
         "name" : "Athlon PRO 300GE",
@@ -671,7 +671,6 @@
       }
     ]
 	},
-  
   "gpu" : {
     "nvidia" : [
       {

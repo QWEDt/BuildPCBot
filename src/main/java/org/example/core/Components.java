@@ -2,12 +2,13 @@ package org.example.core;
 
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.ReadContext;
+import org.example.components.EnumComponents;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Хранит все компоненты из передаваемого json файла
@@ -24,13 +25,9 @@ public final class Components {
     private final List<HashMap<String, String>> corpuses;
     private final List<HashMap<String, String>> disks;
 
-    public Components(String path) throws FileNotFoundException {
-        File file = new File(path);
-        Scanner scanner = new Scanner(file);
-        String json = "";
-        while (scanner.hasNextLine()) {
-            json = json.concat(scanner.nextLine());
-        }
+    public Components(String path) throws IOException {
+        String json = Files.readString(Path.of(path));
+
         ReadContext context = JsonPath.parse(json);
         CPUs = context.read("$.cpu");
         GPUs = context.read("$.gpu");
@@ -74,17 +71,17 @@ public final class Components {
         return disks;
     }
 
-    public List<HashMap<String, String>> getComponent(String type, String cpu, String gpu, String ram) {
+    public List<HashMap<String, String>> getComponents(EnumComponents type, String cpu, String gpu, String ram) {
         return switch (type) {
-            case "cpu" -> getCPUs(cpu);
-            case "gpu" -> getGPUs(gpu);
-            case "motherboard" -> getMotherboards(cpu);
-            case "ram" -> getRAM("ddr4");
-            case "cooling" -> getCooling();
-            case "power" -> getPowers();
-            case "corpus" -> getCorpuses();
-            case "disk" -> getDisks();
-            default -> null;
+            case CPU -> getCPUs(cpu);
+            case GPU -> getGPUs(gpu);
+            case MOTHERBOARD -> getMotherboards(cpu);
+            case COOLING -> getCooling();
+            case POWER -> getPowers();
+            case RAM -> getRAM("ddr4");
+            case DISK -> getDisks();
+            case CORPUS -> getCorpuses();
+            case EXTRA -> null;
         };
     }
 }
