@@ -1,4 +1,4 @@
-package org.example;
+package org.example.core;
 
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.ReadContext;
@@ -14,6 +14,7 @@ import java.util.Scanner;
  * и отдает списки с нужным типом компонентов
  */
 public final class Components {
+    //TODO Переделать в классы
     private final HashMap<String, List<HashMap<String, String>>> CPUs;
     private final HashMap<String, List<HashMap<String, String>>> GPUs;
     private final HashMap<String, List<HashMap<String, String>>> motherboards;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.users;
 
 public class User {
     private final long chatId;

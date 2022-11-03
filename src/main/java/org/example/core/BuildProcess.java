@@ -1,4 +1,4 @@
-package org.example;
+package org.example.core;
 
 import org.example.exceptions.ComponentNotFoundException;
 
