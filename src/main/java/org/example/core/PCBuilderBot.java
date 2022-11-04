@@ -50,12 +50,12 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                         user.nextStep();
                     }
                     case 1 -> {
-                        user.setBrandCPU(message.getText());
+                        user.setBrandCPU(message.getText().toLowerCase());
                         sendText(message.getChatId(), "Введите производителя гпу (nvidia/amd)");
                         user.nextStep();
                     }
                     case 2 -> {
-                        user.setBrandGPU(message.getText());
+                        user.setBrandGPU(message.getText().toLowerCase());
                         Computer computer = buildProcess.build(user.getMoney(), user.getBrandCPU(), user.getBrandGPU());
                         try {
                             users.deleteUser(user.getChatId());

@@ -58,8 +58,7 @@ public final class BuildProcess {
                 try {
                     computer.setComponent(componentsPart, searchBestComponent(componentsPart, BrandCpu, BrandGpu,
                             money * ratio.get(componentsPart) + money * ratio.get(EnumComponents.EXTRA)));
-                } catch (ComponentNotFoundException er) {
-                    return null;
+                } catch (ComponentNotFoundException ignored) {
                 }
             }
         }

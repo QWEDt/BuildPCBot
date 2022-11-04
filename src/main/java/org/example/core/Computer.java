@@ -18,6 +18,9 @@ public class Computer {
     }
 
     public String getComputer() {
+        if (components.size() < 8) {
+            return "Сорри, времена тяжелые. На это ничего не собрать";
+        }
         calculateTotalPrice();
         return generateStringComputer();
     }
