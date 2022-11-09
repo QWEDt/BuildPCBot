@@ -4,12 +4,20 @@ import org.example.exceptions.UserNotFoundException;
 import org.example.users.User;
 import org.example.users.Users;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
+import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardRemove;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import javax.inject.Singleton;
+import java.util.ArrayList;
+import java.util.List;
 
 @Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
@@ -20,6 +28,17 @@ public class PCBuilderBot extends TelegramLongPollingBot {
     public PCBuilderBot() {
         users = new Users();
         buildProcess = new BuildProcess("src/main/resources/components.json");
+        List<BotCommand> commands = new ArrayList<>();
+        commands.add(new BotCommand("/help", "Информация о возможностях"));
+        commands.add(new BotCommand("/start", "Приветственное сообщение"));
+        commands.add(new BotCommand("/buildpc", "Начать сборку пк"));
+
+        try {
+            execute(new SetMyCommands(commands, new BotCommandScopeDefault(), null));
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -39,7 +58,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
             if (users.getUser(message.getChatId()) == null) {
 
                 switch (message.getText()) {
-                    case "/BuildPC" -> {
+                    case "/buildpc" -> {
                         sendText(message.getChatId(), "Введите бюджет.");
                         users.appendUser(message.getChatId());
                     }
@@ -50,12 +69,36 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 switch (user.getStep()) {
                     case 0 -> {
                         user.setMoney(Integer.parseInt(message.getText()));
-                        sendText(message.getChatId(), "Введите производителя цпу (intel/amd)");
+
+                        //TODO Function
+                        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+                        ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
+                        KeyboardRow row = new KeyboardRow();
+                        row.add("Intel");
+                        row.add("AMD");
+                        keyboardRows.add(row);
+                        replyKeyboardMarkup.setKeyboard(keyboardRows);
+                        replyKeyboardMarkup.setResizeKeyboard(true);
+
+                        sendTextWithKeyboard(message.getChatId(), "Введите производителя цпу (intel/amd)",
+                                replyKeyboardMarkup);
                         user.nextStep();
                     }
                     case 1 -> {
                         user.setBrandCPU(message.getText().toLowerCase());
-                        sendText(message.getChatId(), "Введите производителя гпу (nvidia/amd)");
+
+                        //TODO Function
+                        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+                        ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
+                        KeyboardRow row = new KeyboardRow();
+                        row.add("Nvidia");
+                        row.add("AMD");
+                        keyboardRows.add(row);
+                        replyKeyboardMarkup.setKeyboard(keyboardRows);
+                        replyKeyboardMarkup.setResizeKeyboard(true);
+
+                        sendTextWithKeyboard(message.getChatId(), "Введите производителя гпу (nvidia/amd)",
+                                replyKeyboardMarkup);
                         user.nextStep();
                     }
                     case 2 -> {
@@ -81,10 +124,25 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         }
     }
 
-    public void sendText(long chatId, String text) {
+    private void sendText(long chatId, String text) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText(text);
+        sendMessage.setReplyMarkup(new ReplyKeyboardRemove(true));
+
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void sendTextWithKeyboard(long chatId, String text, ReplyKeyboardMarkup keyboardMarkup) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(text);
+        sendMessage.setReplyMarkup(keyboardMarkup);
+
         try {
             execute(sendMessage);
         } catch (TelegramApiException e) {

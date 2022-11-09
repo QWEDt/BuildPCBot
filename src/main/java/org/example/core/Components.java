@@ -6,6 +6,9 @@ import org.example.components.enums.EnumComponents;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Содержит в себе все доступные комплектующие.
+ */
 public class Components {
     private HashMap<String, ArrayList<Processor>> cpu;
     private HashMap<String, ArrayList<VideoCard>> gpu;
@@ -48,6 +51,13 @@ public class Components {
         return disk;
     }
 
+    /**
+     * Отдает список комплектующих необходиого типа.
+     * @param type тип комплектующих.
+     * @param vendorCPU бренд цпу.
+     * @param vendorGPU бренд гпу.
+     * @return список всех комплектующих по выбранному типу.
+     */
     public ArrayList<? extends Component> getComponents(EnumComponents type, String vendorCPU, String vendorGPU) {
         switch (type){
             case CPU -> {

@@ -7,16 +7,16 @@ public class User {
     private String brandGPU;
     private int Step = 0;
 
+    public User(long chatId) {
+        this.chatId = chatId;
+    }
+
     public void nextStep() {
         Step++;
     }
 
     public int getStep() {
         return Step;
-    }
-
-    public User(long chatId) {
-        this.chatId = chatId;
     }
 
     public long getChatId() {

@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Класс для хранения и вывода результата сборки пк.
+ */
 public class Computer {
     private int totalPrice;
     private final Map<EnumComponents, Component> components = new HashMap<>();
@@ -73,7 +76,7 @@ public class Computer {
                 "Ваш диск: " + getComponent(EnumComponents.DISK).getName() + " | цена " +
                 getComponent(EnumComponents.DISK).getPrice() + "\n" +
                 "Ваш корпус: " + getComponent(EnumComponents.CORPUS).getName() + " | цена " +
-                getComponent(EnumComponents.CORPUS).getPrice() + "\n" +
+                getComponent(EnumComponents.CORPUS).getPrice() + "\n\n" +
                 "Общая цена " + totalPrice + "\n";
     }
 }

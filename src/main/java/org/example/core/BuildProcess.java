@@ -10,11 +10,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class BuildProcess {
+/**
+ * Нужен для сборки пк по заданным параметрам .
+ */
+public final class BuildProcess {
     Components components;
 
     /**
-     * @param path путь до файла с компонентами
+     * @param path путь до файла с компонентами.
      */
     public BuildProcess(String path) {
         Gson gson = new Gson();
@@ -26,10 +29,11 @@ public class BuildProcess {
     }
 
     /**
-     * @param money Бюджет на сборку пк
-     * @param brandCPU Производитель цпу и мат. платы
-     * @param brandGPU Производитель видеокарты
-     * @return Сборка компьютера из элементов или null в случае нехватки денег.
+     * Метод для генерации сборки на основе переданных параметров.
+     * @param money Бюджет на сборку пк.
+     * @param brandCPU Производитель цпу и мат. платы.
+     * @param brandGPU Производитель видеокарты.
+     * @return Готовая сборка компьютера.
      */
     public Computer build(double money, String brandCPU, String brandGPU) {
         Computer computer = new Computer();
@@ -49,13 +53,13 @@ public class BuildProcess {
         return computer;
     }
     /**
-     * Ищет лучшую комплектующую с текущими параметрами
-     * @param type Компонент который мы хотим найти
-     * @param brandCPU Производитель цпу
-     * @param brandGPU Производитель гпу
-     * @param money Бюджет для текущей компоненты
-     * @return Лучший компонент
-     * @throws ComponentNotFoundException В случае нехватки денег
+     * Ищет лучшую комплектующую с текущими параметрами.
+     * @param type Компонент который мы хотим найти.
+     * @param brandCPU Производитель цпу.
+     * @param brandGPU Производитель гпу.
+     * @param money Бюджет для текущей компоненты.
+     * @return Лучший компонент.
+     * @throws ComponentNotFoundException В случае нехватки денег.
      */
     private Component getBestComponent(EnumComponents type, String brandCPU, String brandGPU, double money) throws ComponentNotFoundException {
         ArrayList<? extends Component> typeComponents = components.getComponents(type, brandCPU, brandGPU);

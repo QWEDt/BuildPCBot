@@ -1,10 +1,18 @@
 package org.example.components;
 
+/**
+ * Родительский класс для всех комплектующих.
+ */
 public class Component {
     protected String name;
     protected int price;
     protected int points;
 
+    /**
+     * @param name имя компонента
+     * @param price цена компонента
+     * @param points очки производительности компоненты
+     */
     public Component(String name, int price, int points) {
         this.name = name;
         this.price = price;
