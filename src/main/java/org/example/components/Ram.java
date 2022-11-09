@@ -3,8 +3,8 @@ package org.example.components;
 public class Ram extends Component {
     private final String type;
 
-    public Ram (String name, int price, String type) {
-        super(name, price);
+    public Ram (String name, int price, int points, String type) {
+        super(name, price, points);
         this.type = type;
     }
 

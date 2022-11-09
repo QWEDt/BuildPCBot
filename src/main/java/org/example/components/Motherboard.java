@@ -7,8 +7,8 @@ public class Motherboard extends Component {
     private final String form;
     private final int slotsRam;
 
-    public Motherboard(String name, int price, String socket, String chipset, boolean radiators, String form, int slotsRam) {
-        super(name, price);
+    public Motherboard(String name, int price, int points, String socket, String chipset, boolean radiators, String form, int slotsRam) {
+        super(name, price, points);
         this.socket = socket;
         this.chipset = chipset;
         this.radiators = radiators;

@@ -1,4 +1,4 @@
-package org.example.components;
+package org.example.components.enums;
 
 public enum EnumComponents {
     CPU,

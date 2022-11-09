@@ -5,8 +5,8 @@ public class Processor extends Component {
     private final int tdp;
     private final String igpu;
 
-    public Processor(String name, int price, String socket, int tdp, String igpu) {
-        super(name, price);
+    public Processor(String name, int price, int points, String socket, int tdp, String igpu) {
+        super(name, price, points);
         this.socket = socket;
         this.tdp = tdp;
         this.igpu = igpu;

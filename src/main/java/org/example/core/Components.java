@@ -1,87 +1,80 @@
 package org.example.core;
 
-import com.jayway.jsonpath.JsonPath;
-import com.jayway.jsonpath.ReadContext;
-import org.example.components.EnumComponents;
+import org.example.components.*;
+import org.example.components.enums.EnumComponents;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-/**
- * Хранит все компоненты из передаваемого json файла
- * и отдает списки с нужным типом компонентов
- */
-public final class Components {
-    //TODO Переделать в классы
-    private final HashMap<String, List<HashMap<String, String>>> CPUs;
-    private final HashMap<String, List<HashMap<String, String>>> GPUs;
-    private final HashMap<String, List<HashMap<String, String>>> motherboards;
-    private final HashMap<String, List<HashMap<String, String>>> ram;
-    private final List<HashMap<String, String>> cooling;
-    private final List<HashMap<String, String>> powers;
-    private final List<HashMap<String, String>> corpuses;
-    private final List<HashMap<String, String>> disks;
+public class Components {
+    private HashMap<String, ArrayList<Processor>> cpu;
+    private HashMap<String, ArrayList<VideoCard>> gpu;
+    private HashMap<String, ArrayList<Motherboard>> motherboard;
+    private HashMap<String, ArrayList<Ram>> ram;
+    private ArrayList<Cooling> cooling;
+    private ArrayList<Power> power;
+    private ArrayList<Corpus> corpus;
+    private ArrayList<Disk> disk;
 
-    public Components(String path) throws IOException {
-        String json = Files.readString(Path.of(path));
-
-        ReadContext context = JsonPath.parse(json);
-        CPUs = context.read("$.cpu");
-        GPUs = context.read("$.gpu");
-        motherboards = context.read("$.motherboard");
-        ram = context.read("$.ram");
-        cooling = context.read("$.cooling");
-        powers = context.read("$.power");
-        corpuses = context.read("$.corpus");
-        disks = context.read("$.disk");
+    private ArrayList<Processor> getCpus(String vendor) {
+        return cpu.get(vendor);
     }
 
-    public List<HashMap<String, String>> getCPUs(String type) {
-        return CPUs.get(type);
+    private ArrayList<VideoCard> getGpus(String vendor) {
+        return gpu.get(vendor);
     }
 
-    public List<HashMap<String, String>> getGPUs(String type) {
-        return GPUs.get(type);
+    private ArrayList<Motherboard> getMotherboards(String vendor) {
+        return motherboard.get(vendor);
     }
 
-    public List<HashMap<String, String>> getMotherboards(String type) {
-        return motherboards.get(type);
-    }
-
-    public List<HashMap<String, String>> getRAM(String type) {
+    private ArrayList<Ram> getRams(String type) {
         return ram.get(type);
     }
 
-    public List<HashMap<String, String>> getCooling() {
+    private ArrayList<Cooling> getCooling() {
         return cooling;
     }
 
-    public List<HashMap<String, String>> getPowers() {
-        return powers;
+    private ArrayList<Power> getPowers() {
+        return power;
     }
 
-    public List<HashMap<String, String>> getCorpuses() {
-        return corpuses;
+    private ArrayList<Corpus> getCorpuses() {
+        return corpus;
     }
 
-    public List<HashMap<String, String>> getDisks() {
-        return disks;
+    private ArrayList<Disk> getDisks() {
+        return disk;
     }
 
-    public List<HashMap<String, String>> getComponents(EnumComponents type, String cpu, String gpu, String ram) {
-        return switch (type) {
-            case CPU -> getCPUs(cpu);
-            case GPU -> getGPUs(gpu);
-            case MOTHERBOARD -> getMotherboards(cpu);
-            case COOLING -> getCooling();
-            case POWER -> getPowers();
-            case RAM -> getRAM("ddr4");
-            case DISK -> getDisks();
-            case CORPUS -> getCorpuses();
-            case EXTRA -> null;
-        };
+    public ArrayList<? extends Component> getComponents(EnumComponents type, String vendorCPU, String vendorGPU) {
+        switch (type){
+            case CPU -> {
+                return getCpus(vendorCPU);
+            }
+            case GPU -> {
+                return getGpus(vendorGPU);
+            }
+            case MOTHERBOARD -> {
+                return getMotherboards(vendorCPU);
+            }
+            case COOLING -> {
+                return getCooling();
+            }
+            case POWER -> {
+                return getPowers();
+            }
+            case RAM -> {
+                return getRams("ddr4");
+            }
+            case DISK -> {
+                return getDisks();
+            }
+            case CORPUS -> {
+                return getCorpuses();
+            }
+        }
+        return null;
     }
 }

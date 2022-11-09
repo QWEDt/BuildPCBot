@@ -14,8 +14,13 @@ import javax.inject.Singleton;
 @Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
     // Список всех юзеров, нужен для хранения состояния сборки пк.
-    Users users = new Users();
-    BuildProcess buildProcess = new BuildProcess();
+    Users users;
+    BuildProcess buildProcess;
+
+    public PCBuilderBot() {
+        users = new Users();
+        buildProcess = new BuildProcess("src/main/resources/components.json");
+    }
 
     @Override
     public String getBotUsername() {
@@ -42,7 +47,6 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 }
             } else if (!"/cancel".equals(message.getText())) {
                 User user = users.getUser(message.getChatId());
-                //TODO refactor sendText(). Use BotCommands
                 switch (user.getStep()) {
                     case 0 -> {
                         user.setMoney(Integer.parseInt(message.getText()));
