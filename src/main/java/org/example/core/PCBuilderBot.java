@@ -70,34 +70,24 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                     case 0 -> {
                         user.setMoney(Integer.parseInt(message.getText()));
 
-                        //TODO Function
-                        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-                        ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
-                        KeyboardRow row = new KeyboardRow();
-                        row.add("Intel");
-                        row.add("AMD");
-                        keyboardRows.add(row);
-                        replyKeyboardMarkup.setKeyboard(keyboardRows);
-                        replyKeyboardMarkup.setResizeKeyboard(true);
+                        ArrayList<String> words = new ArrayList<>();
+                        words.add("Intel");
+                        words.add("AMD");
+                        ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
 
-                        sendTextWithKeyboard(message.getChatId(), "Введите производителя цпу (intel/amd)",
+                        sendTextWithKeyboard(message.getChatId(), "Введите производителя цпу (Intel/AMD)",
                                 replyKeyboardMarkup);
                         user.nextStep();
                     }
                     case 1 -> {
                         user.setBrandCPU(message.getText().toLowerCase());
 
-                        //TODO Function
-                        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-                        ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
-                        KeyboardRow row = new KeyboardRow();
-                        row.add("Nvidia");
-                        row.add("AMD");
-                        keyboardRows.add(row);
-                        replyKeyboardMarkup.setKeyboard(keyboardRows);
-                        replyKeyboardMarkup.setResizeKeyboard(true);
+                        ArrayList<String> words = new ArrayList<>();
+                        words.add("Nvidia");
+                        words.add("AMD");
+                        ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
 
-                        sendTextWithKeyboard(message.getChatId(), "Введите производителя гпу (nvidia/amd)",
+                        sendTextWithKeyboard(message.getChatId(), "Введите производителя гпу (Nvidia/AMD)",
                                 replyKeyboardMarkup);
                         user.nextStep();
                     }
@@ -122,6 +112,22 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 sendText(message.getChatId(), "Сборка отменена");
             }
         }
+    }
+
+    private ReplyKeyboardMarkup generateKeyboard(ArrayList<String> words) {
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+
+        for (String word : words) {
+            row.add(word);
+        }
+
+        keyboardRows.add(row);
+        replyKeyboardMarkup.setKeyboard(keyboardRows);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+
+        return replyKeyboardMarkup;
     }
 
     private void sendText(long chatId, String text) {

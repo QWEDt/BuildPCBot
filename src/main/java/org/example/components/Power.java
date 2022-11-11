@@ -1,17 +1,17 @@
 package org.example.components;
 
 public class Power extends Component {
-    private final int watt;
+    private final int watts;
     private final String plus;
 
-    public Power(String name, int price, int points, int watt, String plus) {
+    public Power(String name, int price, int points, int watts, String plus) {
         super(name, price, points);
-        this.watt = watt;
+        this.watts = watts;
         this.plus = plus;
     }
 
-    public int getWatt() {
-        return watt;
+    public int getWatts() {
+        return watts;
     }
 
     public String getPlus() {
