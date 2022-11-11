@@ -41,7 +41,6 @@ public final class BuildProcess {
         ComputerContext context = new ComputerContext();
 
         for (EnumComponents type : computer.componentsParts) { // Важно чтобы бп шел после цпу и гпу
-            System.out.println(type);
             Component bestComponent;
             try {
                 bestComponent = getBestComponent(type, brandCPU, brandGPU,
@@ -65,8 +64,6 @@ public final class BuildProcess {
 
             computer.setComponent(type, bestComponent);
         }
-
-        System.out.println(context.tdp);
 
         return computer;
     }
