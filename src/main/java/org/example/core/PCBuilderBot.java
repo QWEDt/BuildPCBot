@@ -30,7 +30,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         buildProcess = new BuildProcess("src/main/resources/components.json");
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/help", "Информация о возможностях"));
-        commands.add(new BotCommand("/start", "Приветственное сообщение"));
+        commands.add(new BotCommand("/start", "Привет это бот по сборке твоего ПК,что бы собрать компютор нажми /buildpc"));
         commands.add(new BotCommand("/buildpc", "Начать сборку пк"));
 
         try {
