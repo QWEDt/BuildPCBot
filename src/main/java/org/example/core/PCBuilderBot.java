@@ -43,7 +43,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                         sendText(message.getChatId(), "Введите бюджет.");
                         users.appendUser(message.getChatId());
                     }
-                    case "/start" -> sendText(message.getChatId(), "start");
+                    case "/start" -> sendText(message.getChatId(), "Привет это бот по сборке твоего ПК,что бы собрать компютор нажми /BuildPC");
                 }
             } else if (!"/cancel".equals(message.getText())) {
                 User user = users.getUser(message.getChatId());
