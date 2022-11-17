@@ -1,4 +1,4 @@
-package org.example.components;
+package org.example.components.computerParts;
 
 public class Ram extends Component {
     private final String type;

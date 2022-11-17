@@ -21,16 +21,15 @@ import java.util.List;
 
 @Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
-    // Список всех юзеров, нужен для хранения состояния сборки пк.
     Users users;
     BuildProcess buildProcess;
 
     public PCBuilderBot() {
         users = new Users();
-        buildProcess = new BuildProcess("src/main/resources/components.json");
+        buildProcess = new BuildProcess();
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/help", "Информация о возможностях"));
-        commands.add(new BotCommand("/start", "Информация о возможностях"));
+        commands.add(new BotCommand("/start", "Приветственное сообщение"));
         commands.add(new BotCommand("/buildpc", "Начать сборку пк"));
 
         try {
@@ -54,63 +53,64 @@ public class PCBuilderBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
-        if (message != null && message.hasText()) {
-            if (users.getUser(message.getChatId()) == null) {
+        if (message == null || !message.hasText()) {
+            return;
+        }
 
-                switch (message.getText()) {
-                    case "/buildpc" -> {
-                        sendText(message.getChatId(), "Введите бюджет.");
-                        users.appendUser(message.getChatId());
-                    }
-                    case "/start" -> sendText(message.getChatId(), "Привет это бот по сборке твоего ПК,что бы собрать компютор нажми /buildpc");
+        if (users.getUser(message.getChatId()) == null) {
+            //todo normal commands
+            switch (message.getText()) {
+                case "/buildpc" -> {
+                    sendText(message.getChatId(), "Введите бюджет.");
+                    users.appendUser(message.getChatId());
                 }
-            } else if (!"/cancel".equals(message.getText())) {
-                User user = users.getUser(message.getChatId());
-                switch (user.getStep()) {
-                    case 0 -> {
-                        user.setMoney(Integer.parseInt(message.getText()));
-
-                        ArrayList<String> words = new ArrayList<>();
-                        words.add("Intel");
-                        words.add("AMD");
-                        ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
-
-                        sendTextWithKeyboard(message.getChatId(), "Введите производителя цпу (Intel/AMD)",
-                                replyKeyboardMarkup);
-                        user.nextStep();
-                    }
-                    case 1 -> {
-                        user.setBrandCPU(message.getText().toLowerCase());
-
-                        ArrayList<String> words = new ArrayList<>();
-                        words.add("Nvidia");
-                        words.add("AMD");
-                        ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
-
-                        sendTextWithKeyboard(message.getChatId(), "Введите производителя гпу (Nvidia/AMD)",
-                                replyKeyboardMarkup);
-                        user.nextStep();
-                    }
-                    case 2 -> {
-                        user.setBrandGPU(message.getText().toLowerCase());
-                        Computer computer = buildProcess.build(user.getMoney(), user.getBrandCPU(), user.getBrandGPU());
-                        try {
-                            users.deleteUser(user.getChatId());
-                        } catch (UserNotFoundException e) {
-                            throw new RuntimeException(e);
-                        }
-                        sendText(message.getChatId(), computer.getComputer());
-                    }
-                    //TODO Default
-                }
-            } else {
-                try {
-                    users.deleteUser(message.getChatId());
-                } catch (UserNotFoundException e) {
-                    throw new RuntimeException(e);
-                }
-                sendText(message.getChatId(), "Сборка отменена");
+                case "/start" -> sendText(message.getChatId(), "start");
             }
+        } else if (!"/cancel".equals(message.getText())) {
+            User user = users.getUser(message.getChatId());
+            switch (user.getStep()) {
+                case 0 -> {
+                    user.setMoney(Integer.parseInt(message.getText()));
+
+                    ArrayList<String> words = new ArrayList<>();
+                    words.add("Intel");
+                    words.add("AMD");
+                    ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
+
+                    sendTextWithKeyboard(message.getChatId(), "Введите производителя цпу (Intel/AMD)",
+                            replyKeyboardMarkup);
+                    user.nextStep();
+                }
+                case 1 -> {
+                    user.setBrandCPU(message.getText().toLowerCase());
+
+                    ArrayList<String> words = new ArrayList<>();
+                    words.add("Nvidia");
+                    words.add("AMD");
+                    ReplyKeyboardMarkup replyKeyboardMarkup = generateKeyboard(words);
+
+                    sendTextWithKeyboard(message.getChatId(), "Введите производителя гпу (Nvidia/AMD)",
+                            replyKeyboardMarkup);
+                    user.nextStep();
+                }
+                case 2 -> {
+                    user.setBrandGPU(message.getText().toLowerCase());
+                    Computer computer = buildProcess.build(user.getMoney(), user.getBrandCPU(), user.getBrandGPU());
+                    try {
+                        users.deleteUser(user.getChatId());
+                    } catch (UserNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                    sendText(message.getChatId(), computer.getComputer());
+                }
+            }
+        } else {
+            try {
+                users.deleteUser(message.getChatId());
+            } catch (UserNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            sendText(message.getChatId(), "Сборка отменена");
         }
     }
 

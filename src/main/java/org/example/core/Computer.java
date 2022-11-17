@@ -1,7 +1,7 @@
 package org.example.core;
 
-import org.example.components.*;
-import org.example.components.enums.EnumComponents;
+import org.example.components.computerParts.Component;
+import org.example.enums.EnumComponents;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,6 +46,7 @@ public class Computer {
     }
 
     public String getComputer() {
+        //todo reduce hardcode
         if (components.size() < 8) {
             return "Сорри, времена тяжелые. На это ничего не собрать";
         }
@@ -60,6 +61,7 @@ public class Computer {
         }
     }
 
+    //todo add button to save it
     private String generateStringComputer() {
         return "Ваш процессор: " + getComponent(EnumComponents.CPU).getName() + " | цена " +
                 getComponent(EnumComponents.CPU).getPrice() + "\n" +

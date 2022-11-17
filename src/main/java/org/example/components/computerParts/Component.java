@@ -1,4 +1,4 @@
-package org.example.components;
+package org.example.components.computerParts;
 
 /**
  * Родительский класс для всех комплектующих.

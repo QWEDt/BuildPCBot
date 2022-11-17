@@ -1,31 +1,23 @@
 package org.example.core;
 
-import com.google.gson.Gson;
 import org.example.components.*;
-import org.example.components.enums.EnumComponents;
+import org.example.components.computerParts.*;
+import org.example.enums.EnumComponents;
 import org.example.exceptions.ComponentNotFoundException;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 
 /**
  * Нужен для сборки пк по заданным параметрам .
  */
 public final class BuildProcess {
-    Components components;
+    private String socket;
+    private int tdp = 150;
+    private int cpuTdp;
+    ComponentsService componentsService;
 
-    /**
-     * @param path путь до файла с компонентами.
-     */
-    public BuildProcess(String path) {
-        Gson gson = new Gson();
-        try {
-            components = gson.fromJson(Files.readString(Path.of(path)), Components.class);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public BuildProcess() {
+        componentsService = new ComponentsService();
     }
 
     /**
@@ -38,28 +30,27 @@ public final class BuildProcess {
      */
     public Computer build(double money, String brandCPU, String brandGPU) {
         Computer computer = new Computer();
-        ComputerContext context = new ComputerContext();
 
-        for (EnumComponents type : computer.componentsParts) { // Важно чтобы бп шел после цпу и гпу
+        for (EnumComponents type : computer.componentsParts) {
             Component bestComponent;
             try {
                 bestComponent = getBestComponent(type, brandCPU, brandGPU,
-                        money * computer.ratio.get(type), context);
+                        money * computer.ratio.get(type));
             } catch (ComponentNotFoundException e) {
                 try {
                     bestComponent = getBestComponent(type, brandCPU, brandGPU,
-                            money * computer.ratio.get(type) + money * computer.ratio.get(EnumComponents.EXTRA), context);
+                            money * computer.ratio.get(type) + money * computer.ratio.get(EnumComponents.EXTRA));
                 } catch (ComponentNotFoundException ignored) {
                     break;
                 }
             }
 
             if (bestComponent instanceof Processor) {
-                context.socket = ((Processor) bestComponent).getSocket();
-                context.tdp += ((Processor) bestComponent).getTdp();
-                context.cpuTdp = ((Processor) bestComponent).getTdp();
+                socket = ((Processor) bestComponent).getSocket();
+                tdp += ((Processor) bestComponent).getTdp();
+                cpuTdp = ((Processor) bestComponent).getTdp();
             } else if (bestComponent instanceof VideoCard) {
-                context.tdp += ((VideoCard) bestComponent).getTdp();
+                tdp += ((VideoCard) bestComponent).getTdp();
             }
 
             computer.setComponent(type, bestComponent);
@@ -79,11 +70,13 @@ public final class BuildProcess {
      * @throws ComponentNotFoundException В случае нехватки денег.
      */
     private Component getBestComponent(EnumComponents type, String brandCPU, String brandGPU,
-                                       double money, ComputerContext context) throws ComponentNotFoundException {
-        ArrayList<? extends Component> typeComponents = components.getComponents(type, brandCPU, brandGPU);
+                                       double money) throws ComponentNotFoundException {
+        ArrayList<? extends Component> typeComponents = componentsService.getComponents(type, brandCPU, brandGPU);
         Component bestComponent = null;
+        System.out.println(typeComponents);
         for (Component typeComponent : typeComponents) {
-            boolean isOk = typeComponent.getPrice() <= money && makeDecision(typeComponent, context);
+            boolean isOk = typeComponent.getPrice() <= money && makeDecision(typeComponent);
+
             if (bestComponent != null) {
                 if (isOk && typeComponent.getPoints() > bestComponent.getPoints()) {
                     bestComponent = typeComponent;
@@ -102,21 +95,14 @@ public final class BuildProcess {
         return bestComponent;
     }
 
-    private boolean makeDecision(Component component, ComputerContext context) {
+    private boolean makeDecision(Component component) {
         if (component instanceof Motherboard) {
-            return context.socket.equals(((Motherboard) component).getSocket());
+            return socket.equals(((Motherboard) component).getSocket());
         } else if (component instanceof Cooling) {
-            // У кулеров нет максимального охлаждения в ватт(9(
+            return cpuTdp <= ((Cooling) component).getTdp();
         } else if (component instanceof Power) {
-            return context.tdp <= ((Power) component).getWatts();
+            return tdp <= ((Power) component).getWatts();
         }
         return true;
-    }
-
-    private static class ComputerContext {
-        private String socket;
-        private int tdp = 150;
-        private int cpuTdp;
-        private int typeDdr;
     }
 }

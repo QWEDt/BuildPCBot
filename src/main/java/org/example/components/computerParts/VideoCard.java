@@ -1,4 +1,4 @@
-package org.example.components;
+package org.example.components.computerParts;
 
 public class VideoCard extends Component {
     private final int tdp;
