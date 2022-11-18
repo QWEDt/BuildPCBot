@@ -1,10 +1,11 @@
-package org.example.components;
+package org.example.computer.components;
 
-import org.example.components.computerParts.*;
+import org.example.computer.parts.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//todo record
 /**
  * Содержит в себе все доступные комплектующие.
  */

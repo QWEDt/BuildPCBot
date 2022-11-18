@@ -1,8 +1,8 @@
-package org.example.components;
+package org.example.computer.components;
 
 import com.google.gson.Gson;
-import org.example.components.computerParts.Component;
-import org.example.enums.EnumComponents;
+import org.example.computer.parts.Component;
+import org.example.enums.ComponentsEnum;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -29,7 +29,7 @@ public class ComponentsService {
      * @param vendorGPU бренд гпу.
      * @return список всех комплектующих по выбранному типу.
      */
-    public ArrayList<? extends Component> getComponents(EnumComponents type, String vendorCPU, String vendorGPU) {
+    public ArrayList<? extends Component> getComponents(ComponentsEnum type, String vendorCPU, String vendorGPU) {
         switch (type){
             case CPU -> {
                 return componentsStorage.getCpus(vendorCPU);

@@ -1,4 +1,4 @@
-package org.example.components.computerParts;
+package org.example.computer.parts;
 
 public class Processor extends Component {
     private final String socket;

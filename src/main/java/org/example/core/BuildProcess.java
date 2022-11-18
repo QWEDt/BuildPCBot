@@ -1,8 +1,9 @@
 package org.example.core;
 
-import org.example.components.*;
-import org.example.components.computerParts.*;
-import org.example.enums.EnumComponents;
+import org.example.computer.Computer;
+import org.example.computer.components.ComponentsService;
+import org.example.computer.parts.*;
+import org.example.enums.ComponentsEnum;
 import org.example.exceptions.ComponentNotFoundException;
 
 import java.util.ArrayList;
@@ -29,19 +30,20 @@ public final class BuildProcess {
      * @return Готовая сборка компьютера.
      */
     public Computer build(double money, String brandCPU, String brandGPU) {
+        resetValues();
         Computer computer = new Computer();
 
-        for (EnumComponents type : computer.componentsParts) {
-            Component bestComponent;
-            try {
-                bestComponent = getBestComponent(type, brandCPU, brandGPU,
-                        money * computer.ratio.get(type));
-            } catch (ComponentNotFoundException e) {
+        int attempts = 6;
+
+        for (ComponentsEnum type : computer.componentsParts) {
+            Component bestComponent = null;
+            for (int i = 0; i < attempts; i++) {
                 try {
-                    bestComponent = getBestComponent(type, brandCPU, brandGPU,
-                            money * computer.ratio.get(type) + money * computer.ratio.get(EnumComponents.EXTRA));
-                } catch (ComponentNotFoundException ignored) {
+                    bestComponent = getBestComponent(type, brandCPU, brandGPU, money * computer.ratio.get(type)
+                            + money * computer.ratio.get(ComponentsEnum.EXTRA) * i);
                     break;
+                } catch (ComponentNotFoundException ignored) {
+                    if (i == attempts - 1) return computer;
                 }
             }
 
@@ -69,22 +71,17 @@ public final class BuildProcess {
      * @return Лучший компонент.
      * @throws ComponentNotFoundException В случае нехватки денег.
      */
-    private Component getBestComponent(EnumComponents type, String brandCPU, String brandGPU,
+    private Component getBestComponent(ComponentsEnum type, String brandCPU, String brandGPU,
                                        double money) throws ComponentNotFoundException {
         ArrayList<? extends Component> typeComponents = componentsService.getComponents(type, brandCPU, brandGPU);
         Component bestComponent = null;
-        System.out.println(typeComponents);
         for (Component typeComponent : typeComponents) {
-            boolean isOk = typeComponent.getPrice() <= money && makeDecision(typeComponent);
+            if (typeComponent.getPrice() > money || !makeDecision(typeComponent)) continue;
 
-            if (bestComponent != null) {
-                if (isOk && typeComponent.getPoints() > bestComponent.getPoints()) {
-                    bestComponent = typeComponent;
-                }
-            } else {
-                if (isOk) {
-                    bestComponent = typeComponent;
-                }
+            if (bestComponent == null) {
+                bestComponent = typeComponent;
+            } else if (typeComponent.getPoints() > bestComponent.getPoints()) {
+                bestComponent = typeComponent;
             }
         }
 
@@ -104,5 +101,11 @@ public final class BuildProcess {
             return tdp <= ((Power) component).getWatts();
         }
         return true;
+    }
+
+    private void resetValues() {
+        socket = null;
+        tdp = 150;
+        cpuTdp = 0;
     }
 }

@@ -1,6 +1,6 @@
 package org.example.enums;
 
-public enum EnumComponents {
+public enum ComponentsEnum {
     CPU,
     GPU,
     MOTHERBOARD,

@@ -1,9 +1,9 @@
-package org.example.components.computerParts;
+package org.example.computer.parts;
 
-public class Ram extends Component {
+public class Disk extends Component {
     private final String type;
 
-    public Ram (String name, int price, int points, String type) {
+    public Disk (String name, int price, int points, String type){
         super(name, price, points);
         this.type = type;
     }
