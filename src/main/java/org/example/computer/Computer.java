@@ -2,9 +2,12 @@ package org.example.computer;
 
 import org.example.computer.parts.Component;
 import org.example.enums.ComponentsEnum;
+import org.example.text.TextContainer;
+import org.example.users.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +18,10 @@ public class Computer {
     private final Map<ComponentsEnum, Component> components = new HashMap<>();
     public ArrayList<ComponentsEnum> componentsParts = new ArrayList<>();
     public Map<ComponentsEnum, Double> ratio = new HashMap<>();
+    private boolean isPublic;
+    private int likes;
+    private final List<User> userLikes = new ArrayList<>();
+    private String creator;
 
     public Computer() {
         componentsParts.add(ComponentsEnum.CPU);
@@ -37,6 +44,35 @@ public class Computer {
         ratio.put(ComponentsEnum.EXTRA, 0.01);
     }
 
+    public boolean isUserLiked(User user) {
+        return userLikes.contains(user);
+    }
+
+    public void addUserLike(User user) {
+        likes += 1;
+        this.userLikes.add(user);
+    }
+
+    public void deleteUserLike(User user) {
+        likes -= 1;
+        userLikes.remove(user);
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+    public boolean isPublic() {
+        return isPublic;
+    }
+
+    public void setPublic(boolean aPublic) {
+        isPublic = aPublic;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
     public Component getComponent(ComponentsEnum component) {
         return components.get(component);
     }
@@ -45,11 +81,11 @@ public class Computer {
         components.put(name, component);
     }
 
-    public String getInfo() {
+    public String getInfo(boolean fromPublic, String name) {
         if (!CheckThePresenceOfAllElements()) return "Сорри, времена тяжелые. На это ничего не собрать";
 
         calculateTotalPrice();
-        return generateStringComputer();
+        return generateStringComputer(fromPublic, name);
     }
 
     private boolean CheckThePresenceOfAllElements() {
@@ -66,22 +102,31 @@ public class Computer {
         }
     }
 
-    private String generateStringComputer() {
-        return "Ваш процессор: " + getComponent(ComponentsEnum.CPU).getName() + " | цена " +
+    private String generateStringComputer(boolean fromPublic, String name) {
+        String extraInfo = "";
+        if (isPublic && fromPublic) {
+            extraInfo += name + "\n\n" +
+                    creator + " - создатель\n" +
+                    "Лайков " + likes + "\n\n";
+        } else if (!fromPublic) {
+            extraInfo += TextContainer.isPublic(this) + "\n\n";
+        }
+        return  extraInfo +
+                "Процессор: " + getComponent(ComponentsEnum.CPU).getName() + " | цена " +
                 getComponent(ComponentsEnum.CPU).getPrice() + "\n" +
-                "Ваша материнская плата: " + getComponent(ComponentsEnum.MOTHERBOARD).getName() + " | цена " +
+                "Материнская плата: " + getComponent(ComponentsEnum.MOTHERBOARD).getName() + " | цена " +
                 getComponent(ComponentsEnum.MOTHERBOARD).getPrice() + "\n" +
-                "Ваша видеокарта: " + getComponent(ComponentsEnum.GPU).getName() + " | цена " +
+                "Видеокарта: " + getComponent(ComponentsEnum.GPU).getName() + " | цена " +
                 getComponent(ComponentsEnum.GPU).getPrice() + "\n" +
-                "Ваша озу: " + getComponent(ComponentsEnum.RAM).getName() + " | цена " +
+                "ОЗУ: " + getComponent(ComponentsEnum.RAM).getName() + " | цена " +
                 getComponent(ComponentsEnum.RAM).getPrice() + "\n" +
-                "Ваше охлаждение: " + getComponent(ComponentsEnum.COOLING).getName() + " | цена " +
+                "Охлаждение: " + getComponent(ComponentsEnum.COOLING).getName() + " | цена " +
                 getComponent(ComponentsEnum.COOLING).getPrice() + "\n" +
-                "Ваш блок питания: " + getComponent(ComponentsEnum.POWER).getName() + " | цена " +
+                "Блок питания: " + getComponent(ComponentsEnum.POWER).getName() + " | цена " +
                 getComponent(ComponentsEnum.POWER).getPrice() + "\n" +
-                "Ваш диск: " + getComponent(ComponentsEnum.DISK).getName() + " | цена " +
+                "Диск: " + getComponent(ComponentsEnum.DISK).getName() + " | цена " +
                 getComponent(ComponentsEnum.DISK).getPrice() + "\n" +
-                "Ваш корпус: " + getComponent(ComponentsEnum.CORPUS).getName() + " | цена " +
+                "Корпус: " + getComponent(ComponentsEnum.CORPUS).getName() + " | цена " +
                 getComponent(ComponentsEnum.CORPUS).getPrice() + "\n\n" +
                 "Общая цена " + totalPrice + "\n";
     }

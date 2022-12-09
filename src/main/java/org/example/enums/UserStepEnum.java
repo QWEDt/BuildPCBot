@@ -5,5 +5,6 @@ public enum UserStepEnum {
     WaitForCPU,
     WaitForGPU,
     WaitForNamePC,
+    WaitForChooseSave,
     Resting
 }

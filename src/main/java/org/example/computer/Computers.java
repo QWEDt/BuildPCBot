@@ -15,6 +15,10 @@ public class Computers {
         return computers.keySet();
     }
 
+    public int getSize() {
+        return computers.size();
+    }
+
     public void append(String name, Computer computer) {
         computers.put(name, computer);
     }

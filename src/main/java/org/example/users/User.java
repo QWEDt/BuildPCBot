@@ -14,13 +14,17 @@ public class User {
     private UserStepEnum step = UserStepEnum.Resting;
     private final Computers computers;
     private Computer lastComputer;
+    private final String userName;
 
 
-    public User(long chatId) {
+    public User(long chatId, String userName) {
         this.chatId = chatId;
+        this.userName = userName;
         computers = new Computers();
     }
-
+    public String getUserName() {
+        return userName;
+    }
     public void deleteComputer(String name) {
         computers.deleteComputer(name);
     }
@@ -31,6 +35,10 @@ public class User {
 
     public Set<String> getComputerNames() {
         return computers.getNames();
+    }
+
+    public int getComputerSize() {
+        return computers.getSize();
     }
 
     public Computer getLastComputer() {
@@ -55,6 +63,7 @@ public class User {
         switch (step) {
             case WaitForMoney -> step = UserStepEnum.WaitForCPU;
             case WaitForCPU -> step = UserStepEnum.WaitForGPU;
+            case WaitForChooseSave -> step = UserStepEnum.WaitForNamePC;
             case WaitForGPU, WaitForNamePC -> step = UserStepEnum.Resting;
         }
     }
@@ -66,6 +75,11 @@ public class User {
     public void setWaitingForName() {
         step = UserStepEnum.WaitForNamePC;
     }
+
+    public void setWaitForChooseSave() {
+        step = UserStepEnum.WaitForChooseSave;
+    }
+
 
     public void startBuilding() {
         step = UserStepEnum.WaitForMoney;

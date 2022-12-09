@@ -15,6 +15,7 @@ public class ComponentsService {
     public ComponentsService() {
         Gson gson = new Gson();
         try {
+            //TODO read from resources
             String path = "src/main/resources/components.json";
             componentsStorage = gson.fromJson(Files.readString(Path.of(path)), ComponentsStorage.class);
         } catch (IOException e) {

@@ -1,9 +1,11 @@
 package org.example.core;
 
+import org.example.computer.Computer;
+import org.example.computer.Computers;
 import org.example.enums.UserStepEnum;
 import org.example.text.TextContainer;
 import org.example.users.User;
-import org.example.users.Users;
+import org.example.users.UsersService;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -28,18 +30,20 @@ import java.util.List;
 
 @Singleton
 public class PCBuilderBot extends TelegramLongPollingBot {
-    Users users;
+    UsersService users;
     BuildProcess buildProcess;
-
+    Computers publicComputers;
     public PCBuilderBot() {
-        users = new Users();
+        users = new UsersService();
         buildProcess = new BuildProcess();
+        publicComputers = users.getPublicComputers();
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/help", "Информация о возможностях"));
         commands.add(new BotCommand("/start", "Приветственное сообщение"));
         commands.add(new BotCommand("/buildpc", "Начать сборку пк"));
-        commands.add(new BotCommand("/cancel", "Отменить текущую сборку пк"));
+        commands.add(new BotCommand("/cancel", "Отменить текущее действие"));
         commands.add(new BotCommand("/saved", "Посмотреть сохраненные сборки пк"));
+        commands.add(new BotCommand("/builds", "Посмотреть сборки от других пользователей"));
         commands.add(new BotCommand("/delete", "Удалить всю информацию обо мне"));
 
         try {
@@ -47,7 +51,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
-
+        System.out.println("Бот запущен");
     }
 
     @Override
@@ -74,8 +78,9 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         User user = users.getUser(message.getChatId());
 
         if (user == null) {
-            user = new User(message.getChatId());
+            user = new User(message.getChatId(), message.getFrom().getUserName());
             users.appendUser(user);
+            users.saveUser(user);
         }
 
         if (message.getText().equals("/cancel"))
@@ -86,7 +91,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         }
 
         if (user.getStep() == UserStepEnum.Resting) {
-            //todo normal commands
+            System.out.println(message.getFrom().getUserName());
             switch (message.getText()) {
                 case "/buildpc" -> {
                     user.startBuilding();
@@ -94,13 +99,15 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 }
                 case "/start" -> sendText(message.getChatId(), TextContainer.start);
 
-                case "/saved" -> sendTextWithKeyboard(message.getChatId(), TextContainer.myBuildsInfo,
-                        generateInlineKeyboard(user.getComputerNames()));
+                case "/saved" -> sendTextWithKeyboard(message.getChatId(), TextContainer.myBuildsInfo(user),
+                        generateInlineKeyboard(user.getComputerNames(), ""));
                 case "/delete" -> {
                     users.deleteUser(user);
                     sendText(user.getChatId(), TextContainer.delete);
                 }
-                case "/save" -> users.saveUserData();
+                case "/builds" -> sendTextWithKeyboard(user.getChatId(), TextContainer.publicBuildsInfo,
+                        generateInlineKeyboard(publicComputers.getNames(), "public_"));
+
             }
         } else userProcessing(user, message.getText().toLowerCase());
     }
@@ -108,20 +115,75 @@ public class PCBuilderBot extends TelegramLongPollingBot {
     private void callbackDataProcessing(Message message, String data) {
         User user = users.getUser(message.getChatId());
 
+        switch (user.getStep()) {
+            case WaitForChooseSave -> {
+                if ("Публично".equals(data)) {
+                    user.getLastComputer().setPublic(true);
+                } else if ("Для себя".equals(data)) {
+                    user.getLastComputer().setPublic(false);
+                }
+                editMessage(message, TextContainer.enterSaveName, null);
+                user.nextStep();
+            }
+            case Resting -> {
+                if (checkPrefix("public_", data)) {
+                    processPublicBuilds(message, data.replace("public_", ""), user);
+                } else {
+                    processLocalBuilds(message, data, user);
+                }
+            }
+        }
+    }
+
+    private void processPublicBuilds(Message message, String data, User user) {
+        if ("Назад".equals(data)) {
+            editMessage(message, TextContainer.publicBuildsInfo,
+                    generateInlineKeyboard(publicComputers.getNames(), "public_"));
+        } else if ("Поставить лайк".equals(data)) {
+            String PCName = getPublicPCName(message.getText());
+            Computer computer = publicComputers.getComputer(PCName);
+            computer.addUserLike(user);
+            editMessage(message, computer.getInfo(true, PCName),
+                    generateInlineKeyboard(List.of("Убрать лайк", "Назад"), "public_"));
+        } else if ("Убрать лайк".equals(data)) {
+            String PCName = getPublicPCName(message.getText());
+            Computer computer = publicComputers.getComputer(PCName);
+            computer.deleteUserLike(user);
+            editMessage(message, computer.getInfo(true, PCName),
+                    generateInlineKeyboard(List.of("Поставить лайк", "Назад"), "public_"));
+        } else {
+            Computer computer = publicComputers.getComputer(data);
+            String text;
+            if (computer.isUserLiked(user)) {
+                text = "Убрать лайк";
+            } else {
+                text = "Поставить лайк";
+            }
+            editMessage(message, computer.getInfo(true, data),
+                    generateInlineKeyboard(List.of(text, "Назад"), "public_"));
+        }
+    }
+
+    private void processLocalBuilds(Message message, String data, User user) {
         if ("Сохранить".equals(data)) {
             editMessage(message, message.getText(), null);
-            sendText(message.getChatId(), TextContainer.enterSaveName);
-            user.setWaitingForName();
+            sendTextWithKeyboard(message.getChatId(), TextContainer.chooseSaveMethod,
+                    generateInlineKeyboard(List.of("Публично", "Для себя"), ""));
+            user.setWaitForChooseSave();
         } else if (user.isContains(data)) {
-            editMessage(message, data, generateInlineKeyboard(Arrays.asList("Посмотреть", "Удалить", "Назад")));
+            editMessage(message, data,
+                    generateInlineKeyboard(Arrays.asList("Посмотреть", "Удалить", "Назад"), ""));
         } else if ("Назад".equals(data)) {
-            editMessage(message, "Ваши сборки:", generateInlineKeyboard(user.getComputerNames()));
+            editMessage(message, "Ваши сборки:",
+                    generateInlineKeyboard(user.getComputerNames(), ""));
         } else if ("Посмотреть".equals(data)) {
-            editMessage(message, user.getComputer(message.getText()).getInfo(),
-                    generateInlineKeyboard(List.of("Назад")));
+            editMessage(message, user.getComputer(message.getText()).getInfo(false, ""),
+                    generateInlineKeyboard(List.of("Назад"), ""));
         } else if ("Удалить".equals(data)) {
             user.deleteComputer(message.getText());
-            editMessage(message, TextContainer.myBuildsInfo, generateInlineKeyboard(user.getComputerNames()));
+            users.saveUser(user);
+            editMessage(message, TextContainer.myBuildsInfo(user),
+                    generateInlineKeyboard(user.getComputerNames(), ""));
         }
     }
 
@@ -143,14 +205,20 @@ public class PCBuilderBot extends TelegramLongPollingBot {
                 user.setBrandGPU(text);
                 sendText(user.getChatId(), TextContainer.assemblyInfo);
                 user.setLastComputer(buildProcess.build(user.getMoney(), user.getBrandCPU(), user.getBrandGPU()));
-                sendTextWithKeyboard(user.getChatId(), user.getLastComputer().getInfo(),
-                        generateInlineKeyboard(List.of("Сохранить")));
+                sendTextWithKeyboard(user.getChatId(), user.getLastComputer().getInfo(false, ""),
+                        generateInlineKeyboard(List.of("Сохранить"), ""));
                 user.nextStep();
             }
             case WaitForNamePC -> {
-                if (user.addComputer(text, user.getLastComputer())) {
+                Computer lastComputer = user.getLastComputer();
+                if (user.addComputer(text, lastComputer)) {
+                    if (lastComputer.isPublic()) {
+                        lastComputer.setCreator(user.getUserName());
+                        publicComputers.append(text, lastComputer);
+                    }
                     sendText(user.getChatId(), TextContainer.buildSaved);
                     user.nextStep();
+                    users.saveUser(user);
                 } else {
                     sendText(user.getChatId(), TextContainer.buildNameIsTaken);
                 }
@@ -189,7 +257,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         return replyKeyboardMarkup;
     }
 
-    private InlineKeyboardMarkup generateInlineKeyboard(Collection<String> words) {
+    private InlineKeyboardMarkup generateInlineKeyboard(Collection<String> words, String callBackDataPrefix) {
         InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
         List<InlineKeyboardButton> rowInline;
@@ -199,7 +267,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
             rowInline = new ArrayList<>();
             button = new InlineKeyboardButton();
             button.setText(word);
-            button.setCallbackData(word);
+            button.setCallbackData(callBackDataPrefix + word);
             rowInline.add(button);
             rowsInline.add(rowInline);
         }
@@ -233,5 +301,14 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
+    }
+
+    private boolean checkPrefix(String prefix, String text) {
+        return text.indexOf(prefix) == 0;
+    }
+
+    private String getPublicPCName(String data) {
+        int index = data.indexOf("\n");
+        return data.substring(0, index);
     }
 }
