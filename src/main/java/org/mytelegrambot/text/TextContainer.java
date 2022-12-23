@@ -27,6 +27,7 @@ public class TextContainer {
     public static final String noComment = "Комментарий не будет добавлен";
     public static final String commentOk = "Комментарий добавлен";
     public static final String searchComponent = "Выберите из списка";
+    public static String waitForMoneyForComponent = "Введите ценовую категорию";
 
     public static String myBuildsInfo(User user) {
         if (user.getComputerSize() == 0) {

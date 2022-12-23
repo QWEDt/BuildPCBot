@@ -3,6 +3,7 @@ package org.mytelegrambot.core;
 
 import org.mytelegrambot.computer.ComponentsParts;
 import org.mytelegrambot.computer.PublicComputersService;
+import org.mytelegrambot.computer.components.ComponentsService;
 import org.mytelegrambot.core.assemble.BuildProcessService;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
 import org.mytelegrambot.users.UsersService;
@@ -34,6 +35,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         UsersService.init();
         PublicComputersService.init();
         ComponentsParts.init();
+        ComponentsService.init();
 
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/help", "Информация о возможностях"));

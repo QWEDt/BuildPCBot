@@ -2,8 +2,13 @@ package org.mytelegrambot.core.processings;
 
 import org.mytelegrambot.computer.Computer;
 import org.mytelegrambot.computer.PublicComputersService;
+import org.mytelegrambot.computer.components.ComponentsService;
+import org.mytelegrambot.computer.parts.Component;
+import org.mytelegrambot.computer.parts.Processor;
+import org.mytelegrambot.computer.parts.VideoCard;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
 import org.mytelegrambot.core.utils.KeyboardGenerator;
+import org.mytelegrambot.enums.ComponentsEnum;
 import org.mytelegrambot.enums.DataPrefixEnum;
 import org.mytelegrambot.enums.OptionsToSendEnum;
 import org.mytelegrambot.enums.UserStepEnum;
@@ -51,10 +56,16 @@ public class CallBackProcessing {
             case PRIVATEPC -> {
                 return processLocalBuilds(callbackText, messageText);
             }
-            case SEARCH -> { //todo
+            case SEARCH -> {
+                return processSearchComponent();
             }
         }
         return null;
+    }
+
+    private ProcessedData processSearchComponent() {
+        user.setStep(UserStepEnum.WaitForMoneyForComponent);
+        return new ProcessedData(TextContainer.waitForMoneyForComponent, OptionsToSendEnum.SEND, null);
     }
 
     private ProcessedData processChooseComment(String text) {

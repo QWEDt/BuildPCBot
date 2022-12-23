@@ -17,11 +17,6 @@ public final class BuildProcess {
     private String socket;
     private int tdp = 150;
     private int cpuTdp;
-    ComponentsService componentsService;
-
-    public BuildProcess() {
-        componentsService = new ComponentsService();
-    }
 
     /**
      * Метод для генерации сборки на основе переданных параметров.
@@ -75,7 +70,7 @@ public final class BuildProcess {
      */
     private Component getBestComponent(ComponentsEnum type, String brandCPU, String brandGPU,
                                        double money) throws ComponentNotFoundException, ComponentStorageException {
-        ArrayList<? extends Component> typeComponents = componentsService.getComponents(type, brandCPU, brandGPU);
+        ArrayList<? extends Component> typeComponents = ComponentsService.getComponents(type, brandCPU, brandGPU);
 
         if (typeComponents == null)
             throw new ComponentStorageException();

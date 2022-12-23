@@ -8,5 +8,6 @@ public enum UserStepEnum {
     WaitForChooseSave,
     WaitForChooseComment,
     WaitForComment,
+    WaitForMoneyForComponent,
     Resting
 }

@@ -3,6 +3,7 @@ package org.mytelegrambot.core.assemble;
 import org.mytelegrambot.computer.Computer;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
 import org.mytelegrambot.core.utils.KeyboardGenerator;
+import org.mytelegrambot.enums.DataPrefixEnum;
 import org.mytelegrambot.enums.OptionsToSendEnum;
 import org.mytelegrambot.exceptions.ComponentNotFoundException;
 import org.mytelegrambot.exceptions.ComponentStorageException;
@@ -42,6 +43,6 @@ public class BuildProcessService {
         processedData.setMessageText(computer.getInfo(false, ""));
         processedData.setOptionToSend(OptionsToSendEnum.SENDWITHKEYBOARD);
         processedData.setKeyboardMarkup(
-                KeyboardGenerator.generateInlineKeyboard(List.of("Сохранить"), ""));
+                KeyboardGenerator.generateInlineKeyboard(List.of("Сохранить"), DataPrefixEnum.PRIVATEPC.toString()));
     }
 }
