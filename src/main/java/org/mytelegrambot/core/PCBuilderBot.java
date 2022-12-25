@@ -60,12 +60,12 @@ public class PCBuilderBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return System.getenv("botName");
+        return System.getProperty("botName");
     }
 
     @Override
     public String getBotToken() {
-        return System.getenv("botToken");
+        return System.getProperty("botToken");
     }
 
     @Override
