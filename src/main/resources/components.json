@@ -3,26 +3,29 @@
     "intel" : [
       {
         "name" : "Celeron G5905",
-        "price" : 2800,
+        "price" : 2700,
         "socket" : "lga1200",
         "tdp" : 58,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 610",
+		"igpu_points" : 1,
         "points" : 1
       },
       {
         "name" : "Celeron G6900",
-        "price" : 3000,
+        "price" : 3200,
         "socket" : "lga1700",
         "tdp" : 46,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 710",
+		"igpu_points" : 2,
         "points" : 4
       },
       {
         "name" : "Pentium Gold G6405",
-        "price" : 5000,
+        "price" : 5200,
         "socket" : "lga1200",
         "tdp" : 58,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 610",
+		"igpu_points" : 1,
         "points" : 3
       },
       {
@@ -30,7 +33,8 @@
         "price" : 5000,
         "socket" : "lga1700",
         "tdp" : 46,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 710",
+		"igpu_points" : 2,
         "points" : 6
       },
       {
@@ -38,7 +42,8 @@
         "price" : 5500,
         "socket" : "lga1200",
         "tdp" : 58,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 610",
+		"igpu_points" : 1,
         "points" : 2
       },
       {
@@ -46,7 +51,8 @@
         "price" : 6500,
         "socket" : "lga1200",
         "tdp" : 58,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 630",
+		"igpu_points" : 3,
         "points" : 5
       },
       {
@@ -54,7 +60,7 @@
         "price" : 6700,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 9
       },
       {
@@ -62,7 +68,7 @@
         "price" : 7000,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 10
       },
       {
@@ -70,7 +76,7 @@
         "price" : 8000,
         "socket" : "lga1700",
         "tdp" : 89,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 12
       },
       {
@@ -78,7 +84,8 @@
         "price" : 8200,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 630",
+		"igpu_points" : 3,
         "points" : 7
       },
       {
@@ -86,7 +93,8 @@
         "price" : 8500,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 630",
+		"igpu_points" : 3,
         "points" : 8
       },
       {
@@ -94,7 +102,8 @@
         "price" : 9300,
         "socket" : "lga1700",
         "tdp" : 89,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 730",
+		"igpu_points" : 4,
         "points" : 11
       },
       {
@@ -102,7 +111,7 @@
         "price" : 10000,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 14
       },
       {
@@ -110,7 +119,7 @@
         "price" : 12500,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 16
       },
       {
@@ -118,7 +127,8 @@
         "price" : 13000,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 630",
+		"igpu_points" : 3,
         "points" : 13
       },
       {
@@ -126,7 +136,7 @@
         "price" : 13800,
         "socket" : "lga1700",
         "tdp" : 117,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 24
       },
       {
@@ -134,7 +144,8 @@
         "price" : 14000,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 730",
+		"igpu_points" : 4,
         "points" : 15
       },
       {
@@ -142,7 +153,7 @@
         "price" : 14300,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 19
       },
       {
@@ -150,7 +161,8 @@
         "price" : 15000,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 17
       },
       {
@@ -158,7 +170,8 @@
         "price" : 15000,
         "socket" : "lga1700",
         "tdp" : 117,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 730",
+		"igpu_points" : 4,
         "points" : 23
       },
       {
@@ -166,7 +179,8 @@
         "price" : 17000,
         "socket" : "lga1700",
         "tdp" : 117,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 25
       },
       {
@@ -174,7 +188,8 @@
         "price" : 17900,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 18
       },
       {
@@ -182,7 +197,8 @@
         "price" : 18500,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 21
       },
       {
@@ -190,7 +206,8 @@
         "price" : 19200,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 630",
+		"igpu_points" : 3,
         "points" : 18
       },
       {
@@ -198,7 +215,7 @@
         "price" : 19600,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 22
       },
       {
@@ -206,7 +223,8 @@
         "price" : 20500,
         "socket" : "lga1700",
         "tdp" : 117,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 30
       },
       {
@@ -214,7 +232,7 @@
         "price" : 23500,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 27
       },
       {
@@ -222,7 +240,7 @@
         "price" : 23500,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 29
       },
       {
@@ -230,7 +248,7 @@
         "price" : 24000,
         "socket" : "lga1700",
         "tdp" : 150,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 32
       },
       {
@@ -238,7 +256,8 @@
         "price" : 24200,
         "socket" : "lga1200",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 28
       },
       {
@@ -246,7 +265,8 @@
         "price" : 24500,
         "socket" : "lga1700",
         "tdp" : 150,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 31
       },
       {
@@ -254,7 +274,8 @@
         "price" : 28800,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 30
       },
       {
@@ -262,7 +283,7 @@
         "price" : 29000,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 31
       },
       {
@@ -270,7 +291,7 @@
         "price" : 30000,
         "socket" : "lga1700",
         "tdp" : 180,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 35
       },
       {
@@ -278,7 +299,8 @@
         "price" : 30300,
         "socket" : "lga1200",
         "tdp" : 125,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 750",
+		"igpu_points" : 5,
         "points" : 33
       },
       {
@@ -286,7 +308,8 @@
         "price" : 32300,
         "socket" : "lga1700",
         "tdp" : 180,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 34
       },
       {
@@ -294,7 +317,7 @@
         "price" : 33000,
         "socket" : "lga1700",
         "tdp" : 190,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 37
       },
       {
@@ -302,7 +325,8 @@
         "price" : 36000,
         "socket" : "lga1700",
         "tdp" : 190,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 36
       },
       {
@@ -310,7 +334,7 @@
         "price" : 38300,
         "socket" : "lga1700",
         "tdp" : 200,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 41
       },
       {
@@ -318,7 +342,8 @@
         "price" : 40800,
         "socket" : "lga1700",
         "tdp" : 200,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 40
       },
       {
@@ -326,7 +351,7 @@
         "price" : 43000,
         "socket" : "lga1700",
         "tdp" : 240,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 43
       },
       {
@@ -334,7 +359,8 @@
         "price" : 45000,
         "socket" : "lga1700",
         "tdp" : 240,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 42
       },
       {
@@ -342,7 +368,8 @@
         "price" : 80000,
         "socket" : "lga1700",
         "tdp" : 270,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 44
       },
       {
@@ -350,7 +377,7 @@
         "price" : 61000,
         "socket" : "lga1700",
         "tdp" : 255,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 48
       },
       {
@@ -358,7 +385,8 @@
         "price" : 64000,
         "socket" : "lga1700",
         "tdp" : 255,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 47
       },
       {
@@ -366,7 +394,7 @@
         "price" : 43000,
         "socket" : "lga1700",
         "tdp" : 255,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 46
       },
       {
@@ -374,7 +402,8 @@
         "price" : 47000,
         "socket" : "lga1700",
         "tdp" : 255,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 45
       },
       {
@@ -382,7 +411,7 @@
         "price" : 34000,
         "socket" : "lga1700",
         "tdp" : 180,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 39
       },
       {
@@ -390,10 +419,10 @@
         "price" : 36000,
         "socket" : "lga1700",
         "tdp" : 180,
-        "igpu" : "1",
+        "igpu" : "UHD Graphics 770",
+		"igpu_points" : 6,
         "points" : 38
       }
-
     ],
     "amd" : [
 
@@ -402,7 +431,8 @@
         "price" : 1650,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon R5",
+		"igpu_points" : 2,
         "points" : 1
       },
       {
@@ -410,7 +440,8 @@
         "price" : 1800,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon R5",
+		"igpu_points" : 2,
         "points" : 4
       },
       {
@@ -418,7 +449,8 @@
         "price" : 2000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon R5",
+		"igpu_points" : 2,
         "points" : 2
       },
       {
@@ -426,7 +458,8 @@
         "price" : 2300,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon R5",
+		"igpu_points" : 2,
         "points" : 3
       },
       {
@@ -434,7 +467,7 @@
         "price" : 2600,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 5
       },
       {
@@ -442,7 +475,8 @@
         "price" : 4400,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon R7",
+		"igpu_points" : 1,
         "points" : 6
       },
       {
@@ -450,7 +484,8 @@
         "price" : 4500,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 3",
+		"igpu_points" : 3,
         "points" : 8
       },
       {
@@ -458,7 +493,8 @@
         "price" : 4500,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 3",
+		"igpu_points" : 3,
         "points" : 8
       },
       {
@@ -466,7 +502,8 @@
         "price" : 5000,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon Graphics",
+		"igpu_points" : 4,
         "points" : 10
       },
       {
@@ -474,7 +511,8 @@
         "price" : 5500,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon R7",
+		"igpu_points" : 1,
         "points" : 7
       },
       {
@@ -482,7 +520,8 @@
         "price" : 6000,
         "socket" : "am4",
         "tdp" : 35,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 3",
+		"igpu_points" : 3,
         "points" : 9
       },
       {
@@ -490,7 +529,7 @@
         "price" : 6500,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 11
       },
       {
@@ -498,7 +537,7 @@
         "price" : 8700,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 14
       },
       {
@@ -506,7 +545,7 @@
         "price" : 8800,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 15
       },
       {
@@ -514,7 +553,8 @@
         "price" : 9000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 6,",
+		"igpu_points" : 5,
         "points" : 13
       },
       {
@@ -522,7 +562,8 @@
         "price" : 9700,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 8",
+		"igpu_points" : 4,
         "points" : 12
       },
       {
@@ -530,7 +571,7 @@
         "price" : 10300,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 17
       },
       {
@@ -538,7 +579,8 @@
         "price" : 11000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 6",
+		"igpu_points" : 6,
         "points" : 16
       },
       {
@@ -546,15 +588,16 @@
         "price" : 11000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 19
       },
       {
         "name" : "Ryzen 5 PRO 4650G",
-        "price" : 11500,
+        "price" : 11000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 6",
+		"igpu_points" : 6,
         "points" : 18
       },
       {
@@ -562,7 +605,7 @@
         "price" : 12800,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 21
       },
       {
@@ -570,7 +613,8 @@
         "price" : 13000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 7",
+		"igpu_points" : 7,
         "points" : 22
       },
       {
@@ -578,7 +622,8 @@
         "price" : 13800,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 7",
+		"igpu_points" : 7,
         "points" : 20
       },
       {
@@ -586,7 +631,8 @@
         "price" : 14000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Vega 7",
+		"igpu_points" : 7,
         "points" : 25
       },
       {
@@ -594,7 +640,7 @@
         "price" : 16000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 26
       },
       {
@@ -602,7 +648,7 @@
         "price" : 16000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 27
       },
       {
@@ -610,23 +656,25 @@
         "price" : 16300,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 23
       },
       {
         "name" : "Ryzen 7 PRO 4750G",
-        "price" : 18000,
+        "price" : 17000,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Graphics",
+		"igpu_points" : 5,
         "points" : 28
       },
       {
         "name" : "Ryzen 7 5700G",
-        "price" : 19000,
+        "price" : 18500,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "1",
+        "igpu" : "Radeon Graphics",
+		"igpu_points" : 5,
         "points" : 29
       },
       {
@@ -634,7 +682,7 @@
         "price" : 21000,
         "socket" : "am4",
         "tdp" : 105,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 24
       },
       {
@@ -642,7 +690,7 @@
         "price" : 23000,
         "socket" : "am4",
         "tdp" : 105,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 21
       },
       {
@@ -650,7 +698,7 @@
         "price" : 23800,
         "socket" : "am4",
         "tdp" : 65,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 30
       },
       {
@@ -658,7 +706,7 @@
         "price" : 31300,
         "socket" : "am4",
         "tdp" : 105,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 32
       },
       {
@@ -666,7 +714,7 @@
         "price" : 39800,
         "socket" : "am4",
         "tdp" : 105,
-        "igpu" : "0",
+        "igpu" : null,
         "points" : 33
       }
     ]
@@ -677,126 +725,147 @@
         "name" : "GT 710",
         "price" : 4100,
         "tdp" : 20,
+		"pin_gpu" : null,
         "points" : 1
       },
       {
         "name" : "GT 730",
         "price" : 4700,
         "tdp" : 50,
+		"pin_gpu" : null,
         "points" : 2
       },
       {
         "name" : "GT 1030",
         "price" : 6000,
         "tdp" : 30,
+		"pin_gpu" : null,
         "points" : 3
       },
       {
         "name" : "GTX 1630",
-        "price" : 11000,
+        "price" : 11500,
         "tdp" : 75,
+		"pin_gpu" : null,
         "points" : 4
       },
       {
         "name" : "GTX 1050 Ti",
         "price" : 13600,
         "tdp" : 75,
+		"pin_gpu" : null,
         "points" : 5
       },
       {
         "name" : "GTX 1650",
-        "price" : 13000,
+        "price" : 16000,
         "tdp" : 75,
+		"pin_gpu" : null,
         "points" : 6
       },
       {
         "name" : "GTX 1660",
         "price" : 21000,
         "tdp" : 120,
+		"pin_gpu" : 8,
         "points" : 7
       },
       {
         "name" : "GTX 1660 SUPER",
-        "price" : 22300,
+        "price" : 19800,
         "tdp" : 125,
+		"pin_gpu" : 8,
         "points" : 8
       },
       {
         "name" : "GTX 1660 Ti",
-        "price" : 24000,
+        "price" : 22300,
         "tdp" : 120,
+		"pin_gpu" : 8,
         "points" : 9
       },
       {
         "name" : "RTX 2060",
-        "price" : 24000,
+        "price" : 26000,
         "tdp" : 175,
+		"pin_gpu" : 8,
         "points" : 11
       },
       {
         "name" : "RTX 2060 SUPER",
         "price" : 30000,
         "tdp" : 175,
+		"pin_gpu" : 8,
         "points" : 12
       },
       {
         "name" : "RTX 3050",
-        "price" : 23300,
+        "price" : 25000,
         "tdp" : 130,
+		"pin_gpu" : 8,
         "points" : 10
       },
       {
         "name" : "RTX 3060",
-        "price" : 30900,
+        "price" : 33000,
         "tdp" : 170,
+		"pin_gpu" : 8,
         "points" : 13
       },
       {
         "name" : "RTX 3060 Ti",
         "price" : 35500,
         "tdp" : 220,
+		"pin_gpu" : 8,
         "points" : 14
       },
       {
         "name" : "RTX 3070",
-        "price" : 41000,
+        "price" : 43000,
         "tdp" : 220,
+		"pin_gpu" : 14,
         "points" : 15
       },
       {
         "name" : "RTX 3070 Ti",
         "price" : 50000,
         "tdp" : 290,
+		"pin_gpu" : 16,
         "points" : 16
       },
       {
         "name" : "RTX 3080",
         "price" : 65000,
         "tdp" : 320,
+		"pin_gpu" : 16,
         "points" : 17
       },
       {
         "name" : "RTX 3080 Ti",
-        "price" : 90000,
+        "price" : 87000,
         "tdp" : 350,
+		"pin_gpu" : 24,
         "points" : 18
       },
       {
         "name" : "RTX 3090",
         "price" : 100000,
         "tdp" : 350,
+		"pin_gpu" : 24,
         "points" : 19
       },
       {
         "name" : "RTX 3090 Ti",
-        "price" : 125000,
+        "price" : 115000,
         "tdp" : 450,
+		"pin_gpu" : 24,
         "points" : 20
       },
       {
         "name" : "RTX 4090",
         "price" : 160000,
         "tdp" : 450,
+		"pin_gpu" : 32,
         "points" : 21
       }
     ],
@@ -805,102 +874,119 @@
         "name" : "Radeon R7 240",
         "price" : 3800,
         "tdp" : 50,
+		"pin_gpu" : null,
         "points" : 1
       },
       {
         "name" : "RX 550",
         "price" : 7000,
         "tdp" : 50,
+		"pin_gpu" : null,
         "points" : 1
       },
       {
         "name" : "RX 560",
         "price" : 10000,
         "tdp" : 75,
+		"pin_gpu" : null,
         "points" : 2
       },
       {
         "name" : "RX 570",
         "price" : 13000,
         "tdp" : 120,
+		"pin_gpu" : 8,
         "points" : 4
       },
       {
         "name" : "RX 580",
         "price" : 16000,
         "tdp" : 185,
+		"pin_gpu" : 8,
         "points" : 5
       },
       {
         "name" : "RX 6400",
         "price" : 14000,
         "tdp" : 55,
+		"pin_gpu" : null,
         "points" : 3
       },
       {
         "name" : "RX 6500 XT",
         "price" : 16000,
         "tdp" : 110,
+		"pin_gpu" : 6,
         "points" : 6
       },
       {
         "name" : "RX 6600",
-        "price" : 27000,
+        "price" : 24000,
         "tdp" : 130,
+		"pin_gpu" : 8,
         "points" : 7
       },
       {
         "name" : "RX 6600 XT",
         "price" : 33000,
         "tdp" : 160,
+		"pin_gpu" : 8,
         "points" : 8
       },
       {
         "name" : "RX 6650 XT",
         "price" : 32000,
         "tdp" : 175,
+		"pin_gpu" : 8,
         "points" : 9
       },
       {
         "name" : "RX 6700",
         "price" : 35000,
         "tdp" : 175,
+		"pin_gpu" : 14,
         "points" : 10
       },
       {
         "name" : "RX 6700 XT",
         "price" : 38000,
         "tdp" : 230,
+		"pin_gpu" : 14,
         "points" : 11
       },
       {
         "name" : "RX 6750 XT",
-        "price" : 46000,
+        "price" : 42000,
         "tdp" : 250,
+		"pin_gpu" : 14,
         "points" : 12
       },
       {
         "name" : "RX 6800",
-        "price" : 50000,
+        "price" : 46000,
         "tdp" : 250,
+		"pin_gpu" : 16,
         "points" : 13
       },
       {
         "name" : "RX 6800 XT",
-        "price" : 64000,
+        "price" : 60000,
         "tdp" : 300,
+		"pin_gpu" : 16,
         "points" : 14
       },
       {
         "name" : "RX 6900 XT",
-        "price" : 72000,
+        "price" : 74000,
         "tdp" : 320,
+		"pin_gpu" : 24,
         "points" : 15
       },
       {
         "name" : "RX 6950 XT",
         "price" : 83000,
         "tdp" : 350,
+		"pin_gpu" : 24,
         "points" : 16
       }
     ]
@@ -916,6 +1002,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : null,
+		"pin_cpu" : 4,
         "points" : 1
       },
       {
@@ -926,6 +1014,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 2
       },
       {
@@ -936,6 +1026,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 4,
         "points" : 3
       },
       {
@@ -946,6 +1038,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 4
       },
       {
@@ -956,6 +1050,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 4,
         "points" : 5
       },
       {
@@ -966,6 +1062,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 4,
         "points" : 6
       },
       {
@@ -976,6 +1074,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 7
       },
       {
@@ -986,6 +1086,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 8
       },
       {
@@ -996,6 +1098,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 9
       },
       {
@@ -1006,6 +1110,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 10
       },
       {
@@ -1016,6 +1122,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 11
       },
       {
@@ -1026,6 +1134,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 12
       },
       {
@@ -1036,6 +1146,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 13
       },
       {
@@ -1046,6 +1158,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 14
       },
       {
@@ -1056,6 +1170,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 15
       },
       {
@@ -1066,6 +1182,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 16
       },
       {
@@ -1076,6 +1194,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 17
       },
       {
@@ -1086,6 +1206,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 18
       },
       {
@@ -1096,6 +1218,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 19
       },
       {
@@ -1106,6 +1230,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 20
       },
       {
@@ -1116,6 +1242,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 21
       },
       {
@@ -1126,6 +1254,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 22
       },
       {
@@ -1136,16 +1266,20 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 23
       },
       {
-        "name" : "ASUS PRIME B550M-PLUS",
+        "name" : "ASUS PRIME B550-PLUS",
         "price" : 10000,
         "socket" : "am4",
         "chipset" : "b550",
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 24
       },
       {
@@ -1156,6 +1290,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 25
       },
       {
@@ -1166,6 +1302,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 26
       },
       {
@@ -1176,6 +1314,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 27
       },
       {
@@ -1186,6 +1326,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 28
       },
       {
@@ -1196,6 +1338,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 29
       },
       {
@@ -1206,6 +1350,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 30
       },
       {
@@ -1216,6 +1362,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 31
       },
       {
@@ -1226,6 +1374,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 32
       },
       {
@@ -1236,6 +1386,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 33
       },
       {
@@ -1246,6 +1398,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 34
       },
       {
@@ -1256,6 +1410,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 35
       },
       {
@@ -1266,6 +1422,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 36
       },
       {
@@ -1276,6 +1434,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 37
       },
       {
@@ -1286,6 +1446,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 38
       },
       {
@@ -1296,6 +1458,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 39
       },
       {
@@ -1306,6 +1470,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 40
       },
       {
@@ -1316,6 +1482,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 41
       },
       {
@@ -1326,6 +1494,8 @@
         "radiators" : true,
         "form" : "mini-itx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 42
       },
       {
@@ -1336,6 +1506,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 16,
         "points" : 43
       },
       {
@@ -1346,6 +1518,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 44
       },
       {
@@ -1356,6 +1530,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 45
       }
 
@@ -1369,6 +1545,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : null,
+		"pin_cpu" : 8,
         "points" : 1
       },
       {
@@ -1379,6 +1557,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 2
       },
       {
@@ -1389,6 +1569,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : null,
+		"pin_cpu" : 8,
         "points" : 3
       },
       {
@@ -1399,6 +1581,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 4
       },
       {
@@ -1409,6 +1593,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 5
       },
       {
@@ -1419,6 +1605,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : null,
+		"pin_cpu" : 4,
         "points" : 6
       },
       {
@@ -1429,6 +1617,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 7
       },
       {
@@ -1439,6 +1629,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 8
       },
       {
@@ -1449,6 +1641,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 9
       },
       {
@@ -1459,6 +1653,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 10
       },
       {
@@ -1469,6 +1665,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 11
       },
       {
@@ -1479,6 +1677,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 12
       },
       {
@@ -1489,6 +1689,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 13
       },
       {
@@ -1499,6 +1701,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 14
       },
       {
@@ -1509,6 +1713,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 15
       },
       {
@@ -1519,6 +1725,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 16
       },
       {
@@ -1529,6 +1737,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 17
       },
       {
@@ -1539,6 +1749,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 18
       },
       {
@@ -1549,6 +1761,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 19
       },
       {
@@ -1559,6 +1773,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 20
       },
       {
@@ -1569,6 +1785,8 @@
         "radiators" : true,
         "form" : "mini-itx",
         "slots_ram" : 4,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 21
       },
       {
@@ -1579,6 +1797,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 22
       },
       {
@@ -1589,6 +1809,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 23
       },
       {
@@ -1599,6 +1821,8 @@
         "radiators" : false,
         "form" : "micro-atx",
         "slots_ram" : 2,
+		"slots_nvme" : 1,
+		"pin_cpu" : 8,
         "points" : 24
       },
       {
@@ -1609,6 +1833,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 25
       },
       {
@@ -1619,6 +1845,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 26
       },
       {
@@ -1629,6 +1857,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 27
       },
       {
@@ -1639,6 +1869,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 28
       },
       {
@@ -1649,6 +1881,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 12,
         "points" : 29
       },
       {
@@ -1659,6 +1893,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 12,
         "points" : 30
       },
       {
@@ -1669,6 +1905,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 12,
         "points" : 31
       },
       {
@@ -1679,6 +1917,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 32
       },
       {
@@ -1689,6 +1929,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 12,
         "points" : 33
       },
       {
@@ -1699,6 +1941,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 34
       },
       {
@@ -1709,6 +1953,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 8,
         "points" : 35
       },
       {
@@ -1719,6 +1965,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 36
       },
       {
@@ -1729,6 +1977,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 8,
         "points" : 37
       },
       {
@@ -1739,6 +1989,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 12,
         "points" : 38
       },
       {
@@ -1749,6 +2001,8 @@
         "radiators" : true,
         "form" : "micro-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 39
       },
       {
@@ -1759,6 +2013,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 12,
         "points" : 40
       },
       {
@@ -1769,6 +2025,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 2,
+		"pin_cpu" : 12,
         "points" : 41
       },
       {
@@ -1779,6 +2037,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 16,
         "points" : 42
       },
       {
@@ -1789,6 +2049,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 12,
         "points" : 43
       },
       {
@@ -1799,6 +2061,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 12,
         "points" : 44
       },
       {
@@ -1809,6 +2073,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 3,
+		"pin_cpu" : 16,
         "points" : 45
       },
       {
@@ -1819,6 +2085,8 @@
         "radiators" : true,
         "form" : "standart-atx",
         "slots_ram" : 4,
+		"slots_nvme" : 4,
+		"pin_cpu" : 16,
         "points" : 46
       }
 
@@ -1826,68 +2094,70 @@
   },
   "cooling" : [
     {
-      "name" : " Deepcool ICE EDGE MINI FS V2.0",
+      "name" : "DEEPCOOL Ice Edge Mini FS V2.0",
       "price" : 700,
       "water" : false,
-      "points" : 1
+      "points" : 1,
+	  "tdp" : 100
     },
     {
       "name" : "DEEPCOOL GAMMAXX 400 V2",
       "price" : 1800,
       "water" : false,
-      "points" : 2
+      "points" : 2,
+	  "tdp" : 180
     },
     {
       "name" : "DEEPCOOL REDHAT",
       "price" : 3600,
       "water" : false,
-      "points" : 4
+      "points" : 4,
+	  "tdp" : 250
     },
     {
       "name" : "ID-COOLING SE-226-XT Black",
       "price" : 4500,
       "water" : false,
-      "points" : 5
+      "points" : 5,
+	  "tdp" : 260
     },
     {
       "name" : "be quiet! DARK ROCK PRO 4",
       "price" : 9900,
       "water" : false,
-      "points" : 8
+      "points" : 8,
+	  "tdp" : 270
     },
     {
       "name" : "Noctua NH-D15",
       "price" : 12000,
       "water" : false,
-      "points" : 10
+      "points" : 10,
+	  "tdp" : 300
     },
     {
       "name" : "Xilence Performance A+ LiQuRizer LQ360",
       "price" : 7000,
       "water" : true,
-      "points" : 12
+      "points" : 12,
+	  "tdp" : 400
     },
     {
       "name" : "Arctic Cooling Liquid Freezer II-360",
       "price" : 13600,
       "water" : true,
-      "points" : 15
+      "points" : 15,
+	  "tdp" : 400
     },
     {
       "name" : "Arctic Cooling Liquid Freezer II-420",
       "price" : 18000,
       "water" : true,
-      "points" : 17
+      "points" : 17,
+	  "tdp" : 450
     }
   ],
   "ram" : {
-    "ddr5" : [
-      {
-        "name" : "XPG 32 ГБ (16 ГБ x 2 шт.) DDR5 6000 МГц",
-        "price" : 20000,
-        "points" : 20
-      }
-    ],
     "ddr4" : [
       {
         "name" : "A-Data XPG GAMMIX D20 (8ГБ х 1шт.)",
@@ -1917,6 +2187,8 @@
       "price" : 2000,
       "watts" : 400,
       "plus" : "none",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 16,
       "points" : 0
     },
     {
@@ -1924,6 +2196,8 @@
       "price" : 2250,
       "watts" : 450,
       "plus" : "none",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 8,
       "points" : 1
     },
     {
@@ -1931,6 +2205,8 @@
       "price" : 4000,
       "watts" : 700,
       "plus" : "bronze",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 16,
       "points" : 2
     },
     {
@@ -1938,6 +2214,8 @@
       "price" : 4000,
       "watts" : 500,
       "plus" : "bronze",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 16,
       "points" : 3
     },
     {
@@ -1945,6 +2223,8 @@
       "price" : 5600,
       "watts" : 600,
       "plus" : "bronze",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 16,
       "points" : 4
     },
     {
@@ -1952,6 +2232,8 @@
       "price" : 6000,
       "watts" : 650,
       "plus" : "bronze",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 32,
       "points" : 5
     },
     {
@@ -1959,6 +2241,8 @@
       "price" : 6600,
       "watts" : 750,
       "plus" : "bronze",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 32,
       "points" : 6
     },
     {
@@ -1966,6 +2250,8 @@
       "price" : 4000,
       "watts" : 500,
       "plus" : "gold",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 16,
       "points" : 7
     },
     {
@@ -1973,6 +2259,8 @@
       "price" : 6300,
       "watts" : 700,
       "plus" : "gold",
+	  "pin_cpu" : 8,
+	  "pin_gpu" : 32,
       "points" : 10
     },
     {
@@ -1980,6 +2268,8 @@
       "price" : 7400,
       "watts" : 650,
       "plus" : "gold",
+	  "pin_cpu" : 16,
+	  "pin_gpu" : 16,
       "points" : 8
     },
     {
@@ -1987,6 +2277,8 @@
       "price" : 7500,
       "watts" : 650,
       "plus" : "gold",
+	  "pin_cpu" : 12,
+	  "pin_gpu" : 32,
       "points" : 9
     },
     {
@@ -1994,6 +2286,8 @@
       "price" : 9100,
       "watts" : 850,
       "plus" : "gold",
+	  "pin_cpu" : 16,
+	  "pin_gpu" : 32,
       "points" : 11
     },
     {
@@ -2001,6 +2295,8 @@
       "price" : 10200,
       "watts" : 1050,
       "plus" : "gold",
+	  "pin_cpu" : 16,
+	  "pin_gpu" : 48,
       "points" : 12
     },
     {
@@ -2008,6 +2304,8 @@
       "price" : 18000,
       "watts" : 850,
       "plus" : "gold",
+	  "pin_cpu" : 16,
+	  "pin_gpu" : 48,
       "points" : 20
     }
   ],
