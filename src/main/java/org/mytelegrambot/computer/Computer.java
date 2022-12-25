@@ -13,36 +13,17 @@ import java.util.Map;
 /**
  * Класс для хранения и вывода результата сборки пк.
  */
-public class Computer { // todo interface and pc, public pc
+public class Computer {
     private int totalPrice;
     private final Map<ComponentsEnum, Component> components = new HashMap<>();
-    public Map<ComponentsEnum, Double> ratio = new HashMap<>();
     private boolean isPublic;
     private int likes;
     private final List<User> userLikes = new ArrayList<>();
     private String creator;
     private String comment = "";
 
-    public Computer() {
-        //todo
-
-        ratio.put(ComponentsEnum.CPU, 0.27);
-        ratio.put(ComponentsEnum.GPU, 0.35);
-        ratio.put(ComponentsEnum.MOTHERBOARD, 0.16);
-        ratio.put(ComponentsEnum.RAM, 0.11);
-        ratio.put(ComponentsEnum.COOLING, 0.03);
-        ratio.put(ComponentsEnum.POWER, 0.07);
-        ratio.put(ComponentsEnum.CORPUS, 0.03);
-        ratio.put(ComponentsEnum.DISK, 0.05);
-        ratio.put(ComponentsEnum.EXTRA, 0.01);
-    }
-
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getComment() {
-        return comment;
     }
 
     public boolean isUserLiked(User user) {
@@ -68,10 +49,6 @@ public class Computer { // todo interface and pc, public pc
 
     public void setPublic(boolean aPublic) {
         isPublic = aPublic;
-    }
-
-    public int getLikes() {
-        return likes;
     }
 
     public Component getComponent(ComponentsEnum component) {

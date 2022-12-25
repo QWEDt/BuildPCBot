@@ -1,6 +1,7 @@
 package org.mytelegrambot.text;
 
 import org.mytelegrambot.computer.Computer;
+import org.mytelegrambot.enums.ComponentsEnum;
 import org.mytelegrambot.users.User;
 
 public class TextContainer {
@@ -28,6 +29,38 @@ public class TextContainer {
     public static final String commentOk = "Комментарий добавлен";
     public static final String searchComponent = "Выберите из списка";
     public static String waitForMoneyForComponent = "Введите ценовую категорию";
+    public static String cantFind = "Ничего не найдено";
+    public static String chooseComponent(ComponentsEnum component) {
+        switch (component) {
+
+            case CPU -> {
+                return "Выберите процессор";
+            }
+            case GPU -> {
+                return "Выберите видеокарту";
+            }
+            case MOTHERBOARD -> {
+                return "Выберите материнскую плату";
+            }
+            case COOLING -> {
+                return "Выберите охлаждение для цп";
+            }
+            case POWER -> {
+                return "Выберите блок питания";
+            }
+            case RAM -> {
+                return "Выберите оперативную память";
+            }
+            case DISK -> {
+                return "Выберите диск";
+            }
+            case CORPUS -> {
+                return "Выберите корпус";
+            }
+        }
+        return "";
+    }
+    public static String chooseMode = "Желаете продолжить в расширенном режиме сборки?";
 
     public static String myBuildsInfo(User user) {
         if (user.getComputerSize() == 0) {

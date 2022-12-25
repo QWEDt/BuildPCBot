@@ -9,14 +9,15 @@ import org.mytelegrambot.exceptions.ComponentNotFoundException;
 import org.mytelegrambot.exceptions.ComponentStorageException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Нужен для сборки пк по заданным параметрам .
  */
 public final class BuildProcess {
-    private String socket;
-    private int tdp = 150;
-    private int cpuTdp;
+    private static String socket;
+    private static int tdp = 150;
+    private static int cpuTdp;
 
     /**
      * Метод для генерации сборки на основе переданных параметров.
@@ -36,26 +37,42 @@ public final class BuildProcess {
             Component bestComponent = null;
             for (int i = 0; i < attempts; i++) {
                 try {
-                    bestComponent = getBestComponent(type, brandCPU, brandGPU, money * computer.ratio.get(type)
-                            + money * computer.ratio.get(ComponentsEnum.EXTRA) * i);
+                    bestComponent = getBestComponent(type, brandCPU, brandGPU, money * RatioContainer.getRatio(type)
+                            + money * RatioContainer.getRatio(ComponentsEnum.EXTRA) * i);
                     break;
                 } catch (ComponentNotFoundException ignored) {
                     if (i == attempts - 1) throw new ComponentNotFoundException();
                 }
             }
 
-            if (bestComponent instanceof Processor) {
-                socket = ((Processor) bestComponent).getSocket();
-                tdp += ((Processor) bestComponent).getTdp();
-                cpuTdp = ((Processor) bestComponent).getTdp();
-            } else if (bestComponent instanceof VideoCard) {
-                tdp += ((VideoCard) bestComponent).getTdp();
-            }
+            buildChecks(bestComponent);
 
             computer.setComponent(type, bestComponent);
         }
 
         return computer;
+    }
+
+    /**
+     * @param money Ценовой сегмент.
+     * @param stage на каком этапе сборки пк мы сейчас.
+     */
+    public static List<Component> extraBuild(double money, ComponentsEnum stage) {
+        List<Component> components = ComponentsService.getComponentsInPriceRange(money, stage);
+        System.out.println(components.get(0));
+        components.removeIf(component -> !makeDecision(component));
+
+        return components;
+    }
+
+    public static void buildChecks(Component bestComponent) {
+        if (bestComponent instanceof Processor) {
+            socket = ((Processor) bestComponent).getSocket();
+            tdp += ((Processor) bestComponent).getTdp();
+            cpuTdp = ((Processor) bestComponent).getTdp();
+        } else if (bestComponent instanceof VideoCard) {
+            tdp += ((VideoCard) bestComponent).getTdp();
+        }
     }
 
     /**
@@ -93,7 +110,7 @@ public final class BuildProcess {
         return bestComponent;
     }
 
-    private boolean makeDecision(Component component) {
+    private static boolean makeDecision(Component component) {
         if (component instanceof Motherboard) {
             return socket.equals(((Motherboard) component).getSocket());
         } else if (component instanceof Cooling) {
@@ -104,7 +121,7 @@ public final class BuildProcess {
         return true;
     }
 
-    private void resetValues() {
+    public static void resetValues() {
         socket = null;
         tdp = 150;
         cpuTdp = 0;

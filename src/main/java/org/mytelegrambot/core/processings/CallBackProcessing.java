@@ -2,19 +2,20 @@ package org.mytelegrambot.core.processings;
 
 import org.mytelegrambot.computer.Computer;
 import org.mytelegrambot.computer.PublicComputersService;
-import org.mytelegrambot.computer.components.ComponentsService;
 import org.mytelegrambot.computer.parts.Component;
-import org.mytelegrambot.computer.parts.Processor;
-import org.mytelegrambot.computer.parts.VideoCard;
+import org.mytelegrambot.core.assemble.BuildProcess;
+import org.mytelegrambot.core.assemble.BuildProcessService;
+import org.mytelegrambot.core.assemble.BuildStateManager;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
-import org.mytelegrambot.core.utils.KeyboardGenerator;
 import org.mytelegrambot.enums.ComponentsEnum;
+import org.mytelegrambot.utils.KeyboardGenerator;
 import org.mytelegrambot.enums.DataPrefixEnum;
 import org.mytelegrambot.enums.OptionsToSendEnum;
 import org.mytelegrambot.enums.UserStepEnum;
 import org.mytelegrambot.text.TextContainer;
 import org.mytelegrambot.users.User;
 import org.mytelegrambot.users.UsersService;
+import org.mytelegrambot.utils.ListHelper;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 
 import java.util.ArrayList;
@@ -25,27 +26,70 @@ public class CallBackProcessing {
 
     public List<ProcessedData> process(CallbackQuery callbackQuery) {
         user = UsersService.getUser(callbackQuery.getMessage());
-
         List<ProcessedData> processedData = new ArrayList<>();
 
         switch (user.getStep()) {
             case WaitForChooseSave -> {
                 processedData.add(processChooseSave(
-                        callbackQuery.getData().replace(DataPrefixEnum.DEFAULT.toString(), "")));
+                        callbackQuery.getData().replace(DataPrefixEnum.PRIVATEPC.toString(), "")));
                 user.setStep(UserStepEnum.WaitForNamePC);
             }
-            case WaitForChooseComment -> {
+            case WaitForChooseComment ->
                 processedData.add(processChooseComment(
                         callbackQuery.getData().replace(DataPrefixEnum.DEFAULT.toString(), "")));
-            }
+
+            case WaitForChooseMode ->
+                processedData.add(processChooseMode(
+                        callbackQuery.getData().replace(DataPrefixEnum.EXTRABUILD.toString(), "")));
+
+            case EXTRABUILD ->
+                processedData.add(processExtraBuild(
+                        callbackQuery.getData().replace(DataPrefixEnum.EXTRABUILD.toString(), "")));
+
             case Resting -> {
                 String data = callbackQuery.getData();
-                DataPrefixEnum prefix = getPrefix(data); //todo проверку
-                String text = removePrefix(prefix.toString(), data); //todo что-то не так
+                DataPrefixEnum prefix = getPrefix(data);
+                if (prefix == null) {
+                    processedData.add(null);
+                    break;
+                }
+                String text = removePrefix(prefix.toString(), data);
                 processedData.add(processRestingState(text, prefix, callbackQuery.getMessage().getText()));
             }
         }
         return processedData;
+    }
+
+    private ProcessedData processExtraBuild(String data) {
+        Computer computer = user.getLastComputer();
+        Component component = ListHelper.getComponent(user.getTempComponents(), data);
+        computer.setComponent(user.getBuildStep(), component);
+        BuildProcess.buildChecks(component);
+        user.setBuildStep(BuildStateManager.nextState(user.getBuildStep()));
+
+        if (user.getBuildStep() == ComponentsEnum.EXTRA) {
+            user.setStep(UserStepEnum.Resting);
+            return new ProcessedData(user.getLastComputer().getInfo(false, ""), OptionsToSendEnum.EDIT,
+                    KeyboardGenerator.generateInlineKeyboard(List.of("Сохранить"), DataPrefixEnum.PRIVATEPC.toString()));
+        }
+        System.out.println("ok");
+        return BuildProcessService.extraBuild(user);
+    }
+
+    private ProcessedData processChooseMode(String data) {
+        switch (data) {
+            case "Да" -> {
+                user.setStep(UserStepEnum.EXTRABUILD);
+                user.setLastComputer(new Computer());
+                return new ProcessedData(TextContainer.enterMoney, OptionsToSendEnum.EDIT, null);
+            }
+            case "Нет" -> {
+                user.setStep(UserStepEnum.WaitForMoney);
+                return new ProcessedData(TextContainer.enterMoney, OptionsToSendEnum.EDIT, null);
+            }
+        }
+
+        return null;
     }
 
     private ProcessedData processRestingState(String callbackText, DataPrefixEnum prefix, String messageText) {
@@ -57,15 +101,17 @@ public class CallBackProcessing {
                 return processLocalBuilds(callbackText, messageText);
             }
             case SEARCH -> {
-                return processSearchComponent();
+                return processSearchComponent(callbackText);
             }
         }
         return null;
     }
 
-    private ProcessedData processSearchComponent() {
+    private ProcessedData processSearchComponent(String callbackText) {
+        System.out.println(callbackText);
+        user.setWhatToSearch(callbackText);
         user.setStep(UserStepEnum.WaitForMoneyForComponent);
-        return new ProcessedData(TextContainer.waitForMoneyForComponent, OptionsToSendEnum.SEND, null);
+        return new ProcessedData(TextContainer.waitForMoneyForComponent, OptionsToSendEnum.EDIT, null);
     }
 
     private ProcessedData processChooseComment(String text) {
@@ -94,31 +140,36 @@ public class CallBackProcessing {
     private ProcessedData processLocalBuilds(String data, String messageText) {
         if (user.isContains(data)) {
             return new ProcessedData(data, OptionsToSendEnum.EDIT,
-                    KeyboardGenerator.generateInlineKeyboard(List.of("Посмотреть", "Удалить", "Назад"), ""));
+                    KeyboardGenerator.generateInlineKeyboard(List.of("Посмотреть", "Удалить", "Назад"),
+                            DataPrefixEnum.PRIVATEPC.toString()));
         }
         switch (data) {
             case "Сохранить" -> {
                 user.setStep(UserStepEnum.WaitForChooseSave);
                 return new ProcessedData(TextContainer.chooseSaveMethod, OptionsToSendEnum.EDIT,
-                        KeyboardGenerator.generateInlineKeyboard(List.of("Публично", "Для себя"), ""));
+                        KeyboardGenerator.generateInlineKeyboard(List.of("Публично", "Для себя"),
+                                DataPrefixEnum.PRIVATEPC.toString()));
             }
 
             case "Назад" -> {
                 return new ProcessedData("Ваши сборки:", OptionsToSendEnum.EDIT,
-                        KeyboardGenerator.generateInlineKeyboard(user.getComputerNames(), ""));
+                        KeyboardGenerator.generateInlineKeyboard(user.getComputerNames(),
+                                DataPrefixEnum.PRIVATEPC.toString()));
             }
 
             case "Посмотреть" -> {
                 return new ProcessedData(user.getComputer(messageText).getInfo(false, ""),
                         OptionsToSendEnum.EDIT,
-                        KeyboardGenerator.generateInlineKeyboard(List.of("Назад"), ""));
+                        KeyboardGenerator.generateInlineKeyboard(List.of("Назад"),
+                                DataPrefixEnum.PRIVATEPC.toString()));
             }
 
             case "Удалить" -> {
                 user.deleteComputer(messageText);
                 PublicComputersService.deleteComputer(messageText);
                 return new ProcessedData(TextContainer.myBuildsInfo(user), OptionsToSendEnum.EDIT,
-                        KeyboardGenerator.generateInlineKeyboard(user.getComputerNames(), ""));
+                        KeyboardGenerator.generateInlineKeyboard(user.getComputerNames(),
+                                DataPrefixEnum.PRIVATEPC.toString()));
             }
         }
 

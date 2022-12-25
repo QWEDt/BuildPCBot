@@ -5,13 +5,13 @@ import org.mytelegrambot.computer.parts.Component;
 import org.mytelegrambot.computer.parts.Motherboard;
 import org.mytelegrambot.computer.parts.Processor;
 import org.mytelegrambot.computer.parts.VideoCard;
+import org.mytelegrambot.core.assemble.RatioContainer;
 import org.mytelegrambot.enums.ComponentsEnum;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ComponentsService {
@@ -19,24 +19,20 @@ public class ComponentsService {
 
     public static void init() {
         Gson gson = new Gson();
-        try {
-            //TODO read from resources
-            try (var is = ComponentsService.class.getClassLoader().getResourceAsStream("components.json")) {
-                //todo
-            }
-            String path = "src/main/resources/components.json";
-            componentsStorage = gson.fromJson(Files.readString(Path.of(path)), ComponentsStorage.class);
+        try (InputStream is = ComponentsService.class.getClassLoader().getResourceAsStream("components.json")){
+            assert is != null;
+            componentsStorage = gson.fromJson(new InputStreamReader(is), ComponentsStorage.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static List<Component> getComponentsInPriceRange(int money, ComponentsEnum type) {
+    public static List<Component> getComponentsInPriceRange(double money, ComponentsEnum type) {
         List<Component> findComponents = new ArrayList<>();
         List<? extends Component> allComponents = getComponentsByType(type);
         assert allComponents != null;
         for (Component component : allComponents) {
-            if (inRange(component, money)) {
+            if (inRange(component, money, type)) {
                 findComponents.add(component);
             }
         }
@@ -44,8 +40,9 @@ public class ComponentsService {
         return findComponents;
     }
 
-    private static boolean inRange(Component component, int money) {
-        return component.getPrice() > money * 0.75 && component.getPrice() < money * 1.25;
+    private static boolean inRange(Component component, double money, ComponentsEnum type) {
+        return component.getPrice() > money * (1 - RatioContainer.getRange(type))
+                && component.getPrice() < money * (1 + RatioContainer.getRange(type));
     }
 
     private static List<? extends Component> getComponentsByType(ComponentsEnum type) {
@@ -90,7 +87,7 @@ public class ComponentsService {
      * @param vendorCPU бренд цпу.
      * @param vendorGPU бренд гпу.
      * @return список всех комплектующих по выбранному типу.
-     */  //todo
+     */
     public static ArrayList<? extends Component> getComponents(ComponentsEnum type, String vendorCPU, String vendorGPU) {
         switch (type){
             case CPU -> {

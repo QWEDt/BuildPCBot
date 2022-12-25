@@ -5,6 +5,7 @@ import org.mytelegrambot.computer.ComponentsParts;
 import org.mytelegrambot.computer.PublicComputersService;
 import org.mytelegrambot.computer.components.ComponentsService;
 import org.mytelegrambot.core.assemble.BuildProcessService;
+import org.mytelegrambot.core.assemble.RatioContainer;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
 import org.mytelegrambot.users.UsersService;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -36,6 +37,7 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         PublicComputersService.init();
         ComponentsParts.init();
         ComponentsService.init();
+        RatioContainer.init();
 
         List<BotCommand> commands = new ArrayList<>();
         commands.add(new BotCommand("/help", "Информация о возможностях"));
@@ -45,7 +47,8 @@ public class PCBuilderBot extends TelegramLongPollingBot {
         commands.add(new BotCommand("/saved", "Посмотреть сохраненные сборки пк"));
         commands.add(new BotCommand("/builds", "Посмотреть сборки от других пользователей"));
         commands.add(new BotCommand("/search", "Найти копмлектующие в нужном ценовом сегменте"));
-        commands.add(new BotCommand("/delete", "Удалить всю информацию обо мне")); //todo упростить
+        commands.add(new BotCommand("/delete", "Удалить всю информацию обо мне"));
+        commands.add(new BotCommand("/yesno", "Случайный ответ да или нет, крайне редко иногда"));
 
         try {
             execute(new SetMyCommands(commands, new BotCommandScopeDefault(), null));

@@ -3,8 +3,15 @@ package org.mytelegrambot.core.processings;
 import org.mytelegrambot.computer.ComponentsParts;
 import org.mytelegrambot.computer.Computer;
 import org.mytelegrambot.computer.PublicComputersService;
+import org.mytelegrambot.computer.components.ComponentsService;
+import org.mytelegrambot.computer.parts.Component;
+import org.mytelegrambot.core.assemble.BuildProcessService;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
-import org.mytelegrambot.core.utils.KeyboardGenerator;
+import org.mytelegrambot.enums.ComponentsEnum;
+import org.mytelegrambot.utils.GetAnswerFromAPI;
+import org.mytelegrambot.utils.KeyboardGenerator;
+import org.mytelegrambot.utils.ListToText;
+import org.mytelegrambot.utils.StringToEnum;
 import org.mytelegrambot.enums.DataPrefixEnum;
 import org.mytelegrambot.enums.OptionsToSendEnum;
 import org.mytelegrambot.enums.UserStepEnum;
@@ -54,13 +61,36 @@ public class TextProcessing {
                 processedesData.add(commentProcessing(text));
                 user.setStep(UserStepEnum.Resting);
             }
-            case WaitForNamePC -> {
+            case WaitForNamePC ->
                 processedesData.add(nameProcessing(text));
-            }
+
+            case WaitForMoneyForComponent ->
+                processedesData.add(searchProcessing(text));
+
+            case EXTRABUILD ->
+                processedesData.add(extraBuildProcessing(text));
+
             case Resting -> processedesData.add(setCommand(text));
         }
 
         return processedesData;
+    }
+
+    private ProcessedData extraBuildProcessing(String text) {
+        user.setMoney(Integer.parseInt(text));
+        user.setBuildStep(ComponentsEnum.EXTRA);
+        user.setLastComputer(new Computer());
+        return BuildProcessService.extraBuild(user);
+    }
+
+    private ProcessedData searchProcessing(String text) {
+        List<Component> components = ComponentsService.getComponentsInPriceRange(Integer.parseInt(text),
+                StringToEnum.StringToComponentsEnum(user.getWhatToSearch()));
+        user.setStep(UserStepEnum.Resting);
+        if (components.size() == 0)
+            return new ProcessedData(TextContainer.cantFind, OptionsToSendEnum.SEND, null);
+
+        return new ProcessedData(ListToText.ToText(components), OptionsToSendEnum.SEND, null);
     }
 
     private ProcessedData commentProcessing(String text) {
@@ -110,8 +140,10 @@ public class TextProcessing {
     private ProcessedData setCommand(String text) {
         switch (text) {
             case "/buildpc" -> {
-                user.setStep(UserStepEnum.WaitForMoney);
-                return new ProcessedData(TextContainer.enterMoney, OptionsToSendEnum.SEND, null);
+                user.setStep(UserStepEnum.WaitForChooseMode);
+                return new ProcessedData(TextContainer.chooseMode, OptionsToSendEnum.SENDWITHKEYBOARD,
+                        KeyboardGenerator.generateInlineKeyboard(Arrays.asList("Да", "Нет"),
+                                DataPrefixEnum.EXTRABUILD.toString()));
             }
 
             case "/start" -> {
@@ -127,7 +159,7 @@ public class TextProcessing {
             case "/help" -> {
                 return new ProcessedData("Help info", OptionsToSendEnum.SEND, null);
             }
-            //todo при удалении ник меняется на PCBuilderBot
+
             case "/delete" -> {
                 UsersService.deleteUser(user);
                 return new ProcessedData(TextContainer.delete, OptionsToSendEnum.SEND, null);
@@ -143,6 +175,10 @@ public class TextProcessing {
             case "/search" -> {
                 return new ProcessedData(TextContainer.searchComponent, OptionsToSendEnum.SENDWITHKEYBOARD,
                         KeyboardGenerator.generateInlineKeyboard(ComponentsParts.getAllParts(), DataPrefixEnum.SEARCH.toString()));
+            }
+
+            case "/yesno" -> {
+                return new ProcessedData(GetAnswerFromAPI.get(), OptionsToSendEnum.SEND, null);
             }
 
             default -> {

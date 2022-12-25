@@ -1,5 +1,6 @@
-package org.mytelegrambot.core.utils;
+package org.mytelegrambot.utils;
 
+import org.mytelegrambot.computer.parts.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -28,6 +29,15 @@ public class KeyboardGenerator {
         keyboardMarkup.setKeyboard(rowsInline);
 
         return keyboardMarkup;
+    }
+
+    public static InlineKeyboardMarkup generateInlineKeyboard(List<Component> words, String callBackDataPrefix) {
+        List<String> newWords = new ArrayList<>();
+        for (Component word : words) {
+            newWords.add(word.getName());
+        }
+
+        return generateInlineKeyboard(newWords, callBackDataPrefix);
     }
 
     public static ReplyKeyboardMarkup generateKeyboard(List<String> words) {

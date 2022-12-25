@@ -4,5 +4,6 @@ public enum DataPrefixEnum {
     DEFAULT,
     PUBLICPC,
     PRIVATEPC,
-    SEARCH
+    SEARCH,
+    EXTRABUILD
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsersSaveAndLoad {
-    private static final String pathToUserData = "src/main/users data/";
+    private static final String pathToUserData = "users data/";
 
     public static void saveUsersData(List<User> users) {
         for (User user : users) {

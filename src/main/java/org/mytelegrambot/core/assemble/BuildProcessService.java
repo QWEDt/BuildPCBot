@@ -1,8 +1,10 @@
 package org.mytelegrambot.core.assemble;
 
 import org.mytelegrambot.computer.Computer;
+import org.mytelegrambot.computer.parts.Component;
 import org.mytelegrambot.core.datacontrol.ProcessedData;
-import org.mytelegrambot.core.utils.KeyboardGenerator;
+import org.mytelegrambot.enums.ComponentsEnum;
+import org.mytelegrambot.utils.KeyboardGenerator;
 import org.mytelegrambot.enums.DataPrefixEnum;
 import org.mytelegrambot.enums.OptionsToSendEnum;
 import org.mytelegrambot.exceptions.ComponentNotFoundException;
@@ -44,5 +46,22 @@ public class BuildProcessService {
         processedData.setOptionToSend(OptionsToSendEnum.SENDWITHKEYBOARD);
         processedData.setKeyboardMarkup(
                 KeyboardGenerator.generateInlineKeyboard(List.of("Сохранить"), DataPrefixEnum.PRIVATEPC.toString()));
+    }
+
+    public static ProcessedData extraBuild(User user) {
+        OptionsToSendEnum option = OptionsToSendEnum.EDIT;
+        if (user.getBuildStep() == ComponentsEnum.EXTRA) {
+            user.setLastComputer(new Computer());
+            user.setBuildStep(ComponentsEnum.CPU);
+            BuildProcess.resetValues();
+            option = OptionsToSendEnum.SENDWITHKEYBOARD;
+        }
+        List<Component> components = BuildProcess.extraBuild(
+                user.getMoney() * RatioContainer.getRatio(user.getBuildStep()), user.getBuildStep());
+        System.out.println(components.get(0));
+        user.setTempComponents(components);
+
+        return new ProcessedData(TextContainer.chooseComponent(user.getBuildStep()), option,
+                KeyboardGenerator.generateInlineKeyboard(components, DataPrefixEnum.EXTRABUILD.toString()));
     }
 }
